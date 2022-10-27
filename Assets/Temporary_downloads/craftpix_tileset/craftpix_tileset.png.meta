@@ -1,0 +1,3596 @@
+fileFormatVersion: 2
+guid: 496bdae170168e840a13f3cc04f0be5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3773976576030001066
+    second: craftpix_tileset_0
+  - first:
+      213: 3781134280842618555
+    second: craftpix_tileset_1
+  - first:
+      213: 4333795769430382328
+    second: craftpix_tileset_2
+  - first:
+      213: -715247905664598068
+    second: craftpix_tileset_3
+  - first:
+      213: -7951979151731932432
+    second: craftpix_tileset_4
+  - first:
+      213: 7588127011506525605
+    second: craftpix_tileset_5
+  - first:
+      213: -1543750995730630912
+    second: craftpix_tileset_6
+  - first:
+      213: -3010385232880334238
+    second: craftpix_tileset_7
+  - first:
+      213: 3109759221896769171
+    second: craftpix_tileset_8
+  - first:
+      213: -7781973180123636467
+    second: craftpix_tileset_9
+  - first:
+      213: -3580742150768480839
+    second: craftpix_tileset_10
+  - first:
+      213: 7432113736046730830
+    second: craftpix_tileset_11
+  - first:
+      213: -4883028050928672916
+    second: craftpix_tileset_12
+  - first:
+      213: -1025358847863844658
+    second: craftpix_tileset_13
+  - first:
+      213: 8935162571215033654
+    second: craftpix_tileset_14
+  - first:
+      213: -3270737304956636103
+    second: craftpix_tileset_15
+  - first:
+      213: -6092696992682611632
+    second: craftpix_tileset_16
+  - first:
+      213: -4770056862781041001
+    second: craftpix_tileset_17
+  - first:
+      213: 5454621100525538852
+    second: craftpix_tileset_18
+  - first:
+      213: 8991096487726887522
+    second: craftpix_tileset_19
+  - first:
+      213: 4173962439795150311
+    second: craftpix_tileset_20
+  - first:
+      213: 3248053381358180725
+    second: craftpix_tileset_21
+  - first:
+      213: 5424832967726929316
+    second: craftpix_tileset_22
+  - first:
+      213: -3103488550997952583
+    second: craftpix_tileset_23
+  - first:
+      213: 3090830775501537345
+    second: craftpix_tileset_24
+  - first:
+      213: 7563877924658716354
+    second: craftpix_tileset_25
+  - first:
+      213: -6277642388276170009
+    second: craftpix_tileset_26
+  - first:
+      213: -4623629947174900631
+    second: craftpix_tileset_27
+  - first:
+      213: -8859927400148320719
+    second: craftpix_tileset_28
+  - first:
+      213: -200252454649577209
+    second: craftpix_tileset_29
+  - first:
+      213: -5982291593528922316
+    second: craftpix_tileset_30
+  - first:
+      213: 3665366693701558981
+    second: craftpix_tileset_31
+  - first:
+      213: -6286168270154190897
+    second: craftpix_tileset_32
+  - first:
+      213: 5117906553905217392
+    second: craftpix_tileset_33
+  - first:
+      213: 6241042854606103381
+    second: craftpix_tileset_34
+  - first:
+      213: -4755292129537849299
+    second: craftpix_tileset_35
+  - first:
+      213: -6262312608198145391
+    second: craftpix_tileset_36
+  - first:
+      213: -1619778652440991672
+    second: craftpix_tileset_37
+  - first:
+      213: 5523823389416428359
+    second: craftpix_tileset_38
+  - first:
+      213: 4743443253053601852
+    second: craftpix_tileset_39
+  - first:
+      213: 7315694015940975076
+    second: craftpix_tileset_40
+  - first:
+      213: 618406636853720080
+    second: craftpix_tileset_41
+  - first:
+      213: -908539138697716710
+    second: craftpix_tileset_42
+  - first:
+      213: 2089270794377851109
+    second: craftpix_tileset_43
+  - first:
+      213: -243116109608103916
+    second: craftpix_tileset_44
+  - first:
+      213: 4106965283129348679
+    second: craftpix_tileset_45
+  - first:
+      213: 5712708422673721424
+    second: craftpix_tileset_46
+  - first:
+      213: 7357662851569807454
+    second: craftpix_tileset_47
+  - first:
+      213: -5150784168893623835
+    second: craftpix_tileset_48
+  - first:
+      213: -4059811593207899372
+    second: craftpix_tileset_49
+  - first:
+      213: 5583907898799150215
+    second: craftpix_tileset_50
+  - first:
+      213: -1599930378715637728
+    second: craftpix_tileset_51
+  - first:
+      213: -8704372973832180686
+    second: craftpix_tileset_52
+  - first:
+      213: 9154320998648781634
+    second: craftpix_tileset_53
+  - first:
+      213: -2514941851184452756
+    second: craftpix_tileset_54
+  - first:
+      213: 3106828589279019944
+    second: craftpix_tileset_55
+  - first:
+      213: 5588853482730310842
+    second: craftpix_tileset_56
+  - first:
+      213: 6103600067289247945
+    second: craftpix_tileset_57
+  - first:
+      213: -1509038328295196182
+    second: craftpix_tileset_58
+  - first:
+      213: -2962616120486784293
+    second: craftpix_tileset_59
+  - first:
+      213: -4008635641980105572
+    second: craftpix_tileset_60
+  - first:
+      213: -6380803195973303586
+    second: craftpix_tileset_61
+  - first:
+      213: 7319720217265936512
+    second: craftpix_tileset_62
+  - first:
+      213: -3150168021948816130
+    second: craftpix_tileset_63
+  - first:
+      213: 305257828993764148
+    second: craftpix_tileset_64
+  - first:
+      213: 891651636032792637
+    second: craftpix_tileset_65
+  - first:
+      213: -646396164964077366
+    second: craftpix_tileset_66
+  - first:
+      213: -2706976291953150323
+    second: craftpix_tileset_67
+  - first:
+      213: -5050192889676797251
+    second: craftpix_tileset_68
+  - first:
+      213: 8705329768558563491
+    second: craftpix_tileset_69
+  - first:
+      213: -9084552090172230920
+    second: craftpix_tileset_70
+  - first:
+      213: 8566628590490558385
+    second: craftpix_tileset_71
+  - first:
+      213: 3565712382368481935
+    second: craftpix_tileset_72
+  - first:
+      213: -3402182076599534235
+    second: craftpix_tileset_73
+  - first:
+      213: 738178286642939351
+    second: craftpix_tileset_74
+  - first:
+      213: 4066192367974876289
+    second: craftpix_tileset_75
+  - first:
+      213: -3812114495485088764
+    second: craftpix_tileset_76
+  - first:
+      213: 6859977125800262158
+    second: craftpix_tileset_77
+  - first:
+      213: -6094741811978731358
+    second: craftpix_tileset_78
+  - first:
+      213: 3202833757905210062
+    second: craftpix_tileset_79
+  - first:
+      213: 2847020087551764343
+    second: craftpix_tileset_80
+  - first:
+      213: 1805469177413294960
+    second: craftpix_tileset_81
+  - first:
+      213: 4182057209313869471
+    second: craftpix_tileset_82
+  - first:
+      213: -8141038574593319076
+    second: craftpix_tileset_83
+  - first:
+      213: 7299890902544577752
+    second: craftpix_tileset_84
+  - first:
+      213: -8824529409080755743
+    second: craftpix_tileset_85
+  - first:
+      213: -6154038185944444279
+    second: craftpix_tileset_86
+  - first:
+      213: -7135659555201435947
+    second: craftpix_tileset_87
+  - first:
+      213: 2222483196339923385
+    second: craftpix_tileset_88
+  - first:
+      213: 7807618026105900636
+    second: craftpix_tileset_89
+  - first:
+      213: 6381408541811126232
+    second: craftpix_tileset_90
+  - first:
+      213: 5230271604770220361
+    second: craftpix_tileset_91
+  - first:
+      213: 8516196939347027759
+    second: craftpix_tileset_92
+  - first:
+      213: 5581985882728923533
+    second: craftpix_tileset_93
+  - first:
+      213: 2365209181978282377
+    second: craftpix_tileset_94
+  - first:
+      213: -770426926970008034
+    second: craftpix_tileset_95
+  - first:
+      213: -5942484777546311675
+    second: craftpix_tileset_96
+  - first:
+      213: -4158181362175867498
+    second: craftpix_tileset_97
+  - first:
+      213: -4226671108472986092
+    second: craftpix_tileset_98
+  - first:
+      213: -5219029172021715864
+    second: craftpix_tileset_99
+  - first:
+      213: -7464776469784714896
+    second: craftpix_tileset_100
+  - first:
+      213: 8936635912829822272
+    second: craftpix_tileset_101
+  - first:
+      213: -503536972808093348
+    second: craftpix_tileset_102
+  - first:
+      213: -14062120745834403
+    second: craftpix_tileset_103
+  - first:
+      213: 20194198157118142
+    second: craftpix_tileset_104
+  - first:
+      213: -8395199812461836350
+    second: craftpix_tileset_105
+  - first:
+      213: -249330160929219437
+    second: craftpix_tileset_106
+  - first:
+      213: -4210670450955558052
+    second: craftpix_tileset_107
+  - first:
+      213: -5187414218144692756
+    second: craftpix_tileset_108
+  - first:
+      213: -3963974740477533272
+    second: craftpix_tileset_109
+  - first:
+      213: 2440430919524262346
+    second: craftpix_tileset_110
+  - first:
+      213: -7981148300506688326
+    second: craftpix_tileset_111
+  - first:
+      213: 2720525015117386299
+    second: craftpix_tileset_112
+  - first:
+      213: -1938991698686744926
+    second: craftpix_tileset_113
+  - first:
+      213: -449914666002671816
+    second: craftpix_tileset_114
+  - first:
+      213: 9050989980210972651
+    second: craftpix_tileset_115
+  - first:
+      213: 8055766398939242027
+    second: craftpix_tileset_116
+  - first:
+      213: -6832518045924089933
+    second: craftpix_tileset_117
+  - first:
+      213: 7840683909476940578
+    second: craftpix_tileset_118
+  - first:
+      213: -6736156572199821147
+    second: craftpix_tileset_119
+  - first:
+      213: -2349259877736548848
+    second: craftpix_tileset_120
+  - first:
+      213: 1641475271759375202
+    second: craftpix_tileset_121
+  - first:
+      213: 1451428287618939023
+    second: craftpix_tileset_122
+  - first:
+      213: 1838750911867918724
+    second: craftpix_tileset_123
+  - first:
+      213: -6774728765874979274
+    second: craftpix_tileset_124
+  - first:
+      213: -5411348315543389087
+    second: craftpix_tileset_125
+  - first:
+      213: 8923216656654312264
+    second: craftpix_tileset_126
+  - first:
+      213: -5097373960549956545
+    second: craftpix_tileset_127
+  - first:
+      213: 9120791626950269572
+    second: craftpix_tileset_128
+  - first:
+      213: -3001684823765085570
+    second: craftpix_tileset_129
+  - first:
+      213: 7318832949639419457
+    second: craftpix_tileset_130
+  - first:
+      213: -4246982903803737937
+    second: craftpix_tileset_131
+  - first:
+      213: -1595837729070837217
+    second: craftpix_tileset_132
+  - first:
+      213: -7529453212984134496
+    second: craftpix_tileset_133
+  - first:
+      213: -8199608384546238359
+    second: craftpix_tileset_134
+  - first:
+      213: 812437588104267143
+    second: craftpix_tileset_135
+  - first:
+      213: 5003611402128613211
+    second: craftpix_tileset_136
+  - first:
+      213: 6369514643973478171
+    second: craftpix_tileset_137
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: craftpix_tileset_0
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 859
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7c9e453bbdf5430800000000000000
+      internalID: 3773976576030001066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_1
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 859
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb62da95899497430800000000000000
+      internalID: 3781134280842618555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_2
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 859
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f61df57a4cb42c30800000000000000
+      internalID: 4333795769430382328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_3
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 859
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccff480c1dde216f0800000000000000
+      internalID: -715247905664598068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 859
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2c4b7c715e4a190800000000000000
+      internalID: -7951979151731932432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_5
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 859
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5946730517e4960800000000000000
+      internalID: 7588127011506525605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_6
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 859
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007f1d506ae739ae0800000000000000
+      internalID: -1543750995730630912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_7
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 859
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a06159496f836d0800000000000000
+      internalID: -3010385232880334238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_8
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 877
+        width: 63
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ee62e3985182b20800000000000000
+      internalID: 3109759221896769171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_9
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 877
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d1d139f90e00490800000000000000
+      internalID: -7781973180123636467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_10
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 877
+        width: 63
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd2d274cf5ae4ec0800000000000000
+      internalID: -3580742150768480839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_11
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 859
+        width: 33
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4edd5fd01c242760800000000000000
+      internalID: 7432113736046730830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_12
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 859
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fd02cebdffb3cb0800000000000000
+      internalID: -4883028050928672916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_13
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 859
+        width: 33
+        height: 64
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec095c97f8135c1f0800000000000000
+      internalID: -1025358847863844658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_14
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 790
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63553ab9403100c70800000000000000
+      internalID: 8935162571215033654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_15
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 790
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934f07010c10c92d0800000000000000
+      internalID: -3270737304956636103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_16
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 790
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cef0b9d54627ba0800000000000000
+      internalID: -6092696992682611632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_17
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 790
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796958f5e8a5dcdb0800000000000000
+      internalID: -4770056862781041001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_18
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 790
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ecc29bdf4b2bb40800000000000000
+      internalID: 5454621100525538852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_19
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 790
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26239346e9ac6cc70800000000000000
+      internalID: 8991096487726887522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_20
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 790
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed00d179b4ece930800000000000000
+      internalID: 4173962439795150311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_21
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 790
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5795c576757631d20800000000000000
+      internalID: 3248053381358180725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_22
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 803
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5113797d0e84b40800000000000000
+      internalID: 5424832967726929316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_23
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 803
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b776491b913ee4d0800000000000000
+      internalID: -3103488550997952583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_24
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 803
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1404d92e636d4ea20800000000000000
+      internalID: 3090830775501537345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_25
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 790
+        width: 33
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce93b7b5ea48f860800000000000000
+      internalID: 7563877924658716354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_26
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 790
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e23ddb128551e8a0800000000000000
+      internalID: -6277642388276170009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_27
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 790
+        width: 33
+        height: 64
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c28c16f0195dfb0800000000000000
+      internalID: -4623629947174900631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_28
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 721
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13eb862b8f63b0580800000000000000
+      internalID: -8859927400148320719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_29
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 721
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7014637147f883df0800000000000000
+      internalID: -200252454649577209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_30
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 721
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f27e0cd71aafca0800000000000000
+      internalID: -5982291593528922316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_31
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 720
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c221a5869ffdd230800000000000000
+      internalID: 3665366693701558981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_32
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 720
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfa02b834b03c8a0800000000000000
+      internalID: -6286168270154190897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_33
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 720
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ff92b15e4760740800000000000000
+      internalID: 5117906553905217392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_34
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 721
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55369c8e863ac9650800000000000000
+      internalID: 6241042854606103381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_35
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 749
+        width: 124
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d288fa7b00fc10eb0800000000000000
+      internalID: -4755292129537849299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_36
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 754
+        width: 65
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a46ebacdbc719a0800000000000000
+      internalID: -6262312608198145391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_37
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 752
+        width: 33
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8486e76c5e36589e0800000000000000
+      internalID: -1619778652440991672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_38
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 752
+        width: 65
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74319203b1098ac40800000000000000
+      internalID: 5523823389416428359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_39
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 752
+        width: 34
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38bb7eb18814d140800000000000000
+      internalID: 4743443253053601852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_40
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 582
+        width: 104
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9dc9182f0968560800000000000000
+      internalID: 7315694015940975076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_41
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 582
+        width: 94
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014f86c4f85059800800000000000000
+      internalID: 618406636853720080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_42
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 608
+        width: 118
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c126d87783463f0800000000000000
+      internalID: -908539138697716710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_43
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 582
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e07d72d7b49efc10800000000000000
+      internalID: 2089270794377851109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_44
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 642
+        width: 127
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41052a7bf2740acf0800000000000000
+      internalID: -243116109608103916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_45
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 579
+        width: 120
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74259c55a2fdef830800000000000000
+      internalID: 4106965283129348679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_46
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 581
+        width: 117
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05869de0b0e974f40800000000000000
+      internalID: 5712708422673721424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_47
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 644
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50f7e4816bab1660800000000000000
+      internalID: 7357662851569807454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_48
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 586
+        width: 60
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1d362a61db488b0800000000000000
+      internalID: -5150784168893623835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_49
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 596
+        width: 52
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b94d3add6a8a7c0800000000000000
+      internalID: -4059811593207899372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_50
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 645
+        width: 58
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784db6e26a60e7d40800000000000000
+      internalID: 5583907898799150215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_51
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 646
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0285c4f1cc7ebc9e0800000000000000
+      internalID: -1599930378715637728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_52
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 581
+        width: 122
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ce836e5ead33780800000000000000
+      internalID: -8704372973832180686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_53
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 576
+        width: 17
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b1c54527eaa0f70800000000000000
+      internalID: 9154320998648781634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_54
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 576
+        width: 58
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b236906b1291dd0800000000000000
+      internalID: -2514941851184452756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_55
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 576
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3010a242cad1b20800000000000000
+      internalID: 3106828589279019944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_56
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 506
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc48dba1a89f8d40800000000000000
+      internalID: 5588853482730310842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_57
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 507
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c073d54ce754b450800000000000000
+      internalID: 6103600067289247945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_58
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 505
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9f389b2a1de0be0800000000000000
+      internalID: -1509038328295196182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_59
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 507
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd21a84c55ca2e6d0800000000000000
+      internalID: -2962616120486784293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_60
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 508
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c4ecd4f177e58c0800000000000000
+      internalID: -4008635641980105572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_61
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 507
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2855adc45d277a0800000000000000
+      internalID: -6380803195973303586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_62
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 507
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088916d81ced49560800000000000000
+      internalID: 7319720217265936512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_63
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 506
+        width: 25
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef422f4dfda5844d0800000000000000
+      internalID: -3150168021948816130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_64
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 508
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b841ec06e7c3400800000000000000
+      internalID: 305257828993764148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_65
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 508
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3861255078cf5c00800000000000000
+      internalID: 891651636032792637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_66
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 508
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0342bdc1a8707f0800000000000000
+      internalID: -646396164964077366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_67
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 508
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d867ab69763ee6ad0800000000000000
+      internalID: -2706976291953150323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_68
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba6c9be25c1ae9b0800000000000000
+      internalID: -5050192889676797251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_69
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 508
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0119b3d4b8fc870800000000000000
+      internalID: 8705329768558563491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_70
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 510
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f270c981003de180800000000000000
+      internalID: -9084552090172230920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_71
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 510
+        width: 30
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf15eaa057c2e670800000000000000
+      internalID: 8566628590490558385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_72
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8209421584fb7130800000000000000
+      internalID: 3565712382368481935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_73
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 507
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d75174d6509c0d0800000000000000
+      internalID: -3402182076599534235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_74
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 508
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5424c9d398e3a00800000000000000
+      internalID: 738178286642939351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_75
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 505
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1840c814a640e6830800000000000000
+      internalID: 4066192367974876289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_76
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 447
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c6e755016a81bc0800000000000000
+      internalID: -3812114495485088764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_77
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 447
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a31a6a9d8833f50800000000000000
+      internalID: 6859977125800262158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_78
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 448
+        width: 69
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a089430d902b6ba0800000000000000
+      internalID: -6094741811978731358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_79
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 428
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecac19e5550c27c20800000000000000
+      internalID: 3202833757905210062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_80
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 428
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777acea7fa5a28720800000000000000
+      internalID: 2847020087551764343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_81
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 427
+        width: 70
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bd2aca6a05e0910800000000000000
+      internalID: 1805469177413294960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_82
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 425
+        width: 67
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9eb387dfd6a90a30800000000000000
+      internalID: 4182057209313869471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_83
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 427
+        width: 64
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fdc9aac88350f80800000000000000
+      internalID: -8141038574593319076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_84
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 425
+        width: 67
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d47641791c6e4560800000000000000
+      internalID: 7299890902544577752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_85
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 323
+        width: 129
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9f0cdb149f88580800000000000000
+      internalID: -8824529409080755743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_86
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 323
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982979810e6789aa0800000000000000
+      internalID: -6154038185944444279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_87
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 322
+        width: 129
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6b81ed07b09fc90800000000000000
+      internalID: -7135659555201435947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_88
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 340
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9ad1d11b8d7de10800000000000000
+      internalID: 2222483196339923385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_89
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 340
+        width: 55
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e8afb6a3b3a5c60800000000000000
+      internalID: 7807618026105900636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_90
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 339
+        width: 61
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfab4532415f8850800000000000000
+      internalID: 6381408541811126232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_91
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 340
+        width: 54
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94924293058a59840800000000000000
+      internalID: 5230271604770220361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_92
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 339
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f276c0fdefb9f2670800000000000000
+      internalID: 8516196939347027759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_93
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 336
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d818d41f592377d40800000000000000
+      internalID: 5581985882728923533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_94
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 314
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989ce473839e2d020800000000000000
+      internalID: 2365209181978282377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_95
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 312
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e8e84bac4ee45f0800000000000000
+      internalID: -770426926970008034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_96
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 184
+        width: 152
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5089f27549d088da0800000000000000
+      internalID: -5942484777546311675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_97
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 184
+        width: 121
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6958bd3051c2b46c0800000000000000
+      internalID: -4158181362175867498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_98
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 254
+        width: 116
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416af0d4509d755c0800000000000000
+      internalID: -4226671108472986092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_99
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 254
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c9e31ae984297b0800000000000000
+      internalID: -5219029172021715864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_100
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 254
+        width: 131
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071a9cec959c76890800000000000000
+      internalID: -7464776469784714896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_101
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 185
+        width: 104
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045683fa30f450c70800000000000000
+      internalID: 8936635912829822272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_102
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 186
+        width: 89
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c518f748ac31309f0800000000000000
+      internalID: -503536972808093348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_103
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 189
+        width: 89
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58e720639a0ecff0800000000000000
+      internalID: -14062120745834403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_104
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 186
+        width: 89
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebacda7248eb74000800000000000000
+      internalID: 20194198157118142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_105
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 184
+        width: 92
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c749cf00424e7b80800000000000000
+      internalID: -8395199812461836350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_106
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 186
+        width: 129
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cd5062a833a8cf0800000000000000
+      internalID: -249330160929219437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_107
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 186
+        width: 65
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c536f80b881b095c0800000000000000
+      internalID: -4210670450955558052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_108
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 186
+        width: 129
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5cca0b04a9208b0800000000000000
+      internalID: -5187414218144692756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_109
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 32
+        width: 98
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3273fb9f12df8c0800000000000000
+      internalID: -3963974740477533272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_110
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 54
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1af19cdf62ed120800000000000000
+      internalID: 2440430919524262346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_111
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 37
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4169818e34d3190800000000000000
+      internalID: -7981148300506688326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_112
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 97
+        width: 61
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32d2a8561f31c520800000000000000
+      internalID: 2720525015117386299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_113
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 97
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a66851c2515715e0800000000000000
+      internalID: -1938991698686744926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_114
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 98
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8371ca9bef491c9f0800000000000000
+      internalID: -449914666002671816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_115
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 98
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7481cce639b9d70800000000000000
+      internalID: 9050989980210972651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_116
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 98
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e1d4acbd4dbcf60800000000000000
+      internalID: 8055766398939242027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_117
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 96
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf9f3799050e21a0800000000000000
+      internalID: -6832518045924089933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_118
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 95
+        width: 64
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b7e745974bfcc60800000000000000
+      internalID: 7840683909476940578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_119
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 98
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0ed9a894d5482a0800000000000000
+      internalID: -6736156572199821147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_120
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 40
+        width: 60
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0167f6e8690c56fd0800000000000000
+      internalID: -2349259877736548848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_121
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 120
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b2ec01011b7c610800000000000000
+      internalID: 1641475271759375202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_122
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 99
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88fa7c6652842410800000000000000
+      internalID: 1451428287618939023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_123
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 100
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4891054563e848910800000000000000
+      internalID: 1838750911867918724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_124
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 98
+        width: 110
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63eb66cd4145bf1a0800000000000000
+      internalID: -6774728765874979274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_125
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 33
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cb028a06707e4b0800000000000000
+      internalID: -5411348315543389087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_126
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 34
+        width: 69
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843aab1a542a5db70800000000000000
+      internalID: 8923216656654312264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_127
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 40
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f340812d36d7249b0800000000000000
+      internalID: -5097373960549956545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_128
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 40
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a5ab229af839e70800000000000000
+      internalID: 9120791626950269572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_129
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 40
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e721dcf6e8fd756d0800000000000000
+      internalID: -3001684823765085570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_130
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 40
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1469ea57ac7b19560800000000000000
+      internalID: 7318832949639419457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_131
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 36
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa80f9bec8faf05c0800000000000000
+      internalID: -4246982903803737937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_132
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 37
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12119f5a027ad9e0800000000000000
+      internalID: -1595837729070837217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_133
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 40
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4382f0232028790800000000000000
+      internalID: -7529453212984134496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_134
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 40
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9609ecd1e93253e80800000000000000
+      internalID: -8199608384546238359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_135
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 36
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78541219eab564b00800000000000000
+      internalID: 812437588104267143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_136
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 34
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f58f95f06607540800000000000000
+      internalID: 5003611402128613211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: craftpix_tileset_137
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 37
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1710b152df056850800000000000000
+      internalID: 6369514643973478171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      craftpix_tileset_18: 5454621100525538852
+      craftpix_tileset_40: 7315694015940975076
+      craftpix_tileset_11: 7432113736046730830
+      craftpix_tileset_1: 3781134280842618555
+      craftpix_tileset_19: 8991096487726887522
+      craftpix_tileset_31: 3665366693701558981
+      craftpix_tileset_90: 6381408541811126232
+      craftpix_tileset_49: -4059811593207899372
+      craftpix_tileset_104: 20194198157118142
+      craftpix_tileset_108: -5187414218144692756
+      craftpix_tileset_101: 8936635912829822272
+      craftpix_tileset_110: 2440430919524262346
+      craftpix_tileset_122: 1451428287618939023
+      craftpix_tileset_39: 4743443253053601852
+      craftpix_tileset_58: -1509038328295196182
+      craftpix_tileset_8: 3109759221896769171
+      craftpix_tileset_99: -5219029172021715864
+      craftpix_tileset_67: -2706976291953150323
+      craftpix_tileset_47: 7357662851569807454
+      craftpix_tileset_29: -200252454649577209
+      craftpix_tileset_76: -3812114495485088764
+      craftpix_tileset_80: 2847020087551764343
+      craftpix_tileset_112: 2720525015117386299
+      craftpix_tileset_45: 4106965283129348679
+      craftpix_tileset_109: -3963974740477533272
+      craftpix_tileset_63: -3150168021948816130
+      craftpix_tileset_61: -6380803195973303586
+      craftpix_tileset_57: 6103600067289247945
+      craftpix_tileset_16: -6092696992682611632
+      craftpix_tileset_79: 3202833757905210062
+      craftpix_tileset_113: -1938991698686744926
+      craftpix_tileset_42: -908539138697716710
+      craftpix_tileset_100: -7464776469784714896
+      craftpix_tileset_51: -1599930378715637728
+      craftpix_tileset_68: -5050192889676797251
+      craftpix_tileset_83: -8141038574593319076
+      craftpix_tileset_116: 8055766398939242027
+      craftpix_tileset_128: 9120791626950269572
+      craftpix_tileset_35: -4755292129537849299
+      craftpix_tileset_56: 5588853482730310842
+      craftpix_tileset_50: 5583907898799150215
+      craftpix_tileset_126: 8923216656654312264
+      craftpix_tileset_34: 6241042854606103381
+      craftpix_tileset_53: 9154320998648781634
+      craftpix_tileset_3: -715247905664598068
+      craftpix_tileset_78: -6094741811978731358
+      craftpix_tileset_21: 3248053381358180725
+      craftpix_tileset_103: -14062120745834403
+      craftpix_tileset_114: -449914666002671816
+      craftpix_tileset_93: 5581985882728923533
+      craftpix_tileset_97: -4158181362175867498
+      craftpix_tileset_0: 3773976576030001066
+      craftpix_tileset_33: 5117906553905217392
+      craftpix_tileset_130: 7318832949639419457
+      craftpix_tileset_24: 3090830775501537345
+      craftpix_tileset_73: -3402182076599534235
+      craftpix_tileset_27: -4623629947174900631
+      craftpix_tileset_10: -3580742150768480839
+      craftpix_tileset_55: 3106828589279019944
+      craftpix_tileset_137: 6369514643973478171
+      craftpix_tileset_37: -1619778652440991672
+      craftpix_tileset_28: -8859927400148320719
+      craftpix_tileset_98: -4226671108472986092
+      craftpix_tileset_13: -1025358847863844658
+      craftpix_tileset_72: 3565712382368481935
+      craftpix_tileset_23: -3103488550997952583
+      craftpix_tileset_64: 305257828993764148
+      craftpix_tileset_5: 7588127011506525605
+      craftpix_tileset_4: -7951979151731932432
+      craftpix_tileset_36: -6262312608198145391
+      craftpix_tileset_41: 618406636853720080
+      craftpix_tileset_106: -249330160929219437
+      craftpix_tileset_38: 5523823389416428359
+      craftpix_tileset_135: 812437588104267143
+      craftpix_tileset_66: -646396164964077366
+      craftpix_tileset_95: -770426926970008034
+      craftpix_tileset_22: 5424832967726929316
+      craftpix_tileset_59: -2962616120486784293
+      craftpix_tileset_107: -4210670450955558052
+      craftpix_tileset_26: -6277642388276170009
+      craftpix_tileset_65: 891651636032792637
+      craftpix_tileset_86: -6154038185944444279
+      craftpix_tileset_6: -1543750995730630912
+      craftpix_tileset_91: 5230271604770220361
+      craftpix_tileset_52: -8704372973832180686
+      craftpix_tileset_123: 1838750911867918724
+      craftpix_tileset_12: -4883028050928672916
+      craftpix_tileset_87: -7135659555201435947
+      craftpix_tileset_20: 4173962439795150311
+      craftpix_tileset_77: 6859977125800262158
+      craftpix_tileset_131: -4246982903803737937
+      craftpix_tileset_25: 7563877924658716354
+      craftpix_tileset_30: -5982291593528922316
+      craftpix_tileset_102: -503536972808093348
+      craftpix_tileset_85: -8824529409080755743
+      craftpix_tileset_111: -7981148300506688326
+      craftpix_tileset_81: 1805469177413294960
+      craftpix_tileset_129: -3001684823765085570
+      craftpix_tileset_2: 4333795769430382328
+      craftpix_tileset_32: -6286168270154190897
+      craftpix_tileset_89: 7807618026105900636
+      craftpix_tileset_117: -6832518045924089933
+      craftpix_tileset_94: 2365209181978282377
+      craftpix_tileset_46: 5712708422673721424
+      craftpix_tileset_54: -2514941851184452756
+      craftpix_tileset_14: 8935162571215033654
+      craftpix_tileset_44: -243116109608103916
+      craftpix_tileset_84: 7299890902544577752
+      craftpix_tileset_115: 9050989980210972651
+      craftpix_tileset_121: 1641475271759375202
+      craftpix_tileset_134: -8199608384546238359
+      craftpix_tileset_48: -5150784168893623835
+      craftpix_tileset_17: -4770056862781041001
+      craftpix_tileset_82: 4182057209313869471
+      craftpix_tileset_127: -5097373960549956545
+      craftpix_tileset_118: 7840683909476940578
+      craftpix_tileset_70: -9084552090172230920
+      craftpix_tileset_7: -3010385232880334238
+      craftpix_tileset_119: -6736156572199821147
+      craftpix_tileset_105: -8395199812461836350
+      craftpix_tileset_133: -7529453212984134496
+      craftpix_tileset_125: -5411348315543389087
+      craftpix_tileset_136: 5003611402128613211
+      craftpix_tileset_9: -7781973180123636467
+      craftpix_tileset_132: -1595837729070837217
+      craftpix_tileset_75: 4066192367974876289
+      craftpix_tileset_69: 8705329768558563491
+      craftpix_tileset_15: -3270737304956636103
+      craftpix_tileset_88: 2222483196339923385
+      craftpix_tileset_74: 738178286642939351
+      craftpix_tileset_92: 8516196939347027759
+      craftpix_tileset_96: -5942484777546311675
+      craftpix_tileset_71: 8566628590490558385
+      craftpix_tileset_62: 7319720217265936512
+      craftpix_tileset_60: -4008635641980105572
+      craftpix_tileset_124: -6774728765874979274
+      craftpix_tileset_43: 2089270794377851109
+      craftpix_tileset_120: -2349259877736548848
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
