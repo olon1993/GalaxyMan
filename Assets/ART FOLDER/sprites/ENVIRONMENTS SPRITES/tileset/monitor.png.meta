@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a768790e08950dc49a49a8572fdf3d65
+guid: 401cdd4427d55eb41ae1cbcda1f86140
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_0
+      name: monitor_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f19aae7537ce9644a7242033453fe8d
-      internalID: 1690239970
+      spriteID: 1dc63463ded192a4fa9bd25fffad14ea
+      internalID: 1377083500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_1
+      name: monitor_1
       rect:
         serializedVersion: 2
         x: 24
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587b1b063debd3749bee3b66aa521bea
-      internalID: 123861917
+      spriteID: 31c95c400205a2740b8cd3aea0e7afc4
+      internalID: 25692693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_2
+      name: monitor_2
       rect:
         serializedVersion: 2
         x: 48
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d78370272ca5ff540bbf567b2c98d268
-      internalID: 257757921
+      spriteID: 193fdec9b8e52ca43874b08073f817eb
+      internalID: -975224690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_3
+      name: monitor_3
       rect:
         serializedVersion: 2
         x: 72
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52908ad2a4c2b4045931441fe55fb8f9
-      internalID: -1466357332
+      spriteID: 2ff18f7b0c2003847a1d7ee919ff5287
+      internalID: -2082087568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_4
+      name: monitor_4
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac84004e8875fb43a21df2e360ec2bd
-      internalID: 2110861309
+      spriteID: b5ec2be425a48f44bb15d40760c16312
+      internalID: -1317961044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_5
+      name: monitor_5
       rect:
         serializedVersion: 2
         x: 24
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dcbf37851566884e8942af396827164
-      internalID: 1973735024
+      spriteID: 8d3ec85db95128f4bae2814c95b40be2
+      internalID: 1900348517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_6
+      name: monitor_6
       rect:
         serializedVersion: 2
         x: 48
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0307f2a91ff7d7c40b719e7ec8ac0658
-      internalID: 466379157
+      spriteID: 4a81cf1dedc1d724ca428adc0949237e
+      internalID: -1121931962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_7
+      name: monitor_7
       rect:
         serializedVersion: 2
         x: 72
@@ -265,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bea6857f15b03a4990568e53e22a52e
-      internalID: 1100263130
+      spriteID: ea8172de8db74ff48822b2fcec58c298
+      internalID: -732585752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_8
+      name: monitor_8
       rect:
         serializedVersion: 2
         x: 0
@@ -286,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19013d68b5ae56641ab49bbc0334fa57
-      internalID: -1780839149
+      spriteID: 0d9e98c2edbd9fc4ba8977af8d462176
+      internalID: 866224353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_9
+      name: monitor_9
       rect:
         serializedVersion: 2
         x: 24
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06ddaebb40ea824458bcb1061927ded8
-      internalID: -1959750708
+      spriteID: 20606420b031d7e42a53ea89b908c952
+      internalID: 1367922920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_10
+      name: monitor_10
       rect:
         serializedVersion: 2
         x: 48
@@ -328,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8f2e31de2f1e8d4aa0cccb14d2a4be4
-      internalID: 1608646159
+      spriteID: 389b8690336070e47a67c94657553cca
+      internalID: -1464664398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_11
+      name: monitor_11
       rect:
         serializedVersion: 2
         x: 72
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbafe34362e8b74468ee49b5b3b2ad20
-      internalID: -784396656
+      spriteID: d66bcb22e08347545adf80e385d7f959
+      internalID: 1558060606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_12
+      name: monitor_12
       rect:
         serializedVersion: 2
         x: 0
@@ -370,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b41d38c011c908f40b5879d695341378
-      internalID: -1504236889
+      spriteID: 7aac52bcb4d629344a6fee542fb0f6be
+      internalID: -1907412298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_13
+      name: monitor_13
       rect:
         serializedVersion: 2
         x: 24
@@ -391,14 +391,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ad24aee35d948a4497d856ca7d6b4e6
-      internalID: 320918192
+      spriteID: f3a1fa3b97627e244b5422805da35563
+      internalID: 653523627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_14
+      name: monitor_14
       rect:
         serializedVersion: 2
         x: 48
@@ -412,14 +412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e03acc4573fb10f4890a6d9f7e2175a3
-      internalID: -1375758090
+      spriteID: 09913c130b95a1c40b48051cd6eaa713
+      internalID: 654187773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_15
+      name: monitor_15
       rect:
         serializedVersion: 2
         x: 72
@@ -433,8 +433,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2782f6b6e3331e6499907e15becfbd40
-      internalID: 1199338674
+      spriteID: 5e3fed75ea99ba24d8744725cc4e6d3a
+      internalID: -120677574
       vertices: []
       indices: 
       edges: []
@@ -450,22 +450,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ground_9: -1959750708
-      ground_10: 1608646159
-      ground_7: 1100263130
-      ground_2: 257757921
-      ground_13: 320918192
-      ground_14: -1375758090
-      ground_3: -1466357332
-      ground_1: 123861917
-      ground_11: -784396656
-      ground_12: -1504236889
-      ground_5: 1973735024
-      ground_4: 2110861309
-      ground_15: 1199338674
-      ground_0: 1690239970
-      ground_6: 466379157
-      ground_8: -1780839149
+      monitor_11: 1558060606
+      monitor_9: 1367922920
+      monitor_3: -2082087568
+      monitor_12: -1907412298
+      monitor_0: 1377083500
+      monitor_2: -975224690
+      monitor_15: -120677574
+      monitor_1: 25692693
+      monitor_5: 1900348517
+      monitor_8: 866224353
+      monitor_10: -1464664398
+      monitor_4: -1317961044
+      monitor_6: -1121931962
+      monitor_7: -732585752
+      monitor_13: 653523627
+      monitor_14: 654187773
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
