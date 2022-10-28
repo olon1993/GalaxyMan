@@ -810,6 +810,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0986e63d1e11449b403744e019fcab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _showDebugLog: 1
+  locations:
+  - {fileID: 1002945078}
+  - {fileID: 236483459}
+  - {fileID: 993791458}
+  - {fileID: 327405435}
+  - {fileID: 1530262318}
 --- !u!1 &1236931323
 GameObject:
   m_ObjectHideFlags: 0

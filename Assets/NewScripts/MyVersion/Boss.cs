@@ -9,14 +9,16 @@ public class Boss : MonoBehaviour
 	//**************************************************\\
 
 
+	[SerializeField] protected bool _showDebugLog = false;
 	private bool acting;
 	private bool justJumped;
 	// private bool shootPossible;
 	private bool jumpPossible;
 	private bool superJumpPossible;
 	private bool quickMovePossible;
+	private bool chargePossible;
 	//////////////////////////////////////////////////////
-	private GameObject[] locations;
+	public GameObject[] locations;
 	private int currentLocation = 0;
 
 	private int[][] jumpPaths;
@@ -44,9 +46,8 @@ public class Boss : MonoBehaviour
 		quickMovePossible = false;
 		yield return new WaitForEndOfFrame();
 		WhatActionsAreAvailable();
-		if (jumpPossible) {
-			StartCoroutine(RunJumpAction());
-		}
+		DecideAction();
+
 	}
 
 	private void WhatActionsAreAvailable() {
@@ -56,12 +57,14 @@ public class Boss : MonoBehaviour
 				break;
 			}
 		}
+		
 		for (int i = 0; i < superJumpPaths.Length; i++) {
 			if (superJumpPaths[i][0] == currentLocation) {
 				superJumpPossible = true;
 				break;
 			}
 		}
+		
 		for (int i = 0; i < quickMoves.Length; i++) {
 			if (quickMoves[i][0] == currentLocation) {
 				quickMovePossible = true;
@@ -70,7 +73,36 @@ public class Boss : MonoBehaviour
 		}
 	}
 
+	private void DecideAction() {
+		float decide = Random.Range(0f, 1f);
+
+		if (jumpPossible && quickMovePossible) {
+			if (decide > 0.6f) {
+				StartCoroutine(RunQuickMove());
+			} else {
+				StartCoroutine(RunJumpAction());
+			}
+		} else if (superJumpPossible && jumpPossible) {
+			if (decide > 0.6f) {
+				StartCoroutine(RunSuperJumpAction());
+			} else {
+				StartCoroutine(RunJumpAction());
+			}
+
+
+		} else if (jumpPossible) {
+			StartCoroutine(RunJumpAction());
+		}
+	}
+
+	//**************************************************\\
+	//********************* JUMP ***********************\\
+	//**************************************************\\
 	private IEnumerator RunJumpAction() {
+
+		if (_showDebugLog) {
+			Debug.Log("Jump");
+		}
 		yield return new WaitForEndOfFrame();
 		int startLoc = currentLocation;
 		int[] startIterations = new int[0];
@@ -87,9 +119,115 @@ public class Boss : MonoBehaviour
 			}
 		}
 		// now the matrix of start/end is setup in startIterations, choose a random number, and get its end location from jump paths
-
 		int jumpSelect = Random.Range(0, startIterations.Length);
-		Debug.Log("Jump Selected: " + jumpSelect);
+		int endLoc = jumpPaths[startIterations[jumpSelect]][1];
+		float t = 0f;
+		// Jump math
+		float startX = locations[startLoc].transform.position.x;
+		float startY = locations[startLoc].transform.position.y;
+		float endX = locations[endLoc].transform.position.x;
+		float endY = locations[endLoc].transform.position.y;
+		Vector2 start = new Vector2(startX, startY);
+		Vector2 end = new Vector2(endX, endY);
+		float jumpY = 10f;
+		while (t < 2f) {
+			yield return new WaitForEndOfFrame();
+			t += Time.deltaTime;
+
+			float i = t / 2;
+			float heightY = jumpY * Mathf.Sin(i * Mathf.PI);
+			Vector2 bossLoc = Vector2.Lerp(start, end, i) + new Vector2(0,heightY);
+			transform.position = bossLoc;
+		}
+		transform.position = end;
+		currentLocation = endLoc;
+		yield return new WaitForSeconds(1f);
+		acting = false;
+	}
+
+
+	//**************************************************\\
+	//****************** SUPER JUMP ********************\\
+	//**************************************************\\
+	private IEnumerator RunSuperJumpAction() {
+
+		if (_showDebugLog) {
+			Debug.Log("Super Jump");
+		}
+		yield return new WaitForEndOfFrame();
+		int startLoc = currentLocation;
+		int endLoc = 2;
+		float t = 0f;
+		// Jump math
+		float startX = locations[startLoc].transform.position.x;
+		float startY = locations[startLoc].transform.position.y;
+		float endX = locations[endLoc].transform.position.x;
+		float endY = locations[endLoc].transform.position.y;
+		Vector2 start = new Vector2(startX, startY);
+		Vector2 end = new Vector2(endX, endY);
+		float jumpY = 20f;
+		while (t < 2f) {
+			yield return new WaitForEndOfFrame();
+			t += Time.deltaTime;
+
+			if (t < 1) {
+				float heightY = jumpY * Mathf.Sin(t / 2 * Mathf.PI);
+				Vector2 bossLoc = Vector2.Lerp(start, end, t) + new Vector2(0, heightY);
+				transform.position = bossLoc;
+			} else {
+				Vector2 bossLoc = end + new Vector2(0,jumpY) * (2-t);
+				transform.position = bossLoc;
+			}
+		}
+		transform.position = end;
+		currentLocation = endLoc;
+		yield return new WaitForSeconds(1f);
+		acting = false;
+	}
+
+	//**************************************************\\
+	//****************** QUICK MOVE ********************\\
+	//**************************************************\\
+	private IEnumerator RunQuickMove() {
+		if (_showDebugLog) {
+			Debug.Log("Quick Move");
+		}
+		yield return new WaitForEndOfFrame();
+		int startLoc = currentLocation;
+		int[] startIterations = new int[0];
+		int count = 0;
+		for (int i = 0; i < quickMoves.Length; i++) {
+			if (quickMoves[i][0] == startLoc) {
+				count++;
+				int[] tmp = new int[count];
+				for (int j = 0; j < tmp.Length - 1; j++) {
+					tmp[j] = startIterations[j];
+				}
+				tmp[count - 1] = i;
+				startIterations = tmp;
+			}
+		}
+		// now the matrix of start/end is setup in startIterations, choose a random number, and get its end location from jump paths
+		int moveSelect = Random.Range(0, startIterations.Length);
+		int endLoc = quickMoves[startIterations[moveSelect]][1];
+		float t = 0f;
+		// Jump math
+		float startX = locations[startLoc].transform.position.x;
+		float startY = locations[startLoc].transform.position.y;
+		float endX = locations[endLoc].transform.position.x;
+		float endY = locations[endLoc].transform.position.y;
+		Vector2 start = new Vector2(startX, startY);
+		Vector2 end = new Vector2(endX, endY);
+		while (t < 1f) {
+			yield return new WaitForEndOfFrame();
+			t += Time.deltaTime;
+
+			Vector2 bossLoc = Vector2.Lerp(start, end, t);
+			transform.position = bossLoc;
+		}
+		transform.position = end;
+		currentLocation = endLoc;
+		yield return new WaitForSeconds(1f);
 		acting = false;
 	}
 
@@ -136,9 +274,9 @@ public class Boss : MonoBehaviour
 		for (int i = 0; i < quickMoves.Length; i++) {
 			quickMoves[i] = new int[2];
 		}
-		quickMoves[0][0] = 1;
-		quickMoves[0][1] = 2;
-		quickMoves[1][0] = 3;
-		quickMoves[1][1] = 2;
+		quickMoves[0][0] = 2;
+		quickMoves[0][1] = 0;
+		quickMoves[1][0] = 2;
+		quickMoves[1][1] = 4;
 	}
 }
