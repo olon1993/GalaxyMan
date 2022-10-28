@@ -10,7 +10,13 @@ public class Boss : MonoBehaviour
 
 
 	[SerializeField] protected bool _showDebugLog = false;
+
+	[SerializeField] protected GameObject rndrr;
+	private Vector3 baseScale;
+
+	private Transform target;
 	private bool acting;
+	private bool shooting;
 	private bool justJumped;
 	// private bool shootPossible;
 	private bool jumpPossible;
@@ -20,6 +26,7 @@ public class Boss : MonoBehaviour
 	//////////////////////////////////////////////////////
 	public GameObject[] locations;
 	private int currentLocation = 0;
+	protected float _direction = -1f;
 
 	private int[][] jumpPaths;
 	private int[][] superJumpPaths;
@@ -29,11 +36,17 @@ public class Boss : MonoBehaviour
 	//******************** Methods *********************\\
 	//**************************************************\\
 	private void Awake() {
+		baseScale = rndrr.transform.localScale;
 		SetupPaths();
 		SetupSuperJump();
+		target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 	}
 
 	private void Update() {
+		if (!shooting) {
+			_direction = Mathf.Sign(target.position.x - transform.position.x);
+			rndrr.transform.localScale = new Vector3(baseScale.x * _direction, baseScale.y, baseScale.z);
+		}
 		if (!acting) {
 			StartCoroutine(SelectAction());
 		}
@@ -49,7 +62,7 @@ public class Boss : MonoBehaviour
 		DecideAction();
 
 	}
-
+	
 	private void WhatActionsAreAvailable() {
 		for (int i = 0; i < jumpPaths.Length; i++) {
 			if (jumpPaths[i][0] == currentLocation) {
@@ -227,6 +240,23 @@ public class Boss : MonoBehaviour
 		}
 		transform.position = end;
 		currentLocation = endLoc;
+		yield return new WaitForSeconds(1f);
+		acting = false;
+	}
+
+	//**************************************************\\
+	//********************* SHOOT **********************\\
+	//**************************************************\\
+	private IEnumerator RunShootAction() {
+		yield return new WaitForEndOfFrame();
+		// point towards target
+		float ver = Mathf.Sign(target.position.y - transform.position.y);
+
+		/*
+		    5 shots, going up 15 degrees each shot
+			vertical up means start 0 degrees, 
+			vertical down means start -45 degrees, 
+		 */
 		yield return new WaitForSeconds(1f);
 		acting = false;
 	}

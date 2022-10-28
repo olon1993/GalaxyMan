@@ -5,12 +5,12 @@ using UnityEngine;
 public class Movement2D : MovementRules2D
 {
 	protected IInput _input;
-	[SerializeField] protected GameObject renderer;
+	[SerializeField] protected GameObject rndrr;
 	private Vector3 baseScale;
 
 	protected override void Awake() {
 		base.Awake();
-		baseScale = renderer.transform.localScale;
+		baseScale = rndrr.transform.localScale;
 		_input = this.gameObject.GetComponent<IInput>();
 		if (_input == null) {
 			Debug.LogError("No Input found!");
@@ -66,7 +66,7 @@ public class Movement2D : MovementRules2D
 		} else if (WallRight) {
 			_direction = -1f;
 		}
-		renderer.transform.localScale = new Vector3(baseScale.x * _direction, baseScale.y, baseScale.z);
+		rndrr.transform.localScale = new Vector3(baseScale.x * _direction, baseScale.y, baseScale.z);
 	}
 
 	protected virtual void ProcessJumpInput() {

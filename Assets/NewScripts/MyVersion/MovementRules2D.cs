@@ -233,7 +233,7 @@ public class MovementRules2D : ColliderBounding2D
 			airDash = false;
 			groundDash = false;
 		}
-		if (!wantsToDash) {
+		if (!wantsToDash && (_wallSliding || Grounded)) {
 			dashLock = false;
 		}
 	}
@@ -253,24 +253,28 @@ public class MovementRules2D : ColliderBounding2D
 	private void HorizontalRaycheck() {
 		for (int i = 1; i < _horizontalRayCount - 1; i++) {
 			// RIGHT CHECK
-			Vector2 rayOrigin = _colliderCorners.BottomRight + new Vector2(-_edgeCheckWidth, i * _horizontalRaySpacing);
-			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.right, _edgeCheckWidth * 2, collisionMask);
-			if (hit) {
-				_colliderInfo.Right = true;
-				jumping = false;
+			if (_velocity.x > -Mathf.Epsilon) {
+				Vector2 rayOrigin = _colliderCorners.BottomRight + new Vector2(-_edgeCheckWidth, i * _horizontalRaySpacing);
+				RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.right, _edgeCheckWidth * 2, collisionMask);
+				if (hit) {
+					_colliderInfo.Right = true;
+					jumping = false;
+				}
+				if (_showDebugLog) {
+					Debug.DrawRay(rayOrigin, Vector3.right * (_edgeCheckWidth * 2), Color.red);
+				}
 			}
-			if (_showDebugLog) {
-				Debug.DrawRay(rayOrigin, Vector3.right * (_edgeCheckWidth * 2), Color.red);
-			}
-			// LEFT CHECK
-			rayOrigin = _colliderCorners.BottomLeft + new Vector2(+_edgeCheckWidth, i * _horizontalRaySpacing);
-			hit = Physics2D.Raycast(rayOrigin, Vector3.left, _edgeCheckWidth * 2, collisionMask);
-			if (hit) {
-				_colliderInfo.Left = true;
-				jumping = false;
-			}
-			if (_showDebugLog) {
-				Debug.DrawRay(rayOrigin, Vector3.left * (_edgeCheckWidth * 2), Color.red);
+			if (_velocity.x < Mathf.Epsilon) {
+				// LEFT CHECK
+				Vector2 rayOrigin = _colliderCorners.BottomLeft + new Vector2(+_edgeCheckWidth, i * _horizontalRaySpacing);
+				RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.left, _edgeCheckWidth * 2, collisionMask);
+				if (hit) {
+					_colliderInfo.Left = true;
+					jumping = false;
+				}
+				if (_showDebugLog) {
+					Debug.DrawRay(rayOrigin, Vector3.left * (_edgeCheckWidth * 2), Color.red);
+				}
 			}
 		}
 
