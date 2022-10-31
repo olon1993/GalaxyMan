@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TheFrozenBanana;
 
 public class Projectile : MonoBehaviour, IProjectile
 {
@@ -53,11 +52,6 @@ public class Projectile : MonoBehaviour, IProjectile
 	private void HandleDamageForce(Collider2D col) {
 		float damageDirection = transform.position.x < col.transform.position.x ? 1 : -1;
 
-		ICanBeAffectedByDamageForce objectAffectedByDamageForce = col.GetComponent<ICanBeAffectedByDamageForce>();
-
-		if (objectAffectedByDamageForce != null) {
-			objectAffectedByDamageForce.ApplyDamageForce(1, damageDirection);
-		}
 	}
 
 	// only handles movement if active

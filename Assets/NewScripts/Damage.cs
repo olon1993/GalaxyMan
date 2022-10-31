@@ -1,5 +1,4 @@
 using UnityEngine;
-using TheFrozenBanana;
 
 public class Damage : MonoBehaviour, IDamage
 {
