@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3430240246259922410}
   - component: {fileID: 3430240246259922413}
   - component: {fileID: 3430240246259922412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3430240246259922414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8545798663381569744}
@@ -205,9 +205,9 @@ GameObject:
   - component: {fileID: 3737960591497499490}
   - component: {fileID: 3737960591497499493}
   - component: {fileID: 3737960591497499494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02140665, y: -0.05621791}
+  m_Offset: {x: -0.15352398, y: -0.16123423}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -252,7 +252,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5842109, y: 0.59966135}
+  m_Size: {x: 1.5666219, y: 1.7988806}
   m_EdgeRadius: 0
 --- !u!114 &3737960591497499491
 MonoBehaviour:
@@ -286,21 +286,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _useGravity: 1
-  _maxJumpHeight: 2
+  _maxJumpHeight: 3.5
   _timeToJumpApex: 0.4
-  _maxSlopeAngle: 80
-  _walkSpeed: 6
-  _dashSpeed: 11
+  _maxSlopeAngle: 50
+  _walkSpeed: 12
+  _dashSpeed: 24
   _wallSlideSpeedMax: 3
-  _terminalFallingVelocity: -30
+  _terminalFallingVelocity: -45
   _minJumpHeight: 1
   _coyoteTimeMargin: 0.25
   _wallStickTime: 0.25
-  _wallJumpClimb: {x: 0, y: 0}
-  _wallJumpOff: {x: 0, y: 0}
-  _wallLeap: {x: 0, y: 0}
-  _dashStaminaCost: 0
-  _staminaIdleReplenishAmount: 0
+  _wallJumpClimb: {x: 7.5, y: 16}
+  _wallJumpOff: {x: 8.5, y: 7}
+  _wallLeap: {x: 18, y: 17}
+  _dashStaminaCost: 3
+  _staminaIdleReplenishAmount: 30
   _staminaDrainFrequency: 0.1
 --- !u!114 &3737960591497499490
 MonoBehaviour:

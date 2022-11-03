@@ -245,34 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _locationId: 3
---- !u!1 &381573522 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 381573522, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-  m_PrefabInstance: {fileID: 728698594}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &381573525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381573522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf1675a86df62c4e965150302bd178a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: Player
-  hand: {fileID: 728698595}
-  _projectilesBySize:
-  - {fileID: 5902931012708338258, guid: a5627048acf8ec3449d58a784458b954, type: 3}
-  - {fileID: 915659332371569813, guid: 83eefabe6eac1934d91e1a1e2c38a520, type: 3}
-  - {fileID: 8937593003508523293, guid: abaa57e94f5139043b60d32c2f9330b9, type: 3}
-  _maxChargeTime: 1
-  _chargeAnnotations:
-  - 0.2
-  - 0.8
-  - 1.5
 --- !u!1 &440640830
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,46 +565,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 381573523, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 381573524, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 381573524, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 381573524, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560279629648474292, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 560279629648474292, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 560279629648474292, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560279629648474292, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7073773658841133617, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_TagString
-      value: Hand
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545798663001642733, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_Name
-      value: Renderer
-      objectReference: {fileID: 0}
     - target: {fileID: 8545798663381569744, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -677,53 +609,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569745, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: rndrr
-      value: 
-      objectReference: {fileID: 1125871962}
-    - target: {fileID: 8545798663381569745, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: gravity
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569745, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: jumpSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569745, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: acceleration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569745, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: _showDebugLog
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569745, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: maxHorizontalSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8545798663381569747, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569747, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569747, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545798663381569751, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
---- !u!1 &728698595 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7073773658841133617, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-  m_PrefabInstance: {fileID: 728698594}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &860959721
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,11 +887,6 @@ PolygonCollider2D:
       - {x: 13, y: 7}
       - {x: 13, y: -4}
       - {x: 15, y: -4}
---- !u!1 &1125871962 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8545798663001642733, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-  m_PrefabInstance: {fileID: 728698594}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171800448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,10 +3406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172ecdbd967eb0a4fa7a5ff9cd7135d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showDebugLog: 0
-  _maxHealth: 100
-  _currentHealth: 0
-  _timeToDie: 0
 --- !u!1 &1984044771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,27 +3490,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2032413617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8545798663381569747, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-  m_PrefabInstance: {fileID: 728698594}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2032413623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032413617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172ecdbd967eb0a4fa7a5ff9cd7135d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showDebugLog: 0
-  _maxHealth: 10
-  _currentHealth: 10
-  _timeToDie: 0.2
 --- !u!1 &2071760450
 GameObject:
   m_ObjectHideFlags: 0
