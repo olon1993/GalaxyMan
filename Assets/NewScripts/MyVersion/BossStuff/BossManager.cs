@@ -10,8 +10,12 @@ public class BossManager : MonoBehaviour
 
 	[SerializeField] protected bool _showDebugLog = false;
 	[SerializeField] protected GameObject rndrr;
+	[SerializeField] protected GameObject _weapon;
+	[SerializeField] protected float pauseBetweenActions = 1f;
+	private bool pausing;
 	private Vector3 baseScale;
-	private Transform target;
+	private Vector3 weaponScale;
+	private Transform _target;
 	private IBossAction[] allActions;
 	private IBossAction[] possibleActions;
 	private IBossAction currentAction;
@@ -26,24 +30,33 @@ public class BossManager : MonoBehaviour
 
 	private void Awake() {
 		baseScale = rndrr.transform.localScale;
-		target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+		weaponScale = _weapon.transform.localScale;
+		_target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		allActions = GetComponents<IBossAction>();
 	}
 
 	private void Update() {
-		if (currentAction != null) {
-			if (!currentAction.ActionBusy) {
-				if (_showDebugLog) {
-					Debug.Log("NEW ACTION SELECTION");
-				}
-				currentLocationId = currentAction.EndLocationId;
-				_direction = Mathf.Sign(target.position.x - transform.position.x);
-				rndrr.transform.localScale = new Vector3(baseScale.x * _direction, baseScale.y, baseScale.z);
-				SelectAction();
-			}
-		} else {
+		if (currentAction == null) {
 			SelectAction();
 		}
+		if (currentAction.ActionBusy) {
+
+		} else if (pausing || currentAction.ActionDelay) {
+			UpdateDirection();
+		} else {
+			if (_showDebugLog) {
+				Debug.Log("NEW ACTION SELECTION");
+			}
+			UpdateDirection();
+			currentLocationId = currentAction.EndLocationId;
+			SelectAction();
+		}
+	}
+
+	private void UpdateDirection() {
+		_direction = Mathf.Sign(_target.position.x - transform.position.x);
+		rndrr.transform.localScale = new Vector3(baseScale.x * _direction, baseScale.y, baseScale.z);
+		Weapon.transform.localScale = new Vector3(weaponScale.x * _direction, weaponScale.y, weaponScale.z);
 	}
 
 	private void SelectAction() {
@@ -53,8 +66,17 @@ public class BossManager : MonoBehaviour
 				AddPossibleAction(allActions[i]);
 			}
 		}
+		pausing = true;
 		currentAction = possibleActions[Random.Range(0, possibleActions.Length)];
+		StartCoroutine(DelayedStartAction());
+		//currentAction.RunAction();
+	}
+
+	private IEnumerator DelayedStartAction() {
+		yield return new WaitForSeconds(pauseBetweenActions);
 		currentAction.RunAction();
+		yield return new WaitForEndOfFrame();
+		pausing = false;
 	}
 
 	private void AddPossibleAction(IBossAction action) {
@@ -66,4 +88,7 @@ public class BossManager : MonoBehaviour
 		possibleActions = tmp;
 
 	}
+
+	public GameObject Weapon { get { return _weapon; } }
+	public Transform Target { get { return _target; } }
 }

@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class QuickMoveAction : BossAction
 {
-	protected override IEnumerator CarryOutAction() {
-		base.CarryOutAction();
-
+	protected override IEnumerator CarryOutSpecificAction() {
 		float t = 0f;
 		float startX = StartLocations[StartInt].Trans.position.x;
 		float startY = StartLocations[StartInt].Trans.position.y;
@@ -23,7 +21,6 @@ public class QuickMoveAction : BossAction
 			transform.position = bossLoc;
 		}
 		transform.position = end;
-		yield return new WaitForSeconds(1f);
 		_actionBusy = false;
 	}
 }

@@ -19,6 +19,11 @@ public class Health : MonoBehaviour, IHealth
 	//******************** Methods *********************\\
 	//**************************************************\\
 
+	private void Awake() {
+		if (_currentHealth == 0) {
+			_currentHealth = _maxHealth;
+		}
+	}
 	public virtual void TakeDamage(IDamage damage) {
 		if (_isDead) {
 			return;
