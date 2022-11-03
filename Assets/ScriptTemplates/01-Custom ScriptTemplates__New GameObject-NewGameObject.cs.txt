@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-    #ROOTNAMESPACEBEGIN#
+	#ROOTNAMESPACEBEGIN#
+
 public class #SCRIPTNAME# : MonoBehaviour
 {
     [SerializeField] private bool _showDebugLog = false;

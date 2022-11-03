@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-    #ROOTNAMESPACEBEGIN#
+	#ROOTNAMESPACEBEGIN#
+
 public interface #SCRIPTNAME# 
 {
     #NOTRIM#
