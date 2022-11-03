@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : MonoBehaviour
+{
+    [SerializeField] private bool _showDebugLog = false;
+
+    //**************************************************\\
+    //********************* Fields *********************\\
+    //**************************************************\\
+    #NOTRIM#
+
+    //**************************************************\\
+    //******************** Methods *********************\\
+    //**************************************************\\
+
+    #region PublicMethods
+
+    #endregion
+
+
+    #region UnityMethods
+
+    void Awake()
+    {
+        #NOTRIM#
+    }
+
+    void Start()
+    {
+        #NOTRIM#
+    }
+
+    void Update()
+    {
+        #NOTRIM#
+    }
+
+    #endregion
+
+
+    #region PrivateMethods
+
+    #endregion
+
+
+    //**************************************************\\
+    //****************** Properties ********************\\
+    //**************************************************\\
+
+
+}
+#ROOTNAMESPACEEND#
