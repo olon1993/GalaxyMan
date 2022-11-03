@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Hand
+  - PassableObstacle
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Terrain
   - Water
   - UI
-  - 
+  - PhysicsObject2d
   - 
   - 
   - 
