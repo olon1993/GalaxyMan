@@ -10,7 +10,7 @@ public class BossAction : MonoBehaviour, IBossAction
 	//**************************************************\\
 
 	[SerializeField] private string _actionName = "Jump";
-	[SerializeField] private bool _showDebugLog;
+	[SerializeField] protected bool _showDebugLog;
 	[SerializeField] private GameObject[] _startLocationsGO; // Can't add Interfaces through Unity editor, so using game objects instead
 	[SerializeField] private GameObject[] _endLocationsGO;
 	[SerializeField] private IActionLocations[] _startLocations;
@@ -18,10 +18,15 @@ public class BossAction : MonoBehaviour, IBossAction
 	[SerializeField] private bool _canEndOnSameLocation;
 	[SerializeField] private bool _mustEndOnSameLocation;
 	[SerializeField] private float _totalActionTime = 1f;
+	[SerializeField] private float _anticipationTime = 1f;
+	[SerializeField] private float _actionDelayTime = 1f;
+	[SerializeField] private GameObject _anticipationEffect;
+	protected BossManager _bossManager;
 	protected bool _actionBusy;
+	protected bool _actionDelay;
 
 	private int _startLocationId;
-	private int _endLocationId;
+	protected int _endLocationId;
 	private int _startInt;
 	private int _endInt;
 
@@ -29,7 +34,11 @@ public class BossAction : MonoBehaviour, IBossAction
 	//******************** Methods *********************\\
 	//**************************************************\\
 
-	private void Awake() {
+	protected virtual void Awake() {
+		if (_totalActionTime < Mathf.Epsilon) {
+			_totalActionTime = 1f;
+		}
+		_bossManager = gameObject.GetComponent<BossManager>();
 		_startLocations = new IActionLocations[_startLocationsGO.Length];
 		_endLocations = new IActionLocations[_endLocationsGO.Length];
 		for (int i = 0; i < _startLocationsGO.Length; i++) {
@@ -45,6 +54,10 @@ public class BossAction : MonoBehaviour, IBossAction
 		bool check = false;
 		// Start Location Check
 		_startLocationId = start;
+		if (_showDebugLog) {
+			Debug.Log("Action: "+ _actionName+ ": " + start);
+			Debug.Log("Locations count: " + _startLocations.Length);
+		}
 		for (int i = 0; i < _startLocations.Length; i++) {
 			if (_startLocationId == _startLocations[i].LocationId) {
 				check = true;
@@ -87,14 +100,23 @@ public class BossAction : MonoBehaviour, IBossAction
 	}
 
 	public void RunAction() {
-		_actionBusy = true;
+		_actionDelay = true;
 		StartCoroutine(CarryOutAction());
 	}
 
-	protected virtual IEnumerator CarryOutAction() {
+	protected IEnumerator CarryOutAction() {
 		if (_showDebugLog) {
 			Debug.Log("Start Action: " + _actionName);
 		}
+		GameObject tmp = Instantiate(_anticipationEffect, transform.position, Quaternion.identity, null) as GameObject;
+		yield return new WaitForSeconds(_anticipationTime);
+		Destroy(tmp, 1f);
+		_actionBusy = true;
+		_actionDelay = false;
+		StartCoroutine(CarryOutSpecificAction());
+	}
+
+	protected virtual IEnumerator CarryOutSpecificAction() {
 		yield return new WaitForEndOfFrame();
 	}
 
@@ -104,12 +126,17 @@ public class BossAction : MonoBehaviour, IBossAction
 
 	public string ActionName { get { return _actionName; } }
 	public bool ShowDebugLog { get { return _showDebugLog; } }
+	public BossManager BossManager { get { return _bossManager; } }
 	public bool ActionBusy { get { return _actionBusy; } }
+	public bool ActionDelay { get { return _actionDelay; } }
 	public IActionLocations[] StartLocations { get { return _startLocations; } }
 	public IActionLocations[] EndLocations { get { return _endLocations; } }
 	public bool CanEndOnSameLocation { get { return _canEndOnSameLocation; } }
 	public bool MustEndOnSameLocation { get { return _mustEndOnSameLocation; } }
 	public float TotalActionTime { get { return _totalActionTime; } }
+	public float AnticipationTime { get { return _anticipationTime; } }
+	public float ActionDelayTime { get { return _actionDelayTime; } }
+	public GameObject AnticipationEffect { get { return _anticipationEffect; } }
 	public int StartLocationId { get { return _startLocationId; } }
 	public int EndLocationId { get { return _endLocationId; } }
 	public int StartInt { get { return _startInt; } }
