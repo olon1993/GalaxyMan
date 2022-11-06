@@ -19,6 +19,7 @@ public class ColliderBounding2D : MonoBehaviour
 	protected int _horizontalRayCount;
 	protected int _verticalRayCount;
 	protected ColliderCorners _colliderCorners;
+	protected const float _skinWidth = 0.015f;
 
 
 	//**************************************************\\
@@ -44,6 +45,7 @@ public class ColliderBounding2D : MonoBehaviour
 
 	protected void CalculateRaySpacing() {
 		Bounds bounds = _collider.bounds;
+		bounds.Expand(_skinWidth * -2);
 
 		float boundsWidth = bounds.size.x;
 		float boundsHeight = bounds.size.y;

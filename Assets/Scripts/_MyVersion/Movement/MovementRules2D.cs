@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovementRules2D : ColliderBounding2D
 {
@@ -9,6 +10,7 @@ public class MovementRules2D : ColliderBounding2D
 	//********************* Fields *********************\\
 	//**************************************************\\
 
+	protected IInput _input;
 	protected Vector2 _movement = Vector2.zero; // Desired movement
 	protected Vector2 _velocity = Vector2.zero; // Actual movement
 	// Collider
@@ -32,13 +34,15 @@ public class MovementRules2D : ColliderBounding2D
 	[SerializeField] protected float maxHorizontalSpeed = 5f;
 	[SerializeField] protected float maxDashHoldTime = 0.6f;
 	[SerializeField] protected float dashSpeed = 15f;
-	protected float _direction = 1f;
+	protected float _moveDirection = 1f;
+	protected float _faceDirection = 1f;
 	protected bool dashing;
 	protected bool wantsToDash;
 	protected bool dashLock;
 	protected bool groundDash;
 	protected bool airDash;
 	protected float dashTimer;
+	[SerializeField] protected Slider dashSlider;
 
 	// Walls
 	[SerializeField] protected float _maxSlopeAngle = 46f;
@@ -72,7 +76,10 @@ public class MovementRules2D : ColliderBounding2D
 	}
 
 	protected virtual void ProcessInput() {
-
+		if (_input != null && !_wallSliding) {
+			if (Mathf.Abs(_input.HorizontalInput) > Mathf.Epsilon)
+ 			_faceDirection = Mathf.Sign(_input.HorizontalInput);
+		}
 	}
 
 	protected void DetermineMovement() {
@@ -114,12 +121,11 @@ public class MovementRules2D : ColliderBounding2D
 		if (_showDebugLog) {
 			Debug.DrawRay(trans.position,_movement, Color.blue);
 			Debug.DrawRay(trans.position,_velocity.normalized, Color.magenta);
-			Debug.DrawRay(trans.position,Vector2.right * _direction, Color.cyan);
+			Debug.DrawRay(trans.position,Vector2.right * _moveDirection, Color.cyan);
 		}
 	}
 
 	protected virtual void Move() {
-
 		trans.Translate(_velocity * Time.fixedDeltaTime);
 	}
 
@@ -201,7 +207,7 @@ public class MovementRules2D : ColliderBounding2D
 		if (wantsToDash && !dashing && dashTimer < maxDashHoldTime && !dashLock) {
 			dashLock = true;
 			if (Grounded) {
-				_movement.x = Mathf.Sign(_direction) * dashSpeed;
+				_movement.x = Mathf.Sign(_faceDirection) * dashSpeed;
 				groundDash = true;
 			} else {
 				if (WallLeft) {
@@ -211,7 +217,7 @@ public class MovementRules2D : ColliderBounding2D
 					_currentWallStickTime = 10f;
 					_movement.x = Mathf.Sign(-1) * dashSpeed;
 				} else {
-					_movement.x = Mathf.Sign(_direction) * dashSpeed;
+					_movement.x = Mathf.Sign(_faceDirection) * dashSpeed;
 				}
 				airDash = true;
 			}
@@ -223,7 +229,7 @@ public class MovementRules2D : ColliderBounding2D
 			if (airDash) {
 				_movement.y = 0f;
 			}
-			_movement.x = Mathf.Sign(_direction) * dashSpeed;
+			_movement.x = Mathf.Sign(_moveDirection) * dashSpeed;
 		} else {
 			dashing = false;
 			dashTimer -= Time.fixedDeltaTime;
@@ -235,6 +241,9 @@ public class MovementRules2D : ColliderBounding2D
 		}
 		if (!wantsToDash && (_wallSliding || Grounded)) {
 			dashLock = false;
+		}
+		if (dashSlider != null) {
+			dashSlider.value = (1 - (dashTimer/maxDashHoldTime));
 		}
 	}
 
@@ -277,7 +286,6 @@ public class MovementRules2D : ColliderBounding2D
 				}
 			}
 		}
-
 	}
 
 	private void VerticalRaycheck() {
@@ -286,19 +294,20 @@ public class MovementRules2D : ColliderBounding2D
 			// BOTTOM CHECK
 			Vector2 rayOrigin = _colliderCorners.BottomLeft + new Vector2(i * _verticalRaySpacing, +_edgeCheckWidth);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.down, _edgeCheckWidth * 2, collisionMask);
-			if (hit) {
-				if (_movement.y < -Mathf.Epsilon) {
-					_movement.y = 0;
+			if (_velocity.y < -Mathf.Epsilon) {
+				if (hit) {
+					if (_movement.y < -Mathf.Epsilon) {
+						_movement.y = 0;
+					}
+					ProcessFloorAngle(hit);
+
+					_colliderInfo.raysToGround += 1;
+					jumping = false;
 				}
-				ProcessFloorAngle(hit);
-
-				_colliderInfo.raysToGround += 1;
-				jumping = false;
+				if (_showDebugLog) {
+					Debug.DrawRay(rayOrigin, Vector3.down * (_edgeCheckWidth * 2), Color.red);
+				}
 			}
-			if (_showDebugLog) {
-				Debug.DrawRay(rayOrigin, Vector3.down * (_edgeCheckWidth * 2), Color.red);
-			}
-
 			// TOP CHECK
 			rayOrigin = _colliderCorners.TopLeft + new Vector2(i * _verticalRaySpacing, -_edgeCheckWidth);
 			hit = Physics2D.Raycast(rayOrigin, Vector3.up, _edgeCheckWidth * 2, collisionMask);
@@ -369,6 +378,7 @@ public class MovementRules2D : ColliderBounding2D
 	public bool Ceiling { get { return _colliderInfo.Above; } }
 	public bool WallLeft { get { return _colliderInfo.Left; } }
 	public bool WallRight { get { return _colliderInfo.Right; } }
-	public float Direction { get { return _direction; } }
+	public float Direction { get { return _moveDirection; } }
+	public float FaceDirection { get { return _faceDirection; } }
 }
 

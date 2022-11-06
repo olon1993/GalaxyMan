@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheFrozenBanana;
 
-namespace TheFrozenBanana {
+namespace TheFrozenBanana
+{
 
 	public class Projectile2d : MonoBehaviour
 	{
@@ -14,44 +15,36 @@ namespace TheFrozenBanana {
 		private Damage _damage;
 		private Vector3 _direction;
 
-		private void Awake() 
-		{
+		private void Awake() {
 			_damage = gameObject.GetComponent<Damage>();
-			if (_damage == null)
-			{
+			if (_damage == null) {
 				Debug.LogError("Damage not found on " + name);
 			}
 		}
 
-		private void FixedUpdate()
-		{
+		private void FixedUpdate() {
 			gameObject.transform.Translate(_direction.normalized * _velocity * Time.fixedDeltaTime);
 		}
 
-		private void OnCollisionEnter2D(Collision2D collision) 
-		{
-            if (collision.collider.gameObject.layer.Equals(_collisionMask) == false)
-            {
+		private void OnCollisionEnter2D(Collision2D collision) {
+			if (collision.collider.gameObject.layer.Equals(_collisionMask) == false) {
 				return;
-            }
+			}
 
-			if (_hitEffect != null) 
-			{
+			if (_hitEffect != null) {
 				Instantiate(_hitEffect, gameObject.transform.position, Quaternion.identity, null);
 			}
 
 			IHealth health = collision.gameObject.GetComponent<IHealth>();
-			if (health != null) 
-			{
+			if (health != null) {
 				// Do damage
 				health.TakeDamage(_damage);
 			}
 
 			IRecoil recoil = collision.collider.GetComponent<IRecoil>();
-			if (recoil != null)
-			{
+			if (recoil != null) {
 				float damageDirection = transform.position.x < collision.transform.position.x ? 1 : -1;
-				recoil.ApplyDamageForce(_damage.DamageForce, damageDirection);
+				//	recoil.ApplyDamageForce(_damage.DamageForce, damageDirection);
 			}
 		}
 	}

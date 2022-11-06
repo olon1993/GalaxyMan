@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Movement2D : MovementRules2D
 {
-	protected IInput _input;
 	[SerializeField] protected GameObject rndrr;
 	private Vector3 baseScale;
 
@@ -18,6 +17,7 @@ public class Movement2D : MovementRules2D
 	}
 
 	protected override void ProcessInput() {
+		base.ProcessInput();
 		ProcessHorizontalInput();
 		ProcessJumpInput();
 		ProcessDashInput();
@@ -59,14 +59,17 @@ public class Movement2D : MovementRules2D
 	protected void ProcessFaceDirection() {
 		if (!_wallSliding) {
 			if (Mathf.Abs(_input.HorizontalInput) > Mathf.Epsilon) {
-				_direction = Mathf.Sign(_movement.x);
+				_moveDirection = Mathf.Sign(_movement.x);
 			}
 		} else if (WallLeft) {
-			_direction = 1f;
+			_moveDirection = 1f;
+			_faceDirection = 1f;
 		} else if (WallRight) {
-			_direction = -1f;
+			_moveDirection = -1f;
+			_faceDirection = -1f;
 		}
-		rndrr.transform.localScale = new Vector3(baseScale.x * _direction, baseScale.y, baseScale.z);
+		
+		rndrr.transform.localScale = new Vector3(baseScale.x * _faceDirection, baseScale.y, baseScale.z);
 	}
 
 	protected virtual void ProcessJumpInput() {

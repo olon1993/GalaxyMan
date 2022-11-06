@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4455570798371375457}
   - component: {fileID: 976621070075634180}
   - component: {fileID: 2331592984908854411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3959907005809676057}
   - component: {fileID: 4703761408602514344}
   - component: {fileID: 2395435816404141890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22dc6b47e2e41c4db1b03e048fa30e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocity: 10
+  _velocity: 18
   _child: {fileID: 2755135807816907560}
   _hitEffect: {fileID: 0}
 --- !u!114 &2395435816404141890
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8937593003508523293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ffa8369b0fa0f244a2cd513fac81f4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cea4fb8cca32eb4caeb6367313c0b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _damageTypeDefinition: 0

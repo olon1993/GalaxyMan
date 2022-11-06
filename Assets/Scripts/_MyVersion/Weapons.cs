@@ -61,7 +61,7 @@ namespace TheFrozenBanana
 			else
 			{
 				hand.transform.localRotation = Quaternion.Euler(0, 0, 0);
-				firingDirection = Vector3.right * mover.Direction;
+				firingDirection = Vector3.right * mover.FaceDirection;
 			}
 		}
 

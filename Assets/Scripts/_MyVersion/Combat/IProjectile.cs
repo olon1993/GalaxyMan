@@ -7,7 +7,7 @@ namespace TheFrozenBanana
 
 	public interface IProjectile
 	{
-		Damage damage { get; set; }
+		IDamage damage { get; set; }
 		GameObject child { get; set; }
 		GameObject hitEffect { get; }
 		Vector3 direction { get; set; }
