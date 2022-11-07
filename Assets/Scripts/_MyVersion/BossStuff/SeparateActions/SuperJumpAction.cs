@@ -8,6 +8,13 @@ public class SuperJumpAction : BossAction
 	[SerializeField] protected float JumpHeight = 10f;
 	[SerializeField] protected Vector2 WaveSpeed;
 	[SerializeField] protected GameObject WavePrefab;
+	[SerializeField] protected Vector2 CameraVibration;
+	private GameObject cam;
+
+	protected override void Awake() {
+		base.Awake();
+		cam = GameObject.FindGameObjectWithTag("MainCamera");
+	}
 
 	protected override IEnumerator CarryOutSpecificAction() {
 		float t = 0f;
@@ -17,6 +24,8 @@ public class SuperJumpAction : BossAction
 		float endY = EndLocations[EndInt].Trans.position.y;
 		Vector2 start = new Vector2(startX, startY);
 		Vector2 end = new Vector2(endX, endY);
+		GameObject tmp = Instantiate(_juiceEffect, transform.position, Quaternion.identity, null) as GameObject;
+		Destroy(tmp, 2f);
 		while (t < TotalActionTime) {
 			yield return new WaitForEndOfFrame();
 			t += Time.deltaTime;
@@ -37,7 +46,10 @@ public class SuperJumpAction : BossAction
 	}
 
 	private void CreateWave() {
+		GameObject tmp = Instantiate(_juiceEffect, transform.position, Quaternion.identity, null) as GameObject;
+		Destroy(tmp, 2f);
 		StartCoroutine(InstantiateWave());
+		StartCoroutine(ShakeCamera());
 	}
 
 	private IEnumerator InstantiateWave() {
@@ -53,7 +65,7 @@ public class SuperJumpAction : BossAction
 			yield return new WaitForSeconds(i);
 			t += i;
 			iteration++;
-			Vector3 spawnLocationLeft = new Vector3(startLocation.x - iteration, startLocation.y - 2,0);
+			Vector3 spawnLocationLeft = new Vector3(startLocation.x - iteration, startLocation.y - 2, 0);
 			GameObject tmpLeft = Instantiate(WavePrefab, spawnLocationLeft, Quaternion.identity, null) as GameObject;
 			tmpLeft.GetComponent<GravityHazard>().SetupSpawnedHazard(WaveSpeed.y);
 			Vector3 spawnLocationRight = new Vector3(startLocation.x + iteration, startLocation.y - 2, 0);
@@ -64,11 +76,20 @@ public class SuperJumpAction : BossAction
 		}
 	}
 
-
-	/// if speed is 10, it should be 2 seconds to do all.
-	/// if speed is 1 , it should be 20 seconds to do all.
-	/// so the initial time is 20.
-	/// the higher the speed, the lower the total time.
-	/// but, how much time inbetween?
-	/// maxTime / 20 
+	private IEnumerator ShakeCamera() {
+		float maxTime = 20 / WaveSpeed.x;
+		Vector3 pos = cam.transform.position;
+		float t = 0;
+		float i = 0;
+		while (t < maxTime) {
+			t += Time.deltaTime;
+			i = t / maxTime;
+			yield return new WaitForEndOfFrame();
+			float randomX = Random.Range(-CameraVibration.x, CameraVibration.x);
+			float randomY = Random.Range(-CameraVibration.y, CameraVibration.y);
+			Vector3 ranPos = new Vector3(pos.x + randomX, pos.y + randomY, pos.z);
+			cam.transform.position = Vector3.Lerp(ranPos,pos,i);
+		}
+		cam.transform.position = pos;
+	}
 }

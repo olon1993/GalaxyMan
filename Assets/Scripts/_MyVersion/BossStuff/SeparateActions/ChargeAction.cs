@@ -34,7 +34,9 @@ public class ChargeAction : BossAction
 			transform.position = bossLoc;
 		}
 		// HIT WALL EFFECT
-
+		float dir = Mathf.Sign(endX - startX);
+		GameObject tmp = Instantiate(_juiceEffect, transform.position - Vector3.right * dir, Quaternion.identity, null) as GameObject;
+		Destroy(tmp, 2f);
 		// NOW GO UP
 		t = 0f;
 		start = new Vector2(end.x, end.y);
@@ -50,6 +52,8 @@ public class ChargeAction : BossAction
 
 		// HIT THE TOP 
 
+		GameObject tmp2 = Instantiate(_juiceEffect, transform.position + Vector3.up, Quaternion.identity, null) as GameObject;
+		Destroy(tmp2, 2f);
 		// NOW ARC TO A RANDOM PLATFORM LOCATION
 		t = 0f;
 		start = new Vector2(end.x, end.y);
@@ -67,6 +71,8 @@ public class ChargeAction : BossAction
 			Vector2 bossLoc = Vector2.Lerp(start, tmpEnd, i);
 			transform.position = bossLoc;
 		}
+		GameObject tmp3 = Instantiate(_juiceEffect, transform.position - Vector3.up, Quaternion.identity, null) as GameObject;
+		Destroy(tmp3, 2f);
 		transform.position = end;
 		_endLocationId = bounceId;
 		_actionBusy = false;

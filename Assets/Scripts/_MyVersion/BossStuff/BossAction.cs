@@ -21,6 +21,7 @@ public class BossAction : MonoBehaviour, IBossAction
 	[SerializeField] private float _anticipationTime = 1f;
 	[SerializeField] private float _actionDelayTime = 1f;
 	[SerializeField] private GameObject _anticipationEffect;
+	[SerializeField] protected GameObject _juiceEffect;
 	protected BossManager _bossManager;
 	protected bool _actionBusy;
 	protected bool _actionDelay;

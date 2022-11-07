@@ -12,6 +12,9 @@ public class QuickMoveAction : BossAction
 		float endY = EndLocations[EndInt].Trans.position.y;
 		Vector2 start = new Vector2(startX, startY);
 		Vector2 end = new Vector2(endX, endY);
+		float dir = Mathf.Sign(endX - startX);
+		GameObject tmp = Instantiate(_juiceEffect, transform.position - Vector3.right * dir, Quaternion.identity, null) as GameObject;
+		Destroy(tmp, 2f);
 		while (t < TotalActionTime) {
 			yield return new WaitForEndOfFrame();
 			t += Time.deltaTime;

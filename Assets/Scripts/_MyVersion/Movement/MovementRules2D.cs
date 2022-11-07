@@ -10,6 +10,9 @@ public class MovementRules2D : ColliderBounding2D
 	//********************* Fields *********************\\
 	//**************************************************\\
 
+	// TEST
+	public float collll;
+
 	protected IInput _input;
 	protected Vector2 _movement = Vector2.zero; // Desired movement
 	protected Vector2 _velocity = Vector2.zero; // Actual movement
@@ -49,6 +52,10 @@ public class MovementRules2D : ColliderBounding2D
 	[SerializeField] protected float _wallStickTime = 0.5f;
 	protected bool _wallSliding;
 	protected float _currentWallStickTime = 0f;
+
+	// Juice
+	[SerializeField] protected GameObject landingEffect;
+	protected bool spawnLandingEffect;
 
 
 	//**************************************************\\
@@ -147,6 +154,9 @@ public class MovementRules2D : ColliderBounding2D
 			jumpLock = true;
 			_movement.y = jumpSpeed;
 			jumping = true;
+			// Juice: Ground
+			GameObject tmp = Instantiate(landingEffect, transform.position - Vector3.up, Quaternion.identity, null) as GameObject;
+			Destroy(tmp, 2f);
 		} else if (!jumping && _wallSliding && wantsToJump && !jumpLock) {
 			jumpLock = true;
 			jumping = true;
@@ -169,6 +179,9 @@ public class MovementRules2D : ColliderBounding2D
 						Debug.Log("Jump Wall Left Soft" + ": " + _movement.x);
 					}
 				}
+				// Juice: Wall
+				GameObject tmp = Instantiate(landingEffect, transform.position - Vector3.right, Quaternion.identity, null) as GameObject;
+				Destroy(tmp, 2f);
 			} else if (WallRight) {
 				if (_movement.x < 0f) {
 					_movement.x = -maxHorizontalSpeed;
@@ -186,6 +199,9 @@ public class MovementRules2D : ColliderBounding2D
 						Debug.Log("Jump Wall Right Soft" + ": " + _movement.x);
 					}
 				}
+				// Juice: Wall
+				GameObject tmp = Instantiate(landingEffect, transform.position - Vector3.left, Quaternion.identity, null) as GameObject;
+				Destroy(tmp, 2f);
 			}
 		} else if (jumping && jumpTimer < maxJumpHoldTime && wantsToJump && jumpLock) {
 			_movement.y = jumpSpeed;
@@ -222,6 +238,10 @@ public class MovementRules2D : ColliderBounding2D
 				airDash = true;
 			}
 			dashing = true;
+
+			// Juice: dash
+			GameObject tmp = Instantiate(landingEffect, transform.position - Mathf.Sign(_faceDirection) * Vector3.right, Quaternion.identity, null) as GameObject;
+			Destroy(tmp, 2f);
 		} else if (wantsToDash && dashing && dashTimer < maxDashHoldTime) {
 			if (dashTimer < maxDashHoldTime) {
 				dashTimer += Time.fixedDeltaTime;
@@ -322,10 +342,19 @@ public class MovementRules2D : ColliderBounding2D
 				Debug.DrawRay(rayOrigin, Vector3.up * (_edgeCheckWidth * 2), Color.red);
 			}
 		}
+
 		if (_colliderInfo.raysToGround > 0) {
 			_colliderInfo.Below = true;
-		}
-		if (_colliderInfo.raysToGround == 0) {
+			// Juice: Landing
+			if (spawnLandingEffect) {
+				GameObject tmp = Instantiate(landingEffect, transform.position - Vector3.up, Quaternion.identity, null) as GameObject;
+				Destroy(tmp, 2f);
+			}
+			spawnLandingEffect = false;
+		} else {
+			if (jumping) {
+				spawnLandingEffect = true;
+			}
 			_colliderInfo.meanSlopeAngle = 0;
 		}
 	}

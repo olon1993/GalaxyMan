@@ -69,7 +69,6 @@ namespace TheFrozenBanana
 		}
 
 		protected virtual void UpdateSlider(float val) {
-			Debug.Log("Update bar to : " + val);
 			if (hpSlider != null) {
 				hpSlider.value = val;
 			}

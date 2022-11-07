@@ -386,6 +386,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1125370979}
     - target: {fileID: 1940471465480799795, guid: f09a8f852e5a3d7409553bf19b7c6b4f, type: 3}
+      propertyPath: landingEffect
+      value: 
+      objectReference: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
+    - target: {fileID: 1940471465480799795, guid: f09a8f852e5a3d7409553bf19b7c6b4f, type: 3}
       propertyPath: maxDashHoldTime
       value: 0.4
       objectReference: {fileID: 0}
@@ -1404,7 +1408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.12941177}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1580,7 +1584,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.5
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -1977,7 +1981,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2267,7 +2271,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3041,13 +3045,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: b7ba46bdab96b584a8b18f3c7120bddc, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: ca44ea8bbb2ecfb47b3e1d3316d3d6e8, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 28
     m_Data: {fileID: 3781134280842618555, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 4333795769430382328, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 3773976576030001066, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -200252454649577209, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
   - m_RefCount: 3
@@ -3068,6 +3076,10 @@ Tilemap:
     m_Data: {fileID: -7781973180123636467, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -3580742150768480839, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 4333795769430382328, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 3773976576030001066, guid: 496bdae170168e840a13f3cc04f0be5c, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 104
     m_Data:
@@ -3154,7 +3166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Quick Move
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 993791458}
   _endLocationsGO:
@@ -3166,6 +3178,7 @@ MonoBehaviour:
   _anticipationTime: 1
   _actionDelayTime: 1
   _anticipationEffect: {fileID: 1830695089661522282, guid: e23835e900c88474282620d304a32b8b, type: 3}
+  _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
 --- !u!114 &1661928070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,7 +3192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Super Jump
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 236483459}
   - {fileID: 327405435}
@@ -3191,9 +3204,11 @@ MonoBehaviour:
   _anticipationTime: 1
   _actionDelayTime: 1
   _anticipationEffect: {fileID: 1511868571819278864, guid: 39ad37238d585e74b8fae52ab3521e78, type: 3}
+  _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
   JumpHeight: 25
   WaveSpeed: {x: 10, y: 8}
   WavePrefab: {fileID: 7025187141464383285, guid: cfdef05f1d8d1e34a88326a1958c5091, type: 3}
+  CameraVibration: {x: 1, y: 1}
 --- !u!114 &1661928071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3207,7 +3222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Jump
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 1002945078}
   - {fileID: 236483459}
@@ -3226,6 +3241,7 @@ MonoBehaviour:
   _anticipationTime: 1
   _actionDelayTime: 1
   _anticipationEffect: {fileID: 4746322822887836611, guid: bd09aa343919e4b43a5b5f0702cce4d7, type: 3}
+  _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
   JumpHeight: 12
 --- !u!114 &1661928072
 MonoBehaviour:
@@ -3239,7 +3255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beee7788d9cafe845b9209e1c3945124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 1
+  _showDebugLog: 0
   rndrr: {fileID: 1601587236}
   _weapon: {fileID: 21209040}
   pauseBetweenActions: 1
@@ -3320,7 +3336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Fire Gun
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 1002945078}
   - {fileID: 236483459}
@@ -3337,6 +3353,7 @@ MonoBehaviour:
   _anticipationTime: 1
   _actionDelayTime: 1
   _anticipationEffect: {fileID: 1784551715040631312, guid: 063e01bd65569e84789ff8372dcfd856, type: 3}
+  _juiceEffect: {fileID: 0}
   ProjectilePrefab: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
   ShotsPerAction: 7
   AngleChangePerShot: 12
@@ -3353,7 +3370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Charge
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 1002945078}
   - {fileID: 1530262318}
@@ -3366,6 +3383,7 @@ MonoBehaviour:
   _anticipationTime: 1
   _actionDelayTime: 1
   _anticipationEffect: {fileID: 404383183757372714, guid: 5a0d97f6d25989c4c9a8680a9f3c1b53, type: 3}
+  _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
   bounceHeight: 12
   bounceHeightTimer: 0.6
   bounceEndLocationsGO:
@@ -3420,6 +3438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
+  _ignoreTag: Enemy
 --- !u!1 &1764030451
 GameObject:
   m_ObjectHideFlags: 0

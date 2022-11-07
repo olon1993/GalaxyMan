@@ -14,6 +14,8 @@ public class JumpAction : BossAction
 		float endY = EndLocations[EndInt].Trans.position.y;
 		Vector2 start = new Vector2(startX, startY);
 		Vector2 end = new Vector2(endX, endY);
+		GameObject tmp = Instantiate(_juiceEffect, transform.position, Quaternion.identity, null) as GameObject;
+		Destroy(tmp, 2f);
 		while (t < TotalActionTime) {
 			yield return new WaitForEndOfFrame();
 			t += Time.deltaTime;
@@ -23,6 +25,8 @@ public class JumpAction : BossAction
 			Vector2 bossLoc = Vector2.Lerp(start, end, i) + new Vector2(0, heightY);
 			transform.position = bossLoc;
 		}
+		GameObject tmp2 = Instantiate(_juiceEffect, transform.position, Quaternion.identity, null) as GameObject;
+		Destroy(tmp2, 2f);
 		transform.position = end;
 		_actionBusy = false;
 	}

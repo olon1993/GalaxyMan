@@ -8,6 +8,7 @@ namespace TheFrozenBanana
     {
         [SerializeField] protected bool _showDebugLog = false;
         [SerializeField] private IDamage _damage;
+        [SerializeField] private string _ignoreTag;
 
         private void Awake()
         {
@@ -23,6 +24,13 @@ namespace TheFrozenBanana
             if (_showDebugLog) {
                 Debug.Log("Hazard hit :" + col.gameObject.name);
 			}
+            if (col.tag == null) {
+                return;
+            }
+            if (col.CompareTag(_ignoreTag)) {
+                return;
+            }
+
             IHealth otherHealth = col.GetComponent<IHealth>();
             if (otherHealth != null)
             {

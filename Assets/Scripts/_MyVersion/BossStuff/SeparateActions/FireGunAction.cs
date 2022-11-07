@@ -23,7 +23,6 @@ namespace TheFrozenBanana
 			{
 				startAngle = 15f;
 			}
-			Debug.Log(startAngle);
 			float angle = startAngle;
 			float deltaTime = TotalActionTime / ShotsPerAction;
 			while (t < TotalActionTime)
