@@ -73,8 +73,8 @@ public class MovementRules2D : ColliderBounding2D
 	protected virtual void FixedUpdate() {
 		_colliderInfo.ResetCollider();
 		UpdateBounds();
-		DetectHorizontalCollisions();
 		DetectVerticalCollisions();
+		DetectHorizontalCollisions();
 		DetermineWallSliding();
 		ProcessDash();
 		ProcessJump();
