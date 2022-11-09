@@ -45,6 +45,7 @@ namespace TheFrozenBanana
         private bool _isJumpCancelled;
         private bool _isDash;
         private bool _isAttack;
+        private bool _isAttacking;
         [SerializeField] private bool _isEnabled;
 
         //**************************************************\\
@@ -248,6 +249,7 @@ namespace TheFrozenBanana
         public bool IsDash { get { return _isDash; } }
 
         public bool IsAttack { get { return _isAttack; } }
+        public bool IsAttacking { get { return _isAttacking; } }
 
         public bool IsEnabled
         {

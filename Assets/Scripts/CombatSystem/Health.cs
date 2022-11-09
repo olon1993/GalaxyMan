@@ -18,7 +18,6 @@ namespace TheFrozenBanana
 		[SerializeField] private Slider hpSlider;
 		protected bool _isDead;
 		private bool _isHurt;
-		private Animator AC;
 
 		//**************************************************\\
 		//******************** Methods *********************\\
@@ -28,7 +27,6 @@ namespace TheFrozenBanana
 			if (CurrentHealth == 0) {
 				CurrentHealth = MaxHealth;
 			}
-			AC = GetComponent<Animator>();
 			if (hpSlider != null) {
 				hpSlider.maxValue = _maxHealth;
 				hpSlider.minValue = 0;
@@ -58,13 +56,6 @@ namespace TheFrozenBanana
 			} else {
 				UpdateSlider(_currentHealth);
 				StartCoroutine(FadeHurt());
-			}
-			if (AC != null) {
-				if (_isDead) {
-					AC.SetTrigger("Die");
-				} else {
-					AC.SetTrigger("Hurt");
-				}
 			}
 		}
 

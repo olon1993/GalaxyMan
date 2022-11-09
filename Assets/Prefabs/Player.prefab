@@ -311,18 +311,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8545798663381569747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315f7e3412825254a88ee194811280f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2505fdddc61e9324c9e040b901fbe2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
-  _maxHealth: 100
-  _currentHealth: 100
-  HealthBar: {fileID: 0}
-  HurtSoundEffect: {fileID: 0}
-  DieSoundEffect: {fileID: 0}
-  DamageMultipliers: []
-  _enableOnDie: {fileID: 0}
-  _disableOnDie: {fileID: 0}
+  _maxHealth: 10
+  _currentHealth: 10
+  _timeToDie: 0
+  hpSlider: {fileID: 0}
 --- !u!114 &3737960591497499493
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace TheFrozenBanana
 {
 
-	public class Projectile : MonoBehaviour, IProjectile
+	public class Projectile2DFreeAim : MonoBehaviour, IProjectile
 	{
 
 		[SerializeField] private float _velocity;

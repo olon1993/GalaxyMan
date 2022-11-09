@@ -15,6 +15,7 @@ namespace TheFrozenBanana
         [SerializeField] protected LayerMask CollisionMask;
         protected Collider2D _collider;
         protected RaycastOrigins _raycastOrigins;
+
         protected float _horizontalRaySpacing;
         protected float _verticalRaySpacing;
         protected const float _distanceBetweenRays = 0.25f;

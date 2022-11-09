@@ -11,7 +11,6 @@ namespace TheFrozenBanana
 		bool IsHurt { get; set; }
 		int MaxHealth { get; set; }
 		int CurrentHealth { get; set; }
-		float TimeToDie { get; set; }
 		void TakeDamage(IDamage damage);
 		void AddHealth(int hp);
 	}

@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: maxHorizontalSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1940471465480799795, guid: f09a8f852e5a3d7409553bf19b7c6b4f, type: 3}
+      propertyPath: CollisionMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1940471465480799798, guid: f09a8f852e5a3d7409553bf19b7c6b4f, type: 3}
       propertyPath: m_RootOrder
       value: 7

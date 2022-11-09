@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TheFrozenBanana;
 
-public class MovementRules2D : ColliderBounding2D
+public class MovementRules2D : RaycastController
 {
 
 	//**************************************************\\
@@ -72,7 +73,7 @@ public class MovementRules2D : ColliderBounding2D
 
 	protected virtual void FixedUpdate() {
 		_colliderInfo.ResetCollider();
-		UpdateBounds();
+		UpdateRacastOrigins();
 		DetectVerticalCollisions();
 		DetectHorizontalCollisions();
 		DetermineWallSliding();
@@ -283,26 +284,26 @@ public class MovementRules2D : ColliderBounding2D
 		for (int i = 1; i < _horizontalRayCount - 1; i++) {
 			// RIGHT CHECK
 			if (_velocity.x > -Mathf.Epsilon) {
-				Vector2 rayOrigin = _colliderCorners.BottomRight + new Vector2(-_edgeCheckWidth, i * _horizontalRaySpacing);
-				RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.right, _edgeCheckWidth * 2, collisionMask);
+				Vector2 rayOrigin = _raycastOrigins.BottomRight + new Vector2(-_skinWidth, i * _horizontalRaySpacing);
+				RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.right, _skinWidth * 2, CollisionMask);
 				if (hit) {
 					_colliderInfo.Right = true;
 					jumping = false;
 				}
 				if (_showDebugLog) {
-					Debug.DrawRay(rayOrigin, Vector3.right * (_edgeCheckWidth * 2), Color.red);
+					Debug.DrawRay(rayOrigin, Vector3.right * (_skinWidth * 2), Color.red);
 				}
 			}
 			if (_velocity.x < Mathf.Epsilon) {
 				// LEFT CHECK
-				Vector2 rayOrigin = _colliderCorners.BottomLeft + new Vector2(+_edgeCheckWidth, i * _horizontalRaySpacing);
-				RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.left, _edgeCheckWidth * 2, collisionMask);
+				Vector2 rayOrigin = _raycastOrigins.BottomLeft + new Vector2(+_skinWidth, i * _horizontalRaySpacing);
+				RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.left, _skinWidth * 2, CollisionMask);
 				if (hit) {
 					_colliderInfo.Left = true;
 					jumping = false;
 				}
 				if (_showDebugLog) {
-					Debug.DrawRay(rayOrigin, Vector3.left * (_edgeCheckWidth * 2), Color.red);
+					Debug.DrawRay(rayOrigin, Vector3.left * (_skinWidth * 2), Color.red);
 				}
 			}
 		}
@@ -312,8 +313,8 @@ public class MovementRules2D : ColliderBounding2D
 		_colliderInfo.raysToGround = 0;
 		for (int i = 0; i < _verticalRayCount; i++) {
 			// BOTTOM CHECK
-			Vector2 rayOrigin = _colliderCorners.BottomLeft + new Vector2(i * _verticalRaySpacing, +_edgeCheckWidth);
-			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.down, _edgeCheckWidth * 2, collisionMask);
+			Vector2 rayOrigin = _raycastOrigins.BottomLeft + new Vector2(i * _verticalRaySpacing, +_skinWidth);
+			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector3.down, _skinWidth * 2, CollisionMask);
 			if (_velocity.y < -Mathf.Epsilon) {
 				if (hit) {
 					if (_movement.y < -Mathf.Epsilon) {
@@ -325,12 +326,12 @@ public class MovementRules2D : ColliderBounding2D
 					jumping = false;
 				}
 				if (_showDebugLog) {
-					Debug.DrawRay(rayOrigin, Vector3.down * (_edgeCheckWidth * 2), Color.red);
+					Debug.DrawRay(rayOrigin, Vector3.down * (_skinWidth * 2), Color.red);
 				}
 			}
 			// TOP CHECK
-			rayOrigin = _colliderCorners.TopLeft + new Vector2(i * _verticalRaySpacing, -_edgeCheckWidth);
-			hit = Physics2D.Raycast(rayOrigin, Vector3.up, _edgeCheckWidth * 2, collisionMask);
+			rayOrigin = _raycastOrigins.TopLeft + new Vector2(i * _verticalRaySpacing, -_skinWidth);
+			hit = Physics2D.Raycast(rayOrigin, Vector3.up, _skinWidth * 2, CollisionMask);
 			if (hit) {
 				_colliderInfo.Above = true;
 				if (_movement.y > Mathf.Epsilon) {
@@ -339,7 +340,7 @@ public class MovementRules2D : ColliderBounding2D
 				jumping = false;
 			}
 			if (_showDebugLog) {
-				Debug.DrawRay(rayOrigin, Vector3.up * (_edgeCheckWidth * 2), Color.red);
+				Debug.DrawRay(rayOrigin, Vector3.up * (_skinWidth * 2), Color.red);
 			}
 		}
 

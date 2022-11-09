@@ -5,7 +5,7 @@ using UnityEngine;
 namespace TheFrozenBanana
 {
 
-	public class ProjectileChild : MonoBehaviour
+	public class Projectile2DFreeAimChild : MonoBehaviour
 	{
 
 		[SerializeField] private IProjectile projectileParent;
@@ -26,5 +26,4 @@ namespace TheFrozenBanana
 			projectileParent.TriggerCollision(col);
 		}
 	}
-
 }
