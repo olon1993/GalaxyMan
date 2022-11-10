@@ -22,7 +22,7 @@ namespace TheFrozenBanana
         {
             base.Awake();
 
-            _locomotion = (ILocomotion2dSideScroller)_dependencyManager.Registry[typeof(ILocomotion)];
+            _locomotion = (ILocomotion2dSideScroller)_dependencyManager.Registry[typeof(ILocomotion2dSideScroller)];
             if (_locomotion == null)
             {
                 Debug.LogError("Locomotion not found on " + name);

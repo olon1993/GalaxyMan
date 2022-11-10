@@ -3217,6 +3217,8 @@ MonoBehaviour:
   _actionDelayTime: 1
   _anticipationEffect: {fileID: 1511868571819278864, guid: 39ad37238d585e74b8fae52ab3521e78, type: 3}
   JumpHeight: 25
+  WaveSpeed: {x: 0, y: 0}
+  WavePrefab: {fileID: 0}
 --- !u!114 &1661928071
 MonoBehaviour:
   m_ObjectHideFlags: 0

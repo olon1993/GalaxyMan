@@ -12,10 +12,12 @@ GameObject:
   - component: {fileID: 3430240246259922406}
   - component: {fileID: 3430240246259922409}
   - component: {fileID: 3430240246259922408}
+  - component: {fileID: 8815013091399825691}
   - component: {fileID: 3430240246259922411}
   - component: {fileID: 3430240246259922410}
   - component: {fileID: 3430240246259922413}
   - component: {fileID: 3430240246259922412}
+  - component: {fileID: 2766750898662356946}
   m_Layer: 6
   m_Name: Graphics
   m_TagString: Untagged
@@ -122,6 +124,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48db935ea92f92f4aa4aeef8bb13cec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8815013091399825691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3430240246259922414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9389a3a7743c24ba3d9c5597788829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 7400000, guid: c353294f4f5f08a47a1c19f65e94f77f, type: 2}
+  _priority: 4
+  _animationLayer: 0
+  _canBeInterrupted: 1
+  _isAnimationOverride: 0
 --- !u!114 &3430240246259922411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8767fa57cde361243b6e0db3a74d8914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: 6195eed6edd3702418539a854d10facd, type: 2}
+  _animation: {fileID: 7400000, guid: 7d203c39b64ba4c47abb728d215efd20, type: 2}
   _priority: 3
   _animationLayer: 0
   _canBeInterrupted: 1
@@ -190,6 +209,23 @@ MonoBehaviour:
   _animationLayer: 0
   _canBeInterrupted: 1
   _isAnimationOverride: 0
+--- !u!114 &2766750898662356946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3430240246259922414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9389a3a7743c24ba3d9c5597788829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 0}
+  _priority: 0
+  _animationLayer: 0
+  _canBeInterrupted: 1
+  _isAnimationOverride: 0
 --- !u!1 &8545798663381569747
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,8 +238,8 @@ GameObject:
   - component: {fileID: 8545798663381569751}
   - component: {fileID: 3737960591497499491}
   - component: {fileID: 3737960591497499495}
-  - component: {fileID: 3737960591497499490}
   - component: {fileID: 3737960591497499493}
+  - component: {fileID: 9180426972312459569}
   - component: {fileID: 3737960591497499494}
   m_Layer: 6
   m_Name: Player
@@ -302,27 +338,6 @@ MonoBehaviour:
   _dashStaminaCost: 3
   _staminaIdleReplenishAmount: 30
   _staminaDrainFrequency: 0.1
---- !u!114 &3737960591497499490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8545798663381569747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315f7e3412825254a88ee194811280f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugLog: 0
-  _maxHealth: 100
-  _currentHealth: 100
-  HealthBar: {fileID: 0}
-  HurtSoundEffect: {fileID: 0}
-  DieSoundEffect: {fileID: 0}
-  DamageMultipliers: []
-  _enableOnDie: {fileID: 0}
-  _disableOnDie: {fileID: 0}
 --- !u!114 &3737960591497499493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +351,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
+--- !u!114 &9180426972312459569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545798663381569747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a73b6cb716bf0241b4f42a4cbb9735a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugLog: 0
+  _maxHealth: 50
+  _currentHealth: 50
+  _timeToDie: 0
+  hpSlider: {fileID: 0}
+  _resistanceTypeDefinition: 
+  _vulnerableTypeDefinition: 
+  _timeInvulnerable: 0
 --- !u!114 &3737960591497499494
 MonoBehaviour:
   m_ObjectHideFlags: 0

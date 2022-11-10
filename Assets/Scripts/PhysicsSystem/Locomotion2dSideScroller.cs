@@ -95,6 +95,8 @@ namespace TheFrozenBanana
 
         protected override void Update()
         {
+            Debug.Log(HorizontalLook);
+
             GetInput();
 
             CalculateVelocity();
