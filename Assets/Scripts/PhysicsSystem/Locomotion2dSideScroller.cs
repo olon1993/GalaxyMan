@@ -39,6 +39,7 @@ namespace TheFrozenBanana
 		private bool _wantsToDash;
 		private bool _dashLock, _groundDash, _airDash;
 		private float _dashTimer;
+		private float _dashDirection;
 		[SerializeField] protected float _maxDashHoldTime;
 		protected bool _isDashing;
 
@@ -218,7 +219,7 @@ namespace TheFrozenBanana
 		protected virtual void HandleDash() {
 	//		Debug.Log("Wall direction "+_wallDirectionX);
 
-
+			// DASH STARTUP
 			if (_wantsToDash && !IsDashing && _dashTimer < _maxDashHoldTime && !_dashLock) {
 				_dashLock = true;
 
@@ -229,22 +230,24 @@ namespace TheFrozenBanana
 	//				Debug.Log("Start Grounded");
 				} else {
 
-
-
 					if (_wallDirectionX < 0) {
 						_velocity.x = _dashSpeed;
-						Debug.Log("Start Wall Left");
+	//					Debug.Log("Start Wall Left");
 					} else if (_wallDirectionX > 0) {
 						_velocity.x = -_dashSpeed;
-						Debug.Log("Start Wall Right");
+	//					Debug.Log("Start Wall Right");
 					} else {
 						_velocity.x = Mathf.Sign(HorizontalLook) * _dashSpeed;
-						Debug.Log("Start Air");
+	//					Debug.Log("Start Air");
 					}
 					_airDash = true;
 				}
 				IsDashing = true;
+				_dashDirection = Mathf.Sign(HorizontalLook);
 
+
+
+			// DASH CONTINUATION
 			} else if (_wantsToDash && IsDashing && _dashTimer < _maxDashHoldTime) {
 //				Debug.Log("Continue Dash");
 				if (_dashTimer < _maxDashHoldTime) {
@@ -253,10 +256,11 @@ namespace TheFrozenBanana
 				if (_airDash) {
 					_velocity.y = 0f;
 				}
-				_velocity.x = Mathf.Sign(_velocity.x) * _dashSpeed;
+				Debug.Log(Mathf.Sign(_velocity.x));
+				_velocity.x = Mathf.Sign(_dashDirection) * _dashSpeed;
 
 
-
+			// DASH END
 			} else {
 	//			Debug.Log("End Dash");
 				IsDashing = false;
