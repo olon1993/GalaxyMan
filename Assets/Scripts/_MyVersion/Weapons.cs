@@ -20,11 +20,9 @@ namespace TheFrozenBanana
 		private string[] firingAnnotations;
 		private Vector3 firingDirection;
 
-		private void Awake()
-		{
+		private void Awake() {
 			_input = gameObject.GetComponentInParent<IInput>();
-			if (_input == null)
-			{
+			if (_input == null) {
 				Debug.LogError("No Input found on weapon!");
 			}
 			mover = gameObject.GetComponentInParent<MovementRules2D>();
@@ -34,49 +32,35 @@ namespace TheFrozenBanana
 			firingAnnotations[2] = "ChargeFire";
 		}
 
-		private void Update()
-		{
+		private void Update() {
 			ProcessInput();
 		}
 
-		public void ProcessInput()
-		{
-			if (_input.WeaponInput && !charging && !firing)
-			{
+		public void ProcessInput() {
+			if (_input.WeaponInput && !charging && !firing) {
 				StartCoroutine(ChargeWeapon());
 			}
-			if (Mathf.Abs(_input.VerticalInput) > Mathf.Epsilon)
-			{
-				if (_input.VerticalInput > 0)
-				{
+			if (Mathf.Abs(_input.VerticalInput) > Mathf.Epsilon) {
+				if (_input.VerticalInput > 0) {
 					hand.transform.localRotation = Quaternion.Euler(0, 0, 90);
 					firingDirection = Vector3.up;
-				}
-				else
-				{
+				} else {
 					hand.transform.localRotation = Quaternion.Euler(0, 0, -90);
 					firingDirection = Vector3.down;
 				}
-			}
-			else
-			{
+			} else {
 				hand.transform.localRotation = Quaternion.Euler(0, 0, 0);
 				firingDirection = Vector3.right * mover.FaceDirection;
 			}
 		}
 
-		private IEnumerator ChargeWeapon()
-		{
+		private IEnumerator ChargeWeapon() {
 			charging = true;
 			chargeTime = 0f;
-			while (_input.WeaponInput)
-			{
-				if (chargeTime < _maxChargeTime)
-				{
+			while (_input.WeaponInput) {
+				if (chargeTime < _maxChargeTime) {
 					chargeTime += Time.deltaTime;
-				}
-				else
-				{
+				} else {
 					chargeTime = _maxChargeTime;
 				}
 				yield return new WaitForEndOfFrame();
@@ -86,17 +70,13 @@ namespace TheFrozenBanana
 			FireWeapon();
 		}
 
-		private void FireWeapon()
-		{
+		private void FireWeapon() {
 			StartCoroutine(UseWeapon());
 		}
 
-		private IEnumerator UseWeapon()
-		{
-			for (int i = 0; i < _chargeAnnotations.Length; i++)
-			{
-				if (chargeTime < _chargeAnnotations[i])
-				{
+		private IEnumerator UseWeapon() {
+			for (int i = 0; i < _chargeAnnotations.Length; i++) {
+				if (chargeTime < _chargeAnnotations[i]) {
 					StartCoroutine(firingAnnotations[i]);
 					break;
 				}
@@ -104,10 +84,8 @@ namespace TheFrozenBanana
 			yield return new WaitForEndOfFrame();
 		}
 
-		private IEnumerator BurstFire()
-		{
-			for (int i = 0; i < 3; i++)
-			{
+		private IEnumerator BurstFire() {
+			for (int i = 0; i < 3; i++) {
 				ShootProjectile(0);
 				yield return new WaitForSeconds(0.2f);
 			}
@@ -115,22 +93,19 @@ namespace TheFrozenBanana
 			firing = false;
 		}
 
-		private IEnumerator SemiChargeFire()
-		{
+		private IEnumerator SemiChargeFire() {
 			ShootProjectile(1);
 			yield return new WaitForSeconds(0.2f);
 			firing = false;
 		}
 
-		private IEnumerator ChargeFire()
-		{
+		private IEnumerator ChargeFire() {
 			ShootProjectile(2);
 			yield return new WaitForSeconds(0.2f);
 			firing = false;
 		}
 
-		private void ShootProjectile(int size)
-		{
+		private void ShootProjectile(int size) {
 
 			Vector3 projectileDirection = gameObject.transform.position + firingDirection;
 			GameObject tmp = Instantiate(_projectilesBySize[size], gameObject.transform.position, Quaternion.identity, null) as GameObject;

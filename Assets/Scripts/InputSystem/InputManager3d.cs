@@ -19,6 +19,7 @@ namespace TheFrozenBanana
 		protected bool _isDash;
 		protected bool _isJump;
 		protected bool _isAttack;
+		protected bool _isAttacking;
 		protected bool _isSwitchWeapon;
 		protected bool _isRunning;
 		protected bool _isEnabled;
@@ -54,6 +55,7 @@ namespace TheFrozenBanana
 		public bool IsDash { get { return _isDash; } }
 		public bool IsJump { get { return _isJump; } }
 		public bool IsAttack { get { return _isAttack; } }
+		public bool IsAttacking { get { return _isAttacking; } }
 		public bool IsSwitchWeapon { get { return _isSwitchWeapon; } }
 		public bool IsRunning { get { return _isRunning; } }
 

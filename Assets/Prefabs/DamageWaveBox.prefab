@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5451959639462593972}
   m_Layer: 0
   m_Name: DamageWaveBox
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5aaab7d41970954cb7a12076b60d52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 1
+  _showDebugLog: 0
+  _ignoreTag: Enemy
 --- !u!114 &5451959639462593972
 MonoBehaviour:
   m_ObjectHideFlags: 0
