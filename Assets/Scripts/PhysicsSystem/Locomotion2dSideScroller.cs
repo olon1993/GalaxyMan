@@ -36,13 +36,11 @@ namespace TheFrozenBanana
 		private bool _isWallSliding;
 
 		// Dash and Stamina
-		private Stamina _stamina;
-
-		[SerializeField] private float _dashStaminaCost;
-		[SerializeField] private float _staminaIdleReplenishAmount;
-		[SerializeField] private float _staminaDrainFrequency = 0.1f;
-		private float _staminaDrainTimer = 0;
 		private bool _wantsToDash;
+		private bool _dashLock, _groundDash, _airDash;
+		private float _dashTimer;
+		[SerializeField] protected float _maxDashHoldTime;
+		protected bool _isDashing;
 
 		// Damage Force
 
@@ -67,7 +65,6 @@ namespace TheFrozenBanana
 				Debug.Log("No Input Manager found on " + name);
 			}
 
-			_stamina = GetComponent<Stamina>();
 		}
 
 		protected override void Start() {
@@ -105,8 +102,6 @@ namespace TheFrozenBanana
 
 			VerticalCollisionAdjustment();
 
-			Idle();
-
 		}
 
 
@@ -115,7 +110,7 @@ namespace TheFrozenBanana
 			VerticalMovement = _inputManager.Vertical;
 			IsJumping = _inputManager.IsJump;
 			IsJumpCancelled = _inputManager.IsJumpCancelled;
-			_wantsToDash = IsJumping ? false : _inputManager.IsDash;
+			_wantsToDash = _inputManager.IsDash;
 		}
 
 		protected override void CalculateVelocity() {
@@ -129,7 +124,15 @@ namespace TheFrozenBanana
 		}
 
 		protected void HandleWallSliding() {
-			_wallDirectionX = (_collisions.Left) ? -1 : 1;
+
+			if (_collisions.Left) {
+				_wallDirectionX = -1;
+			} else if (_collisions.Right) {
+				_wallDirectionX = 1;
+			} else {
+				_wallDirectionX = 0;
+			}
+
 			_isWallSliding = false;
 
 			// Slide down wall
@@ -212,41 +215,71 @@ namespace TheFrozenBanana
 		//**************************************************\\
 		//****************** DASH MOVEMENT *****************\\
 		//**************************************************\\
-		private void HandleDash() {
-			if (IsJumping) return;
+		protected virtual void HandleDash() {
+	//		Debug.Log("Wall direction "+_wallDirectionX);
 
-			// Already dashing
-			if (IsDashing && IsGrounded) {
-				// Not moving
-				if (Mathf.Abs(_velocity.x) <= Mathf.Epsilon) {
-					IsDashing = false;
-					return;
-				}
-				if (_wantsToDash) {
-					if (_stamina == null || _staminaDrainTimer < _staminaDrainFrequency) {
-						_velocity.x += _dashSpeed * HorizontalMovement;
-						_staminaDrainTimer += Time.deltaTime;
-						return;
-					}
-					if (_stamina.UseStamina(_dashStaminaCost)) {
-						_staminaDrainTimer = 0f;
-						_velocity.x += _dashSpeed * HorizontalMovement;
-						return;
-					}
-					IsDashing = false;
-					return;
-				}
-			}
 
-			if (_wantsToDash && IsGrounded && (_stamina == null || _stamina.UseStamina(_dashStaminaCost))) {
+			if (_wantsToDash && !IsDashing && _dashTimer < _maxDashHoldTime && !_dashLock) {
+				_dashLock = true;
+
+				if (IsGrounded) {
+					_velocity.x = Mathf.Sign(HorizontalLook) * _dashSpeed;
+					_groundDash = true;
+
+	//				Debug.Log("Start Grounded");
+				} else {
+
+
+
+					if (_wallDirectionX < 0) {
+						_velocity.x = _dashSpeed;
+						Debug.Log("Start Wall Left");
+					} else if (_wallDirectionX > 0) {
+						_velocity.x = -_dashSpeed;
+						Debug.Log("Start Wall Right");
+					} else {
+						_velocity.x = Mathf.Sign(HorizontalLook) * _dashSpeed;
+						Debug.Log("Start Air");
+					}
+					_airDash = true;
+				}
 				IsDashing = true;
-				_velocity.x += _dashSpeed * HorizontalMovement;
-				return;
+
+			} else if (_wantsToDash && IsDashing && _dashTimer < _maxDashHoldTime) {
+//				Debug.Log("Continue Dash");
+				if (_dashTimer < _maxDashHoldTime) {
+					_dashTimer += Time.fixedDeltaTime;
+				}
+				if (_airDash) {
+					_velocity.y = 0f;
+				}
+				_velocity.x = Mathf.Sign(_velocity.x) * _dashSpeed;
+
+
+
+			} else {
+	//			Debug.Log("End Dash");
+				IsDashing = false;
+				_dashTimer -= Time.fixedDeltaTime;
+				if (_dashTimer < 0f) {
+					_dashTimer = 0f;
+				}
+				_airDash = false;
+				_groundDash = false;
+			}
+			if (!_wantsToDash && (IsWallSliding || IsGrounded)) {
+	//			Debug.Log("Unlock Dash");
+				_dashLock = false;
 			}
 
-			IsDashing = false;
+			if (IsDashing) {
+				HorizontalLook = Mathf.Sign(_velocity.x);
+			}
+			/*
+			if (_dashSlider != null) {
+				_dashSlider.value = (1 - (_dashTimer / _maxDashHoldTime));
+			} */
 		}
-
 		//**************************************************\\
 		//*************** COLLISION DETECTION **************\\
 		//**************************************************\\
@@ -261,11 +294,6 @@ namespace TheFrozenBanana
 			}
 		}
 
-		private void Idle() {
-			if (_stamina != null && Mathf.Abs(_velocity.x) <= Mathf.Epsilon && Mathf.Abs(_velocity.y) <= Mathf.Epsilon) {
-				_stamina.ReplenishStamina(_staminaIdleReplenishAmount * Time.deltaTime);
-			}
-		}
 
 		//**************************************************\\
 		//*************** COLLISION DETECTION **************\\
