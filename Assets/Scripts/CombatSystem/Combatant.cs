@@ -17,6 +17,7 @@ namespace TheFrozenBanana
         private DependencyManager _dependencyManager;
 
         private IInputManager _inputManager;
+        private ILocomotion2dSideScroller _locomotion;
         private IHealth _health;
 
         private IList<IWeapon> _weapons;
@@ -24,6 +25,9 @@ namespace TheFrozenBanana
         private int _currentWeaponIndex = 0;
 
         private int _horizontalFacingDirection = 1;
+
+        private float _attackChargeTime = 0f;
+        private Vector3 _combatDirection = Vector3.right;
 
         //**************************************************\\
         //******************** Methods *********************\\
@@ -49,6 +53,12 @@ namespace TheFrozenBanana
                 Debug.LogError("IHealth not found on " + gameObject.name);
             }
 
+            _locomotion = (ILocomotion2dSideScroller)_dependencyManager.Registry[typeof(ILocomotion2dSideScroller)];
+            if (_health == null)
+            {
+                Debug.LogError("IHealth not found on " + gameObject.name);
+            }
+
             _weapons = new List<IWeapon>();
             IList<IWeapon> weapons = transform.GetComponentsInChildren<IWeapon>().ToList();
             foreach (IWeapon weapon in weapons)
@@ -64,11 +74,37 @@ namespace TheFrozenBanana
 
         private void Update()
         {
-            IsAttacking = _inputManager.IsAttack;
+            IsAttack = _inputManager.IsAttack;
+            IsAttacking = _inputManager.IsAttacking;
+
+            bool isUp = _inputManager.Vertical > Mathf.Epsilon;
+
+            if (isUp)
+            {
+                CurrentWeapon.PointOfOrigin.localPosition = new Vector3(0, 1.5f, 0);
+                CurrentWeapon.PointOfTargetting.localPosition = new Vector3(0, 5f, 0);
+            }
+            else if (_locomotion.IsWallSliding)
+            {
+
+                CurrentWeapon.PointOfOrigin.localPosition = new Vector3(-1, 0, 0);
+                CurrentWeapon.PointOfTargetting.localPosition = new Vector3(-5, 0, 0);
+            }
+            else 
+            {
+                CurrentWeapon.PointOfOrigin.localPosition = new Vector3(_horizontalFacingDirection, 0, 0);
+                CurrentWeapon.PointOfTargetting.localPosition = new Vector3(_horizontalFacingDirection * 5, 0, 0);
+            }
 
             if (IsAttacking)
             {
-                CurrentWeapon.Attack();
+                _attackChargeTime += Time.deltaTime;
+            }
+
+            if (IsAttack)
+            {
+                CurrentWeapon.Attack(_attackChargeTime);
+                _attackChargeTime = 0f;
             }
 
             CheckWeaponToggle();
@@ -147,6 +183,8 @@ namespace TheFrozenBanana
             }
         }
 
+        public bool IsAttack { get; set; }
+
         public bool IsAttacking { get; set; }
 
         public int HorizontalFacingDirection
@@ -160,6 +198,7 @@ namespace TheFrozenBanana
                     if (Mathf.Sign(CurrentWeapon.PointOfOrigin.localPosition.x) != Mathf.Sign(_horizontalFacingDirection))
                     {
                         CurrentWeapon.PointOfOrigin.transform.localPosition *= -1;
+                        CurrentWeapon.PointOfTargetting.transform.localPosition *= -1;
                     }
                 }
             }

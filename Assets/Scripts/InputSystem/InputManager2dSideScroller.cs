@@ -53,7 +53,7 @@ namespace TheFrozenBanana
 
 				_isDash = Input.GetButton("Fire3");
 
-				_isAttack = Input.GetButtonDown("Fire1");
+				_isAttack = Input.GetButtonUp("Fire1");
 				_isAttacking = Input.GetButton("Fire1");
 
 				_isToggleInventory = Input.GetKeyDown(KeyCode.I);
@@ -64,7 +64,8 @@ namespace TheFrozenBanana
 					Debug.Log("IsJumping: " + _isJump);
 					Debug.Log("IsJumpCancelled: " + _isJumpCancelled);
 					Debug.Log("IsDashing: " + _isDash);
-					Debug.Log("IsAttacking: " + _isAttack);
+					Debug.Log("IsAttack: " + _isAttack);
+					Debug.Log("IsAttacking: " + _isAttacking);
 					Debug.Log("IsToggleInventory: " + _isToggleInventory);
 				}
 			} else {

@@ -46,7 +46,7 @@ namespace TheFrozenBanana
 			}
 		}
 
-		public void Attack() {
+		public void Attack(float charge) {
 			if (_showDebugLog) {
 				Debug.Log("Attacking with " + name);
 			}
@@ -123,6 +123,12 @@ namespace TheFrozenBanana
 			_audioSource.Play();
 		}
 
+		void OnDrawGizmos()
+		{
+			Gizmos.color = Color.red;
+			Gizmos.DrawWireSphere(_pointOfOrigin.position, _radiusOfInteraction);
+		}
+
 		//**************************************************\\
 		//******************* Properties *******************\\
 		//**************************************************\\
@@ -168,10 +174,8 @@ namespace TheFrozenBanana
 			get { return _attackActionTime; }
 		}
 
-		void OnDrawGizmos() {
-			Gizmos.color = Color.red;
-			Gizmos.DrawWireSphere(_pointOfOrigin.position, _radiusOfInteraction);
-		}
+        public Transform PointOfTargetting { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public float AttackCharge { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
 	}
 }

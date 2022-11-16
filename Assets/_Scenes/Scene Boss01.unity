@@ -434,7 +434,7 @@ Transform:
   - {fileID: 1604161582}
   - {fileID: 860959722}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &572097560
 GameObject:
@@ -925,25 +925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0986e63d1e11449b403744e019fcab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 1
-  rndrr: {fileID: 1509761010}
-  baseScale: {x: 0, y: 0, z: 0}
-  target: {fileID: 0}
-  acting: 0
-  shooting: 0
-  justJumped: 0
-  jumpPossible: 0
-  superJumpPossible: 0
-  quickMovePossible: 0
-  chargePossible: 0
-  locations:
-  - {fileID: 1002945078}
-  - {fileID: 236483459}
-  - {fileID: 993791458}
-  - {fileID: 327405435}
-  - {fileID: 1530262318}
-  currentLocation: 0
-  _direction: -1
 --- !u!1 &1228104470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3494,15 +3475,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.17
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.71
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3535,22 +3516,6 @@ PrefabInstance:
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792141944326332760, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_Size.x
-      value: 2.0358853
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792141944326332760, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_Size.y
-      value: 2.4785037
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792141944326332760, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.09688878
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792141944326332760, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.22596025
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332766, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_Name

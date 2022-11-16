@@ -13,6 +13,8 @@ namespace TheFrozenBanana
         bool IsGrounded { get; }
         bool IsRightCollision { get; }
         bool IsLeftCollision { get; }
+        int WallDirectionX { get; }
+        bool IsWallSliding { get; }
     }
 
 }

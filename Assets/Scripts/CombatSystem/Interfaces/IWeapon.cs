@@ -11,8 +11,10 @@ namespace TheFrozenBanana
         int CurrentAmmo { get; set; }
         AmmoType AmmoTypeDefinition { get; set; }
         Transform PointOfOrigin { get; set; }
+        Transform PointOfTargetting { get; set; }
         public float AttackActionTime { get; }
 		int AnimationLayer { get; set; }
+        float AttackCharge { get; set; }
 
 		public enum DamageType
         {
@@ -24,7 +26,7 @@ namespace TheFrozenBanana
             NONE, MAGIC
         }
 
-        void Attack();
+        void Attack(float charge);
 
     }
 }

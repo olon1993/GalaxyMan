@@ -217,7 +217,6 @@ namespace TheFrozenBanana
 		//****************** DASH MOVEMENT *****************\\
 		//**************************************************\\
 		protected virtual void HandleDash() {
-	//		Debug.Log("Wall direction "+_wallDirectionX);
 
 			// DASH STARTUP
 			if (_wantsToDash && !IsDashing && _dashTimer < _maxDashHoldTime && !_dashLock) {
@@ -227,18 +226,14 @@ namespace TheFrozenBanana
 					_velocity.x = Mathf.Sign(HorizontalLook) * _dashSpeed;
 					_groundDash = true;
 
-	//				Debug.Log("Start Grounded");
 				} else {
 
 					if (_wallDirectionX < 0) {
 						_velocity.x = _dashSpeed;
-	//					Debug.Log("Start Wall Left");
 					} else if (_wallDirectionX > 0) {
 						_velocity.x = -_dashSpeed;
-	//					Debug.Log("Start Wall Right");
 					} else {
 						_velocity.x = Mathf.Sign(HorizontalLook) * _dashSpeed;
-	//					Debug.Log("Start Air");
 					}
 					_airDash = true;
 				}
@@ -500,5 +495,7 @@ namespace TheFrozenBanana
 		public new bool IsGrounded { get { return _collisions.Below; } }
 
 		public bool IsWallSliding { get { return _isWallSliding; } }
-	}
+
+        public int WallDirectionX { get { return _wallDirectionX; } }
+    }
 }

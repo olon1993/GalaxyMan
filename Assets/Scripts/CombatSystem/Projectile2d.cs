@@ -47,5 +47,17 @@ namespace TheFrozenBanana
 				//	recoil.ApplyDamageForce(_damage.DamageForce, damageDirection);
 			}
 		}
+
+		public Vector3 Direction
+        {
+            get { return _direction; }
+            set
+            {
+				if(_direction != value)
+                {
+					_direction = value;
+                }
+            }
+        }
 	}
 }

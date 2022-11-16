@@ -9,9 +9,16 @@ namespace TheFrozenBanana
         //**************************************************\\
 
         [SerializeField] private Transform _pointOfOrigin;
-        [SerializeField] Transform PointOfTargetting;
+        [SerializeField] private Transform _pointOfTargetting;
 
-        [SerializeField] GameObject Projectile;
+        [SerializeField] GameObject DefaultProjectile;
+
+        [SerializeField] private float _halfChargeTime = 0.5f;
+        [SerializeField] GameObject HalfChargedProjectile;
+
+        [SerializeField] private float _fullChargeTime = 1f;
+        [SerializeField] GameObject FullChargedProjectile;
+
 
         [SerializeField] private bool _isLimitedAmmo;
         [SerializeField] private int _maxAmmo;
@@ -23,7 +30,7 @@ namespace TheFrozenBanana
         //******************** Methods *********************\\
         //**************************************************\\
 
-        public void Attack()
+        public void Attack(float charge)
         {
             if (IsLimitedAmmo)
             {
@@ -39,14 +46,29 @@ namespace TheFrozenBanana
                 }
             }
 
+            GameObject insProjectile = null;
+            if (charge < _halfChargeTime)
+            {
+                insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, _pointOfTargetting.rotation);
+            }
+            else if(charge < _fullChargeTime)
+            {
+                insProjectile = Instantiate(HalfChargedProjectile, _pointOfOrigin.position, _pointOfTargetting.rotation);
+            }
+            else
+            {
+                insProjectile = Instantiate(FullChargedProjectile, _pointOfOrigin.position, _pointOfTargetting.rotation);
+            }
+
             // Instantiate the weapon gameObject
-            Instantiate(Projectile, _pointOfOrigin.position, PointOfTargetting.rotation);
+            Projectile2d projectile2D = insProjectile.GetComponent<Projectile2d>();
+            projectile2D.Direction = _pointOfTargetting.position - _pointOfOrigin.position;
         }
 
         public void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
-            Vector3 direction = transform.TransformDirection(Vector3.forward) * 5;
+            Vector3 direction = _pointOfTargetting.position - _pointOfOrigin.position;
             Gizmos.DrawRay(_pointOfOrigin.position, direction);
         }
 
@@ -84,11 +106,19 @@ namespace TheFrozenBanana
             set { _pointOfOrigin = value; }
         }
 
+        public Transform PointOfTargetting
+        {
+            get { return _pointOfTargetting; }
+            set { _pointOfTargetting = value; }
+        }
+
         public float AttackActionTime { get; }
 
 		public int AnimationLayer {
 			get { return _animationLayer; }
 			set { _animationLayer = value; }
 		}
-	}
+
+        public float AttackCharge { get; set; }
+    }
 }
