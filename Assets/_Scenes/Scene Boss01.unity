@@ -3859,6 +3859,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332762, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: _dashSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5792141944326332762, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _dashSlider
       value: 
       objectReference: {fileID: 27729492}
@@ -3898,5 +3902,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7137527831321958454, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: _animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 7087a00977ae57f4795f4ea6a651fe98, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}

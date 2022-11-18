@@ -249,19 +249,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _useGravity: 1
-  _maxJumpHeight: 3.5
+  _maxJumpHeight: 6
   _timeToJumpApex: 0.4
   _maxSlopeAngle: 50
   _walkSpeed: 12
-  _dashSpeed: 24
+  _dashSpeed: 30
   _wallSlideSpeedMax: 3
   _terminalFallingVelocity: -45
   _minJumpHeight: 1
   _coyoteTimeMargin: 0.25
   _wallStickTime: 0.25
-  _wallJumpClimb: {x: 7.5, y: 16}
-  _wallJumpOff: {x: 8.5, y: 7}
-  _wallLeap: {x: 18, y: 17}
+  _wallJumpClimb: {x: 4, y: 30}
+  _wallJumpOff: {x: 8, y: 30}
+  _wallLeap: {x: 12, y: 30}
+  _dashSlider: {fileID: 0}
   _maxDashHoldTime: 0.5
 --- !u!114 &5792141944326332763
 MonoBehaviour:
@@ -331,6 +332,7 @@ GameObject:
   - component: {fileID: 5792141945379020441}
   - component: {fileID: 5792141945379020442}
   - component: {fileID: 5792141945379020443}
+  - component: {fileID: 7137527831321958454}
   - component: {fileID: 5792141945379020444}
   - component: {fileID: 5792141945379020445}
   - component: {fileID: 5792141945379020446}
@@ -442,6 +444,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48db935ea92f92f4aa4aeef8bb13cec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7137527831321958454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5792141945379020435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06024ba1e67289498fb7117cac2024b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 7400000, guid: 7087a00977ae57f4795f4ea6a651fe98, type: 2}
+  _priority: 5
+  _animationLayer: 0
+  _canBeInterrupted: 1
+  _isAnimationOverride: 0
 --- !u!114 &5792141945379020444
 MonoBehaviour:
   m_ObjectHideFlags: 0
