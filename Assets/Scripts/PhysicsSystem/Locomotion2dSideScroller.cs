@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TheFrozenBanana
 {
@@ -36,6 +37,7 @@ namespace TheFrozenBanana
 		private bool _isWallSliding;
 
 		// Dash and Stamina
+		[SerializeField] private Slider _dashSlider;
 		private bool _wantsToDash;
 		private bool _dashLock, _groundDash, _airDash;
 		private float _dashTimer;
@@ -251,7 +253,6 @@ namespace TheFrozenBanana
 				if (_airDash) {
 					_velocity.y = 0f;
 				}
-				Debug.Log(Mathf.Sign(_velocity.x));
 				_velocity.x = Mathf.Sign(_dashDirection) * _dashSpeed;
 
 
@@ -274,10 +275,10 @@ namespace TheFrozenBanana
 			if (IsDashing) {
 				HorizontalLook = Mathf.Sign(_velocity.x);
 			}
-			/*
+			
 			if (_dashSlider != null) {
 				_dashSlider.value = (1 - (_dashTimer / _maxDashHoldTime));
-			} */
+			} 
 		}
 		//**************************************************\\
 		//*************** COLLISION DETECTION **************\\
