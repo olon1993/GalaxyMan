@@ -250,9 +250,7 @@ namespace TheFrozenBanana
 				if (_dashTimer < _maxDashHoldTime) {
 					_dashTimer += Time.fixedDeltaTime;
 				}
-				if (_airDash) {
-					_velocity.y = 0f;
-				}
+				_velocity.y = 0f;
 				_velocity.x = Mathf.Sign(_dashDirection) * _dashSpeed;
 
 
