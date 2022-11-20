@@ -11,6 +11,7 @@ namespace TheFrozenBanana
         public float timeToSmash = 1f;
         public float timeToPause = 2f;
         public float timeToReset = 5f;
+        public float smashDistance = 7f;
         public Vector3 start;
         public Vector3 end;
         public Material pipeSpriteMaterial;
@@ -18,7 +19,7 @@ namespace TheFrozenBanana
 
         private void Awake() {
             start = gameObject.transform.position;
-            end = start + Vector3.down * 8;
+            end = start + Vector3.down * smashDistance;
             pipe = gameObject.AddComponent<LineRenderer>();
             pipe.material = pipeSpriteMaterial;
             pipe.positionCount = 2;
@@ -44,6 +45,7 @@ namespace TheFrozenBanana
 
         private IEnumerator RunSmash() {
             float t = 0;
+            GetComponent<ToggleHazard>().Toggle();
             while (t < timeToSmash) {
                 t += Time.deltaTime;
                 float i = t / timeToSmash;
@@ -51,6 +53,7 @@ namespace TheFrozenBanana
                 yield return new WaitForEndOfFrame();
             }
             transform.position = Vector3.Lerp(start, end, 1);
+            GetComponent<ToggleHazard>().Toggle();
             StartCoroutine(RunPause());
 		}
 

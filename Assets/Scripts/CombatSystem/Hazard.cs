@@ -8,7 +8,7 @@ namespace TheFrozenBanana
     {
         [SerializeField] protected bool _showDebugLog = false;
         [SerializeField] private IDamage _damage;
-        [SerializeField] private string _ignoreTag;
+        [SerializeField] private string _ignoreTag= "Untagged";
 
         private void Awake()
         {
@@ -19,7 +19,7 @@ namespace TheFrozenBanana
             }
         }
 
-        protected void OnTriggerEnter2D(Collider2D col)
+        protected virtual void OnTriggerEnter2D(Collider2D col)
         {
             if (_showDebugLog) {
                 Debug.Log("Hazard hit :" + col.gameObject.name);
