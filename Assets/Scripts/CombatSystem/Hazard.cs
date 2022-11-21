@@ -7,8 +7,8 @@ namespace TheFrozenBanana
     public class Hazard : MonoBehaviour
     {
         [SerializeField] protected bool _showDebugLog = false;
-        [SerializeField] private IDamage _damage;
-        [SerializeField] private string _ignoreTag= "Untagged";
+        [SerializeField] protected IDamage _damage;
+        [SerializeField] protected string _ignoreTag= "Untagged";
 
         private void Awake()
         {

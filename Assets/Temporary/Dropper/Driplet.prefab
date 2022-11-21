@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5aaab7d41970954cb7a12076b60d52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 1
+  _showDebugLog: 0
   _ignoreTag: Untagged
   despawnWhenColliding: 1
 --- !u!212 &1328456059735592745
