@@ -126,6 +126,9 @@ namespace TheFrozenBanana
 			}
 		}
 
+		//**************************************************\\
+		//****************** WALL MOVEMENT *****************\\
+		//**************************************************\\
 		protected void HandleWallSliding() {
 
 			if (_collisions.Left) {
@@ -240,7 +243,8 @@ namespace TheFrozenBanana
 					_airDash = true;
 				}
 				IsDashing = true;
-				_dashDirection = Mathf.Sign(HorizontalLook);
+				_velocity.y = 0f;
+				_dashDirection = Mathf.Sign(_velocity.x);
 
 
 
@@ -252,7 +256,9 @@ namespace TheFrozenBanana
 				}
 				_velocity.y = 0f;
 				_velocity.x = Mathf.Sign(_dashDirection) * _dashSpeed;
-
+				if (Mathf.Sign(_dashDirection) == WallDirectionX) {
+					IsDashing = false;
+				}
 
 			// DASH END
 			} else {
