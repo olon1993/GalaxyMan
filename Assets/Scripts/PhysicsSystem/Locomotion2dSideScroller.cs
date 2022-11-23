@@ -109,6 +109,9 @@ namespace TheFrozenBanana
 
 
 		private void GetInput() {
+			if (_handlingDamageForce) {
+				return;
+			}
 			HorizontalMovement = _inputManager.Horizontal;
 			VerticalMovement = _inputManager.Vertical;
 			IsJumping = _inputManager.IsJump;
@@ -471,7 +474,7 @@ namespace TheFrozenBanana
 
 			_handlingDamageForce = true;
 			HorizontalMovement = forceAmount * direction;
-			yield return new WaitForSeconds(0.05f);
+			yield return new WaitForSeconds(0.5f);
 			HorizontalMovement = 0f;
 			_handlingDamageForce = false;
 		}
