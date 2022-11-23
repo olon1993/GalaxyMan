@@ -40,8 +40,9 @@ namespace TheFrozenBanana
             IRecoil recoil = col.GetComponent<IRecoil>();
             if (recoil != null)
             {
+                Debug.Log("Recoil");
                 float damageDirection = transform.position.x < col.transform.position.x ? 1 : -1;
-             //   recoil.ApplyDamageForce(_damage.DamageForce, damageDirection);
+                recoil.ApplyDamageForce(_damage.KnockbackForce, damageDirection);
             }
         }
     }
