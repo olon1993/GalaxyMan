@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4454679528096695850}
   m_Layer: 0
-  m_Name: Effect
+  m_Name: FallInAPitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1396,9 +1396,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 0, a: 0}
-        key1: {r: 0, g: 0.29255292, b: 0.7490196, a: 1}
-        key2: {r: 0.12434556, g: 0.7909241, b: 1.25, a: 0}
+        key0: {r: 1, g: 0.81539816, b: 0, a: 1}
+        key1: {r: 0, g: 0.29255292, b: 0.7490196, a: 0}
+        key2: {r: 0.12434556, g: 0.7909241, b: 1.25, a: 1}
         key3: {r: 0.51308894, g: 3.4999998, b: 3.1928365, a: 0}
         key4: {r: 1.2146596, g: 3.9999995, b: 3.8941953, a: 0}
         key5: {r: 2.5130885, g: 11.999997, b: 9.676129, a: 0}
@@ -1413,8 +1413,8 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
-        atime2: 0
+        atime1: 11758
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
@@ -1422,7 +1422,7 @@ ParticleSystem:
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 6
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

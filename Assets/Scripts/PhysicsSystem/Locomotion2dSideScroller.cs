@@ -474,7 +474,7 @@ namespace TheFrozenBanana
 
 			_handlingDamageForce = true;
 			HorizontalMovement = forceAmount * direction;
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(0.3f);
 			HorizontalMovement = 0f;
 			_handlingDamageForce = false;
 		}
