@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5826890440385622086}
   - component: {fileID: 4514822104215343938}
   - component: {fileID: 7071740950641319939}
+  - component: {fileID: -858753601748714547}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -100,9 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _velocity: 20
   _hitEffect: {fileID: 0}
-  _collisionMask:
-    serializedVersion: 2
-    m_Bits: 0
+  _ownerTag: Player
 --- !u!114 &7071740950641319939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +118,19 @@ MonoBehaviour:
   _stunTime: 0
   _damageAmount: 5
   _knockbackForce: 0
+--- !u!58 &-858753601748714547
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5128333805578873701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6

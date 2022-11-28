@@ -75,7 +75,7 @@ namespace TheFrozenBanana
 			Quaternion q = barrel.transform.rotation;
 			q *= Quaternion.Euler(0, 0, 90);
 			prj.GetComponent<Projectile2DFreeAim>().Setup(start, end, q, "Enemy");
-			Destroy(prj, 5f);
+			Destroy(prj, 10f);
 		}
 	}
 }

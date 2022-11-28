@@ -100,9 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _velocity: 20
   _hitEffect: {fileID: 0}
-  _collisionMask:
-    serializedVersion: 2
-    m_Bits: 0
+  _ownerTag: Player
 --- !u!114 &7071740950641319939
 MonoBehaviour:
   m_ObjectHideFlags: 0
