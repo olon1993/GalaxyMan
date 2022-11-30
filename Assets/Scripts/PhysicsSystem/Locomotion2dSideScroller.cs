@@ -39,10 +39,11 @@ namespace TheFrozenBanana
 		// Dash and Stamina
 		[SerializeField] private Slider _dashSlider;
 		private bool _wantsToDash;
-		private bool _dashLock, _groundDash, _airDash;
+		private bool _dashLock; //, _groundDash, _airDash;
 		private float _dashTimer;
-		private float _dashDirection;
-		[SerializeField] protected float _maxDashHoldTime;
+		private float _dashX;
+		private float _dashY;
+		[SerializeField] protected float _dashDuration;
 		protected bool _isDashing;
 
 		// Damage Force
@@ -224,67 +225,76 @@ namespace TheFrozenBanana
 		//**************************************************\\
 		//****************** DASH MOVEMENT *****************\\
 		//**************************************************\\
-		protected virtual void HandleDash() {
-
+		protected virtual void HandleDash() 
+		{
 			// DASH STARTUP
-			if (_wantsToDash && !IsDashing && _dashTimer < _maxDashHoldTime && !_dashLock) {
+			if (_wantsToDash && !IsDashing && _dashTimer < _dashDuration && !_dashLock) 
+			{
 				_dashLock = true;
 
-				if (IsGrounded) {
-					_velocity.x = Mathf.Sign(HorizontalLook) * _dashSpeed;
-					_groundDash = true;
-
-				} else {
-
-					if (_wallDirectionX < 0) {
+				if (IsGrounded) 
+				{
+					_velocity.x = Movement.normalized.x * _dashSpeed;
+					_velocity.y = Movement.normalized.y * _dashSpeed;
+				} 
+				else 
+				{
+					if (_wallDirectionX < 0) 
+					{
 						_velocity.x = _dashSpeed;
-					} else if (_wallDirectionX > 0) {
-						_velocity.x = -_dashSpeed;
-					} else {
-						_velocity.x = Mathf.Sign(HorizontalLook) * _dashSpeed;
 					}
-					_airDash = true;
+					else if (_wallDirectionX > 0) 
+					{
+						_velocity.x = -_dashSpeed;
+					} 
+					else
+					{
+						_velocity.x = Movement.normalized.x * _dashSpeed;
+						_velocity.y = Movement.normalized.y * _dashSpeed;
+					}
 				}
 				IsDashing = true;
-				_velocity.y = 0f;
-				_dashDirection = Mathf.Sign(_velocity.x);
-
-
-
+				_dashX = _velocity.x;
+				_dashY = _velocity.y;
+			}
 			// DASH CONTINUATION
-			} else if (_wantsToDash && IsDashing && _dashTimer < _maxDashHoldTime) {
+			else if (_wantsToDash && IsDashing && _dashTimer < _dashDuration) 
+			{
 //				Debug.Log("Continue Dash");
-				if (_dashTimer < _maxDashHoldTime) {
-					_dashTimer += Time.fixedDeltaTime;
+				if (_dashTimer < _dashDuration) 
+				{
+					_dashTimer += Time.deltaTime;
 				}
-				_velocity.y = 0f;
-				_velocity.x = Mathf.Sign(_dashDirection) * _dashSpeed;
-				if (Mathf.Sign(_dashDirection) == WallDirectionX) {
+				_velocity.y = _dashY;//.Sign() * _dashSpeed;
+				_velocity.x = _dashX;//.Sign() * _dashSpeed;
+				if (_dashX.Sign() == WallDirectionX) 
+				{
 					IsDashing = false;
 				}
 
 			// DASH END
-			} else {
+			} 
+			else 
+			{
 	//			Debug.Log("End Dash");
 				IsDashing = false;
-				_dashTimer -= Time.fixedDeltaTime;
-				if (_dashTimer < 0f) {
-					_dashTimer = 0f;
-				}
-				_airDash = false;
-				_groundDash = false;
+				_dashTimer = 0; 
 			}
-			if (!_wantsToDash && (IsWallSliding || IsGrounded)) {
+			Debug.Log("Dash: " + _velocity.y);
+			if (!_wantsToDash && (IsWallSliding || IsGrounded)) 
+			{
 	//			Debug.Log("Unlock Dash");
 				_dashLock = false;
 			}
 
-			if (IsDashing) {
+			if (IsDashing) 
+			{
 				HorizontalLook = Mathf.Sign(_velocity.x);
 			}
 			
-			if (_dashSlider != null) {
-				_dashSlider.value = (1 - (_dashTimer / _maxDashHoldTime));
+			if (_dashSlider != null) 
+			{
+				_dashSlider.value = (1 - (_dashTimer / _dashDuration));
 			} 
 		}
 		//**************************************************\\
