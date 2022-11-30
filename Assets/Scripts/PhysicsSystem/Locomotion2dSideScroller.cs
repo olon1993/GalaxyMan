@@ -44,7 +44,7 @@ namespace TheFrozenBanana
 		private float _dashX;
 		private float _dashY;
 		[SerializeField] protected float _dashDuration;
-		protected bool _isDashing;
+		private bool _isDashing;
 
 		// Damage Force
 
@@ -231,28 +231,20 @@ namespace TheFrozenBanana
 			if (_wantsToDash && !IsDashing && _dashTimer < _dashDuration && !_dashLock) 
 			{
 				_dashLock = true;
-
-				if (IsGrounded) 
+				if (_wallDirectionX < 0) 
+				{
+					_velocity.x = _dashSpeed;
+				}
+				else if (_wallDirectionX > 0) 
+				{
+					_velocity.x = -_dashSpeed;
+				} 
+				else
 				{
 					_velocity.x = Movement.normalized.x * _dashSpeed;
 					_velocity.y = Movement.normalized.y * _dashSpeed;
-				} 
-				else 
-				{
-					if (_wallDirectionX < 0) 
-					{
-						_velocity.x = _dashSpeed;
-					}
-					else if (_wallDirectionX > 0) 
-					{
-						_velocity.x = -_dashSpeed;
-					} 
-					else
-					{
-						_velocity.x = Movement.normalized.x * _dashSpeed;
-						_velocity.y = Movement.normalized.y * _dashSpeed;
-					}
 				}
+
 				IsDashing = true;
 				_dashX = _velocity.x;
 				_dashY = _velocity.y;
@@ -265,9 +257,11 @@ namespace TheFrozenBanana
 				{
 					_dashTimer += Time.deltaTime;
 				}
-				_velocity.y = _dashY;//.Sign() * _dashSpeed;
-				_velocity.x = _dashX;//.Sign() * _dashSpeed;
-				if (_dashX.Sign() == WallDirectionX) 
+
+				_velocity.y = _dashY;
+				_velocity.x = _dashX;
+
+				if (Mathf.Sign(_dashX) == WallDirectionX) 
 				{
 					IsDashing = false;
 				}
@@ -280,7 +274,7 @@ namespace TheFrozenBanana
 				IsDashing = false;
 				_dashTimer = 0; 
 			}
-			Debug.Log("Dash: " + _velocity.y);
+			Debug.Log("Dash: " + IsDashing);
 			if (!_wantsToDash && (IsWallSliding || IsGrounded)) 
 			{
 	//			Debug.Log("Unlock Dash");
@@ -509,7 +503,21 @@ namespace TheFrozenBanana
 
 		public bool IsJumpCancelled { get; set; }
 
-		public bool IsDashing { get; set; }
+		public bool IsDashing 
+		{ 
+			get { return _isDashing; }
+            set
+            {
+				if(_isDashing != value)
+                {
+					_isDashing = value;
+					if(_isDashing == false && _velocity.y > 0)
+                    {
+						_velocity.y = 0;
+                    }
+				}
+            }
+		}
 		public new bool IsGrounded { get { return _collisions.Below; } }
 
 		public bool IsWallSliding { get { return _isWallSliding; } }
