@@ -68,6 +68,14 @@ namespace TheFrozenBanana
 			}
 		}
 
+		public void OverrideHorizontalInput(float val) {
+			throw new System.NotImplementedException();
+		}
+
+		public void EndOverride() {
+			throw new System.NotImplementedException();
+		}
+
 		//**************************************************\\
 		//******************* Properties *******************\\
 		//**************************************************\\

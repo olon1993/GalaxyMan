@@ -45,6 +45,14 @@ namespace TheFrozenBanana
 			}
 		}
 
+		public void OverrideHorizontalInput(float val) {
+			throw new NotImplementedException();
+		}
+
+		public void EndOverride() {
+			throw new NotImplementedException();
+		}
+
 		//**************************************************\\
 		//******************* Properties *******************\\
 		//**************************************************\\

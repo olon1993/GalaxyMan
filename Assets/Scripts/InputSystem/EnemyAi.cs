@@ -218,11 +218,19 @@ namespace TheFrozenBanana
             Gizmos.DrawWireSphere(_target.position, _targetRange);
         }
 
-        //**************************************************\\
-        //******************* Properties *******************\\
-        //**************************************************\\
+		public void OverrideHorizontalInput(float val) {
+			throw new NotImplementedException();
+		}
 
-        private struct TargetInfo
+		public void EndOverride() {
+			throw new NotImplementedException();
+		}
+
+		//**************************************************\\
+		//******************* Properties *******************\\
+		//**************************************************\\
+
+		private struct TargetInfo
         {
             public TargetInfo(Vector2 position, float errorMargin, bool isEnemy = false)
             {
