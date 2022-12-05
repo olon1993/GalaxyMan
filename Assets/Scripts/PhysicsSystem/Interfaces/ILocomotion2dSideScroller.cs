@@ -15,6 +15,7 @@ namespace TheFrozenBanana
         bool IsLeftCollision { get; }
         int WallDirectionX { get; }
         bool IsWallSliding { get; }
+        float HorizontalLook { get; set; }
     }
 
 }

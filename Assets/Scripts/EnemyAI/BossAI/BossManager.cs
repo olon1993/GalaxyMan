@@ -95,7 +95,6 @@ public class BossManager : MonoBehaviour
 		}
 		tmp[possibleActions.Length] = action;
 		possibleActions = tmp;
-
 	}
 
 	private IEnumerator EnterBoss() {

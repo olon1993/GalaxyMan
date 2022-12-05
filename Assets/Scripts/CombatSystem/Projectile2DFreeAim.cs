@@ -68,6 +68,7 @@ namespace TheFrozenBanana
 		public void Setup(Vector3 start, Vector3 target, Quaternion projectileRotation, string owner) {
 			ownerTag = owner;
 			direction = target - start;
+			Debug.Log("Direction: "  + direction);
 			child.transform.rotation = projectileRotation;
 			active = true;
 			Destroy(this.gameObject, 5f);

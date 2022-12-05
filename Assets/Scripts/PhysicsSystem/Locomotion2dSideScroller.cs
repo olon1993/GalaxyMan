@@ -274,7 +274,6 @@ namespace TheFrozenBanana
 				IsDashing = false;
 				_dashTimer = 0; 
 			}
-			Debug.Log("Dash: " + IsDashing);
 			if (!_wantsToDash && (IsWallSliding || IsGrounded)) 
 			{
 	//			Debug.Log("Unlock Dash");

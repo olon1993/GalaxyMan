@@ -25,6 +25,7 @@ namespace TheFrozenBanana
         [SerializeField] private int _currentAmmo;
         [SerializeField] private IWeapon.AmmoType _ammoType;
 		[SerializeField] private int _animationLayer;
+        [SerializeField] private string _owner;
 
         //**************************************************\\
         //******************** Methods *********************\\
@@ -49,20 +50,20 @@ namespace TheFrozenBanana
             GameObject insProjectile = null;
             if (charge < _halfChargeTime)
             {
-                insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, _pointOfTargetting.rotation);
+                insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, Quaternion.identity,null);
             }
             else if(charge < _fullChargeTime)
             {
-                insProjectile = Instantiate(HalfChargedProjectile, _pointOfOrigin.position, _pointOfTargetting.rotation);
+                insProjectile = Instantiate(HalfChargedProjectile, _pointOfOrigin.position, Quaternion.identity, null);
             }
             else
             {
-                insProjectile = Instantiate(FullChargedProjectile, _pointOfOrigin.position, _pointOfTargetting.rotation);
+                insProjectile = Instantiate(FullChargedProjectile, _pointOfOrigin.position, Quaternion.identity, null);
             }
 
             // Instantiate the weapon gameObject
-            Projectile2d projectile2D = insProjectile.GetComponent<Projectile2d>();
-            projectile2D.Direction = _pointOfTargetting.position - _pointOfOrigin.position;
+            IProjectile projectile = insProjectile.GetComponent<IProjectile>();
+            projectile.Setup(_pointOfOrigin.position, _pointOfTargetting.position, _pointOfTargetting.rotation, _owner);
         }
 
         public void OnDrawGizmosSelected()

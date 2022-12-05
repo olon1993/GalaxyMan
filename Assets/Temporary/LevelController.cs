@@ -31,7 +31,7 @@ namespace TheFrozenBanana
 			IInputManager input = player.GetComponent<IInputManager>();
 			input.IsEnabled = false;
 			input.OverrideHorizontalInput(1);
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(0.4f);
 			input.EndOverride();
 			yield return new WaitForSeconds(2f);
 			input.IsEnabled = true;
@@ -41,7 +41,7 @@ namespace TheFrozenBanana
 			IInputManager input = player.GetComponent<IInputManager>();
 			input.IsEnabled = false;
 			input.OverrideHorizontalInput(1);
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(0.4f);
 			input.EndOverride();
 
 			yield return new WaitForSeconds(2f);
