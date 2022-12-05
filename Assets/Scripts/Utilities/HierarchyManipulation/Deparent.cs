@@ -11,7 +11,7 @@ namespace TheFrozenBanana {
 
 		IEnumerator WaitToOrphan() {
 			// Delay is separated so not all deparents are carried out simultaneously
-			float s = Random.Range(0.1f,2f);
+			float s = Random.Range(0.01f,0.02f);
 			yield return new WaitForSeconds(s);
 			gameObject.transform.SetParent(null);
 		}
