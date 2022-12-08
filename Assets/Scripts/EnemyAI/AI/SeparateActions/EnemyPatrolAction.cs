@@ -7,8 +7,10 @@ namespace TheFrozenBanana
 	public class EnemyPatrolAction : EnemyAction
 	{
 		[SerializeField] private Transform[] locations;
+		[SerializeField] private bool allowJump = true;
 		public int currentLocation;
 		private float dir;
+		
 
 		protected override IEnumerator CarryOutAction() {
 			if (_showDebugLog) {
@@ -28,10 +30,18 @@ namespace TheFrozenBanana
 			}
 			float t = 0;
 			while (t < _actionTime) {
-				if (dir > 0 && _locomotion.IsRightCollision && !_inputManager.IsJump) {
-					ec.Jump();
-				} else if (dir < 0 && _locomotion.IsLeftCollision && !_inputManager.IsJump) {
-					ec.Jump();
+				if (allowJump) {
+					if (dir > 0 && _locomotion.IsRightCollision && !_inputManager.IsJump) {
+						ec.Jump();
+					} else if (dir < 0 && _locomotion.IsLeftCollision && !_inputManager.IsJump) {
+						ec.Jump();
+					}
+				} else {
+					if ((dir > 0 && _locomotion.IsRightCollision) || (dir < 0 && _locomotion.IsLeftCollision)) {
+						_inputManager.EndOverride();
+						yield return new WaitForSeconds(0.5f);
+						break;
+					}
 				}
 				if (Vector3.Distance(locations[currentLocation].position, gameObject.transform.position) < 1f) {
 					_inputManager.EndOverride();

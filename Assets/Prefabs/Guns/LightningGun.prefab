@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4322857799254655299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4322857799254655300}
+  m_Layer: 6
+  m_Name: PointOfOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4322857799254655300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322857799254655299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4322857799430956492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4322857799430956491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4322857799430956492}
+  - component: {fileID: 4322857799430956494}
+  m_Layer: 6
+  m_Name: LightningGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4322857799430956492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322857799430956491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.72, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4322857799254655300}
+  - {fileID: 8408673571254707172}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4322857799430956494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322857799430956491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e51b5b29cafcf44d9c2a89d2bc577a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointOfOrigin: {fileID: 4322857799254655300}
+  _pointOfTargetting: {fileID: 0}
+  DefaultProjectile: {fileID: 5902931012708338258, guid: c18178e9853e0fa4398343e94c132b64, type: 3}
+  ChargingParticleSystem: {fileID: 645905436057874729}
+  _chargedShotTime:
+  - 0
+  - 0.6
+  _chargeProjectile:
+  - {fileID: 5902931012708338258, guid: c18178e9853e0fa4398343e94c132b64, type: 3}
+  - {fileID: 5902931012708338258, guid: 3f15ab35f4d47de4aaff0ac356bcc9a2, type: 3}
+  _chargeAmmoCost: 
+  _isLimitedAmmo: 0
+  _maxAmmo: 10
+  _currentAmmo: 10
+  _ammoType: 0
+  _animationLayer: 0
+  _owner: Player
+--- !u!1001 &3057195550698344588
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4322857799430956492}
+    m_Modifications:
+    - target: {fileID: 2493833889676435877, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_Name
+      value: LightningLines
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934690065230725141, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934690065230725141, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+--- !u!1 &645905436057874729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2493833889676435877, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+  m_PrefabInstance: {fileID: 3057195550698344588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8408673571254707172 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6835561707211699048, guid: 254037e7cda1906429d031113e546cb9, type: 3}
+  m_PrefabInstance: {fileID: 3057195550698344588}
+  m_PrefabAsset: {fileID: 0}

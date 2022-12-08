@@ -12,13 +12,11 @@ namespace TheFrozenBanana
         [SerializeField] private Transform _pointOfTargetting;
 
         [SerializeField] GameObject DefaultProjectile;
+        [SerializeField] GameObject ChargingParticleSystem;
 
-        [SerializeField] private float _halfChargeTime = 0.5f;
-        [SerializeField] GameObject HalfChargedProjectile;
-
-        [SerializeField] private float _fullChargeTime = 1f;
-        [SerializeField] GameObject FullChargedProjectile;
-
+        [SerializeField] private float[] _chargedShotTime;
+        [SerializeField] private GameObject[] _chargeProjectile;
+        [SerializeField] private int[] _chargeAmmoCost;
 
         [SerializeField] private bool _isLimitedAmmo;
         [SerializeField] private int _maxAmmo;
@@ -31,40 +29,53 @@ namespace TheFrozenBanana
         //******************** Methods *********************\\
         //**************************************************\\
 
-        public void Attack(float charge)
+        public void ChargeEffect() {
+            if (ChargingParticleSystem != null) {
+                ParticleSystem ps = ChargingParticleSystem.GetComponent<ParticleSystem>();
+                    ps.Play();
+				
+			}
+		}
+
+        public void Attack(float chargeTime)
         {
-            if (IsLimitedAmmo)
-            {
-                if (CurrentAmmo <= 0)
-                {
-                    Debug.Log(gameObject.name + " could not attack because they are out of ammo!");
-                    return;
-                }
-
-                if (MaxAmmo > 0)
-                {
-                    CurrentAmmo -= 1;
-                }
-            }
-
+            if (ChargingParticleSystem != null) {
+                ParticleSystem ps = ChargingParticleSystem.GetComponent<ParticleSystem>();
+                    ps.Stop();
+			}
+            
             GameObject insProjectile = null;
-            if (charge < _halfChargeTime)
-            {
-                insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, Quaternion.identity,null);
+            if (_chargedShotTime.Length == 0 || _chargeProjectile.Length == 0d) {
+                insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, Quaternion.identity, null);
+            } else {
+                // Loop backwards to 0, not from 0 and up
+                for (int i = _chargedShotTime.Length - 1; i > -1 ; i--) {
+                    if (chargeTime > _chargedShotTime[i]) {
+                        if (CheckAmmo(i)) {
+                            insProjectile = Instantiate(_chargeProjectile[i], _pointOfOrigin.position, Quaternion.identity, null);
+                            break;
+                        } else {
+                            Debug.LogWarning("Not enough ammo");
+                            return;
+						}
+                    }
+                }
             }
-            else if(charge < _fullChargeTime)
-            {
-                insProjectile = Instantiate(HalfChargedProjectile, _pointOfOrigin.position, Quaternion.identity, null);
-            }
-            else
-            {
-                insProjectile = Instantiate(FullChargedProjectile, _pointOfOrigin.position, Quaternion.identity, null);
-            }
-
-            // Instantiate the weapon gameObject
+            
             IProjectile projectile = insProjectile.GetComponent<IProjectile>();
             projectile.Setup(_pointOfOrigin.position, _pointOfTargetting.position, _pointOfTargetting.rotation, _owner);
         }
+
+        private bool CheckAmmo(int i) {
+            if (_isLimitedAmmo) {
+                if (_chargeAmmoCost[i] > _currentAmmo) {
+                    return false;
+				} else {
+                    _currentAmmo -= _chargeAmmoCost[i];
+                }
+            }
+            return true;
+		}
 
         public void OnDrawGizmosSelected()
         {

@@ -8,6 +8,7 @@ namespace TheFrozenBanana
     {
 		[SerializeField] private GameObject _projectileWeapon;
 		[SerializeField] private float _aimSpeed;
+		[SerializeField] private GameObject _chargeParticles;
 
 		protected override IEnumerator CarryOutAction() {
 			if (_showDebugLog) {
@@ -16,6 +17,10 @@ namespace TheFrozenBanana
 			_actionInEffect = true;
 			float t = 0;
 			float angle = 0;
+			if (_chargeParticles != null) {
+				GameObject partSys = Instantiate(_chargeParticles, _projectileWeapon.transform.position, Quaternion.identity, _projectileWeapon.transform) as GameObject;
+				Destroy(partSys,_actionTime);
+			}
 			while (t < _actionTime) {
 				if (!_actionInEffect) {
 					if (_showDebugLog) {
