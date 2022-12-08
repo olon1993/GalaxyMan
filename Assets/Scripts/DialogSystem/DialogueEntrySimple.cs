@@ -4,8 +4,7 @@ using UnityEngine;
 
 namespace TheFrozenBanana
 {
-    public class DialogueEntrySimple : MonoBehaviour, IDialogueEntrySimple
-    {
+    public class DialogueEntrySimple : MonoBehaviour, IDialogueEntrySimple {
         [SerializeField] private bool _showDebugLog = false;
 
         //**************************************************\\
@@ -21,12 +20,18 @@ namespace TheFrozenBanana
         [SerializeField] private string[] _sentences;
         [SerializeField] public GameObject _nextDialogueEntry;
 
-        //**************************************************\\
-        //****************** Properties ********************\\
-        //**************************************************\\
+		//**************************************************\\
+		//****************** Properties ********************\\
+		//**************************************************\\
 
-        public string Speaker
-        {
+		private void Awake() {
+
+            if (_showDebugLog) {
+                Debug.Log("DialogueEntrySimple");
+            }
+        }
+
+		public string Speaker {
             get { return _speaker; }
         }
 

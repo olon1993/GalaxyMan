@@ -28,7 +28,11 @@ namespace TheFrozenBanana
 
         void Awake()
         {
-        
+
+
+            if (_showDebugLog) {
+                Debug.Log("DialogueEntryBranching");
+            }
         }
 
         void Start()

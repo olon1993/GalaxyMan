@@ -28,7 +28,7 @@ namespace TheFrozenBanana
 
         #region UnityMethods
 
-        void Awake()
+        protected override void Awake()
         {
             base.Awake();
 
@@ -39,12 +39,12 @@ namespace TheFrozenBanana
             }
         }
 
-        void Start()
+        protected override void Start()
         {
-
+            base.Start();
         }
 
-        void Update()
+        protected override void Update()
         {
             GetInput();
 
@@ -70,11 +70,7 @@ namespace TheFrozenBanana
         //****************** Properties ********************\\
         //**************************************************\\
 
-        public float HorizontalMovement { get; set; }
-        public float VerticalMovement { get; set; }
         public bool IsDashing { get; set; }
-        public Vector3 Movement { get; }
-        public Vector3 Velocity { get; }
 
     }
 }

@@ -9,7 +9,6 @@ namespace TheFrozenBanana
     {
         bool IsJumping { get; set; }
         bool IsJumpCancelled { get; set; }
-        bool IsDashing { get; set; }
         bool IsGrounded { get; }
         bool IsRightCollision { get; }
         bool IsLeftCollision { get; }

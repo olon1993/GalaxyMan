@@ -7,7 +7,7 @@ namespace TheFrozenBanana
 
 	public class Projectile2DFreeAim : MonoBehaviour, IProjectile
 	{
-
+		[SerializeField] protected bool _showDebugLog;
 		[SerializeField] private float _velocity;
 		[SerializeField] GameObject _child;
 		[SerializeField] GameObject _hitEffect;
@@ -45,17 +45,19 @@ namespace TheFrozenBanana
 			if (hpScript != null) {
 				// Do damage
 				hpScript.TakeDamage(_damage);
-				HandleDamageForce(col);
+			}
+			IRecoil recoil = col.GetComponent<IRecoil>();
+			if (recoil != null) {
+				if (_showDebugLog) {
+					Debug.Log("Recoil");
+				}
+				recoil.ApplyRecoil(_damage.KnockbackForce, gameObject.transform.position - _direction * 5);
 			}
 			if (active) {
 				Deactivate();
 			}
 		}
 
-		private void HandleDamageForce(Collider2D col) {
-			float damageDirection = transform.position.x < col.transform.position.x ? 1 : -1;
-
-		}
 
 		// only handles movement if active
 		private void FixedUpdate() {

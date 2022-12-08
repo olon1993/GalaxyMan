@@ -15,6 +15,7 @@ namespace TheFrozenBanana
         public float AttackActionTime { get; }
 		int AnimationLayer { get; set; }
         float AttackCharge { get; set; }
+        void ChargeEffect();
 
 		public enum DamageType
         {
