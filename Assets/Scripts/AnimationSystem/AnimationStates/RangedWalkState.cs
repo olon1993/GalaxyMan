@@ -17,8 +17,9 @@ namespace TheFrozenBanana
         //******************** Methods *********************\\
         //**************************************************\\
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             _locomotion = GetComponentInParent<ILocomotion>();
             if(_locomotion == null)
             {

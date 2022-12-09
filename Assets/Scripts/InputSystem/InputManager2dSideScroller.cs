@@ -22,6 +22,7 @@ namespace TheFrozenBanana
 		private bool _isDash;
 		private bool _isAttack;
 		private bool _isAttacking;
+		private bool overrideInput;
 		[SerializeField] private bool _isEnabled;
 
 		//**************************************************\\
@@ -30,6 +31,14 @@ namespace TheFrozenBanana
 
 		#region PublicMethods
 
+		public void OverrideHorizontalInput(float val) {
+			overrideInput = true;
+			_horizontal = val;
+		}
+
+		public void EndOverride() {
+			overrideInput = false;
+		}
 		#endregion
 
 
@@ -68,7 +77,9 @@ namespace TheFrozenBanana
 					Debug.Log("IsAttacking: " + _isAttacking);
 					Debug.Log("IsToggleInventory: " + _isToggleInventory);
 				}
-			} else {
+			} else if (overrideInput) {
+			} else { 
+
 				_horizontal = 0;
 				_vertical = 0;
 				_isToggleInventory = false;

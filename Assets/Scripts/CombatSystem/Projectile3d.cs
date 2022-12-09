@@ -39,28 +39,39 @@ namespace TheFrozenBanana
 			_rigidbody.velocity = gameObject.transform.forward * ProjectileSpeed;
 		}
 
-		private void OnTriggerEnter(Collider collider) {
-			if (collider.gameObject.layer.Equals(_collisionMask) == false) {
+		private void OnTriggerEnter(Collider col) {
+			if (col.gameObject.layer.Equals(_collisionMask) == false) {
 				return;
 			}
 
-			IHealth health = collider.GetComponent<IHealth>();
+			// TODO: WTF?
+			IHealth health = col.GetComponent<IHealth>();
 			if (health == null) {
 				Destroy(gameObject);
 				return;
 			}
 
 			if (_showDebugLog) {
-				Debug.Log(gameObject.name + " attacks dealing " + _damage.DamageAmount + " damage to " + collider.gameObject.name + "!");
+				Debug.Log(gameObject.name + " attacks dealing " + _damage.DamageAmount + " damage to " + col.gameObject.name + "!");
 			}
 
 			health.TakeDamage(_damage);
 
 			if (_showDebugLog) {
-				Debug.Log(collider.gameObject.name + " health = " + health.CurrentHealth + " / " + health.MaxHealth);
+				Debug.Log(col.gameObject.name + " health = " + health.CurrentHealth + " / " + health.MaxHealth);
 
 			}
+			IRecoil recoil = col.GetComponent<IRecoil>();
+			if (recoil != null) {
+				if (_showDebugLog) {
+					Debug.Log("Recoil");
+				}
+				float damageDirection = transform.position.x < col.transform.position.x ? 1 : -1;
+				Vector2 closest = col.ClosestPoint(gameObject.transform.position);
+				Vector3 src = new Vector3(closest.x, closest.y, 0);
 
+				recoil.ApplyRecoil(_damage.KnockbackForce, src);
+			}
 			Destroy(gameObject);
 		}
 	}

@@ -21,6 +21,7 @@ public class BossManager : MonoBehaviour
 	private IBossAction currentAction;
 
 	private bool acting;
+	private bool active;
 	private int currentLocationId = 0;
 	protected float _direction = -1f;
 
@@ -33,9 +34,17 @@ public class BossManager : MonoBehaviour
 		weaponScale = _weapon.transform.localScale;
 		_target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		allActions = GetComponents<IBossAction>();
+		StartCoroutine(EnterBoss());
+	}
+
+	public void Activate() {
+		active = true;
 	}
 
 	private void Update() {
+		if (!active) {
+			return;
+		}
 		if (currentAction == null) {
 			SelectAction();
 		}
@@ -86,7 +95,10 @@ public class BossManager : MonoBehaviour
 		}
 		tmp[possibleActions.Length] = action;
 		possibleActions = tmp;
+	}
 
+	private IEnumerator EnterBoss() {
+		yield return new WaitForEndOfFrame();
 	}
 
 	public GameObject Weapon { get { return _weapon; } }

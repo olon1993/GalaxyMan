@@ -9,12 +9,12 @@ namespace TheFrozenBanana
     {
         bool IsJumping { get; set; }
         bool IsJumpCancelled { get; set; }
-        bool IsDashing { get; set; }
         bool IsGrounded { get; }
         bool IsRightCollision { get; }
         bool IsLeftCollision { get; }
         int WallDirectionX { get; }
         bool IsWallSliding { get; }
+        float HorizontalLook { get; set; }
     }
 
 }

@@ -26,6 +26,7 @@ namespace TheFrozenBanana
 
         private int _horizontalFacingDirection = 1;
 
+        private bool _isCharging = false;
         private float _attackChargeTime = 0f;
         private Vector3 _combatDirection = Vector3.right;
 
@@ -35,6 +36,10 @@ namespace TheFrozenBanana
 
         void Awake()
         {
+
+            if (_showDebugLog) {
+                Debug.Log("Combatant Debug Log is on");
+            }
             _dependencyManager = GetComponent<DependencyManager>();
             if(_dependencyManager == null)
             {
@@ -78,6 +83,11 @@ namespace TheFrozenBanana
             IsAttacking = _inputManager.IsAttacking;
 
             bool isUp = _inputManager.Vertical > Mathf.Epsilon;
+            
+            if (IsAttacking && !_isCharging) {
+                CurrentWeapon.ChargeEffect();
+                _isCharging = true;
+			}
 
             if (isUp)
             {
@@ -105,6 +115,7 @@ namespace TheFrozenBanana
             {
                 CurrentWeapon.Attack(_attackChargeTime);
                 _attackChargeTime = 0f;
+                _isCharging = false;
             }
 
             CheckWeaponToggle();

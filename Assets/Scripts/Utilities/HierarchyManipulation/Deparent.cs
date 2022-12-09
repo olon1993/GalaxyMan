@@ -6,12 +6,12 @@ using TheFrozenBanana;
 namespace TheFrozenBanana {
 	public class Deparent : MonoBehaviour {
 		private void Awake() {
-		//	StartCoroutine(WaitToOrphan());
+			StartCoroutine(WaitToOrphan());
 		}
 
 		IEnumerator WaitToOrphan() {
 			// Delay is separated so not all deparents are carried out simultaneously
-			float s = Random.Range(1f,5f);
+			float s = Random.Range(0.01f,0.02f);
 			yield return new WaitForSeconds(s);
 			gameObject.transform.SetParent(null);
 		}

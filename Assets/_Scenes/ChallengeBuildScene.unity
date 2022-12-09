@@ -4012,7 +4012,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 1
-  _knockbackForce: 2
+  _knockbackForce: 5
 --- !u!114 &227978374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4116,7 +4116,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 1
-  _knockbackForce: 2
+  _knockbackForce: 5
 --- !u!114 &272306223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4541,7 +4541,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 1
-  _knockbackForce: 2
+  _knockbackForce: 10
 --- !u!58 &446055533
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4611,7 +4611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332762, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _showDebugLog
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332764, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _timeInvulnerable
@@ -5220,7 +5220,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 1
-  _knockbackForce: 2
+  _knockbackForce: 5
 --- !u!114 &705146568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22995,7 +22995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1825317657
 Transform:
   m_ObjectHideFlags: 0
@@ -26468,7 +26468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1840963203
 Transform:
   m_ObjectHideFlags: 0
@@ -29015,7 +29015,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 1
-  _knockbackForce: 2
+  _knockbackForce: 5
 --- !u!114 &1871712233
 MonoBehaviour:
   m_ObjectHideFlags: 0

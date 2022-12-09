@@ -6,7 +6,7 @@ using TheFrozenBanana;
 namespace TheFrozenBanana
 {
 
-	public class Projectile2d : MonoBehaviour
+	public class Projectile2d : MonoBehaviour, IProjectile
 	{
 
 		[SerializeField] private float _velocity;
@@ -59,6 +59,18 @@ namespace TheFrozenBanana
 		private void Deactivate() {
 			_active = false;
 			gameObject.SetActive(false);
+		}
+
+		public void TriggerCollision(Collider2D col) {
+			Debug.LogWarning("The method TriggerCollision should not be called in this script");
+		}
+
+		public void Setup(Vector3 start, Vector3 target, Quaternion rotation, string ownerTag) {
+			ownerTag = _ownerTag;
+			_direction = target - start;
+			Debug.Log("Direction: " + _direction);
+			_active = true;
+			Destroy(this.gameObject, 5f);
 		}
 
 		public Vector3 Direction {

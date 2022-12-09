@@ -18,6 +18,9 @@ namespace TheFrozenBanana
 
         // Input
         bool IsEnabled { get; set; }
+
+        void OverrideHorizontalInput(float val);
+        void EndOverride();
     }
 }
 

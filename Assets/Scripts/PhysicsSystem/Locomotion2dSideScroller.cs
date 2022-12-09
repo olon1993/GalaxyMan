@@ -48,7 +48,7 @@ namespace TheFrozenBanana
 
 		// Damage Force
 
-		private bool _handlingDamageForce;
+		private bool _handlingKnockback;
 
 		// Graphics
 		private float _horizontalLook = 1;
@@ -95,7 +95,7 @@ namespace TheFrozenBanana
 
 			CalculateVelocity();
 
-			if (!_handlingDamageForce) {
+			if (!_handlingKnockback) {
 				HandleWallSliding();
 				HandleJumping();
 				FaceDirectionBasedOnInput();
@@ -110,7 +110,7 @@ namespace TheFrozenBanana
 
 
 		private void GetInput() {
-			if (_handlingDamageForce) {
+			if (_handlingKnockback) {
 				return;
 			}
 			HorizontalMovement = _inputManager.Horizontal;
@@ -274,7 +274,6 @@ namespace TheFrozenBanana
 				IsDashing = false;
 				_dashTimer = 0; 
 			}
-			Debug.Log("Dash: " + IsDashing);
 			if (!_wantsToDash && (IsWallSliding || IsGrounded)) 
 			{
 	//			Debug.Log("Unlock Dash");
@@ -466,21 +465,38 @@ namespace TheFrozenBanana
 			_collisions.FallingThroughPlatform = false;
 		}
 
-		public void ApplyDamageForce(float forceAmount, float direction) {
-			StartCoroutine(RunDamageForce(forceAmount, direction));
+		public void ApplyRecoil(float amount, Vector3 source) {
+			StartCoroutine(RunRecoil(amount, source));
 		}
 
+		//**************************************************\\
+		//********************* Recoil *********************\\
+		//**************************************************\\
 
-		private IEnumerator RunDamageForce(float forceAmount, float direction) {
+		private IEnumerator RunRecoil(float forceValue, Vector3 forceSource) {
 			if (_showDebugLog) {
-				Debug.Log("Applying Damage Force: " + gameObject.name + " Direction: " + direction);
+				Debug.Log("Applying Damage Force: " + gameObject.name + " Source: " + forceSource);
 			}
 
-			_handlingDamageForce = true;
-			HorizontalMovement = forceAmount * direction;
-			yield return new WaitForSeconds(0.3f);
+			Vector3 direction = (gameObject.transform.position - forceSource).normalized;
+			if (_showDebugLog) {
+				Debug.Log("Applying Damage Force: " + gameObject.name + " Source: " + forceSource + " Direction: " + direction);
+			}
+			_handlingKnockback = true;
+			DisruptInput();
+			HorizontalMovement = forceValue * direction.x;
+			_velocity.y = forceValue * direction.y;
+			if (_velocity.y > 0) {
+				_velocity.y *= 4;
+			}
+			yield return new WaitForSeconds(0.1f);
 			HorizontalMovement = 0f;
-			_handlingDamageForce = false;
+			_handlingKnockback = false;
+		}
+
+		private void DisruptInput() {
+			IsDashing = false;
+			IsJumping = false;
 		}
 
 		//**************************************************\\

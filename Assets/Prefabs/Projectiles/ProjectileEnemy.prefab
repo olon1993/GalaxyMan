@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a695ce4c66145c1469ec4e767e4c4189, type: 3}
-  m_Color: {r: 0.31044602, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 337d9a9513e9ba14b818185ecab7d0a8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22dc6b47e2e41c4db1b03e048fa30e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _showDebugLog: 0
   _velocity: 16
   _child: {fileID: 5430302830572526666}
   _hitEffect: {fileID: 0}
@@ -200,4 +201,4 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 1
-  _knockbackForce: 0
+  _knockbackForce: 5

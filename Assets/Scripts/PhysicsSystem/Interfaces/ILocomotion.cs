@@ -8,7 +8,7 @@ namespace TheFrozenBanana
     {
         float HorizontalMovement { get; set; }
         float VerticalMovement { get; set; }
-        public bool IsDashing { get; set; }
+        bool IsDashing { get; set; }
         Vector3 Movement { get; }
         Vector3 Velocity { get; }
     }

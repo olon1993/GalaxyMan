@@ -57,8 +57,11 @@ namespace TheFrozenBanana
 
         #region PublicMethods
 
-        public void Initiate(IDialogueTree dialogue)
-        {
+        public void Initiate(IDialogueTree dialogue) {
+
+            if (_showDebugLog) {
+                Debug.Log("DialogueManager.Initiate");
+            }
             _currentDialogue = dialogue;
             _currentDialogueEntry = dialogue.StartDialogueEntry.GetComponent<IDialogueEntry>();
 
