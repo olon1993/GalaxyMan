@@ -3918,6 +3918,10 @@ PrefabInstance:
       propertyPath: _dashSlider
       value: 
       objectReference: {fileID: 27729492}
+    - target: {fileID: 5792141944326332762, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: _dashDuration
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332764, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: hpSlider
       value: 
