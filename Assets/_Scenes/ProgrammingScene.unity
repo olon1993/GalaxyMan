@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.770834
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -360,9 +360,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: DefaultProjectile
+      value: 
+      objectReference: {fileID: 5460237704629442253, guid: 9b3c05f6184b05740b6076ccb8d93d2d, type: 3}
+    - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
       propertyPath: _pointOfTargetting
       value: 
       objectReference: {fileID: 691768238}
+    - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: _chargedShotTime.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: _chargeProjectile.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
 --- !u!4 &170675329 stripped
@@ -19703,6 +19715,83 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1693575030
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 170675329}
+    m_Modifications:
+    - target: {fileID: 2820402607768805443, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_Name
+      value: BoomerangGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805443, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805444, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: DefaultProjectile
+      value: 
+      objectReference: {fileID: 5460237704629442253, guid: 5213e1fdc88079e4794688e36b6b5505, type: 3}
+    - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: _pointOfTargetting
+      value: 
+      objectReference: {fileID: 691768238}
+    - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: _chargedShotTime.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
+      propertyPath: _chargeProjectile.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
 --- !u!1 &1884135517
 GameObject:
   m_ObjectHideFlags: 0
@@ -19867,6 +19956,10 @@ PrefabInstance:
     - target: {fileID: 4322857799430956491, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
       propertyPath: m_Name
       value: LightningGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322857799430956491, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322857799430956492, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
       propertyPath: m_RootOrder
@@ -20042,6 +20135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTankGun
       objectReference: {fileID: 0}
+    - target: {fileID: 1801772067097645463, guid: a8ea73f12a70c864eb7f099bf182a713, type: 3}
+      propertyPath: DefaultProjectile
+      value: 
+      objectReference: {fileID: 5460237704629442253, guid: 9b3c05f6184b05740b6076ccb8d93d2d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ea73f12a70c864eb7f099bf182a713, type: 3}
 --- !u!1 &3982252793887612233
@@ -20298,6 +20395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Enemy
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &3982252794511903889
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -71,7 +71,9 @@ namespace TheFrozenBanana
 			ownerTag = owner;
 			direction = target - start;
 			Debug.Log("Direction: "  + direction);
-			child.transform.rotation = projectileRotation;
+			float angle = Vector3.Angle(direction,Vector3.right);
+			Quaternion euler = Quaternion.Euler(0,0,angle);
+			child.transform.rotation = euler;
 			active = true;
 			Destroy(this.gameObject, 5f);
 		}

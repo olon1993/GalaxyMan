@@ -23,7 +23,8 @@ namespace TheFrozenBanana
 
 		private void OnTriggerEnter2D(Collider2D col)
 		{
-			projectileParent.TriggerCollision(col);
+			Debug.Log("This is an old script. You should use the new one.");
+			//projectileParent.TriggerCollision(col);
 		}
 	}
 }

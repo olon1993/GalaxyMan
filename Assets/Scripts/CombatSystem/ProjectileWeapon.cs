@@ -45,7 +45,7 @@ namespace TheFrozenBanana
 			}
             
             GameObject insProjectile = null;
-            if (_chargedShotTime.Length == 0 || _chargeProjectile.Length == 0d) {
+            if (_chargedShotTime.Length == 0 || _chargeProjectile.Length == 0) {
                 insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, Quaternion.identity, null);
             } else {
                 // Loop backwards to 0, not from 0 and up
