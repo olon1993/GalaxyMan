@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &35278512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2734,6 +2735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
   knockbackToLocation: {fileID: 2110038746}
   testPS: {fileID: 107972537797418217, guid: bab9191f39a4747498ac5d176e65f1dd, type: 3}
 --- !u!19719996 &115515796
@@ -3925,6 +3927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &208547169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4027,6 +4030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &227978375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4131,6 +4135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &272306224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4459,6 +4464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!212 &446055530
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4611,7 +4617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332762, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _showDebugLog
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332764, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _timeInvulnerable
@@ -4966,6 +4972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &561569918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5235,6 +5242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &705146569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5528,6 +5536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1038835913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5864,6 +5873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1140642261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5936,6 +5946,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1825317657}
     m_Modifications:
+    - target: {fileID: 857406296926760170, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
+      propertyPath: fireInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 857406296926760170, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
       propertyPath: projectilePrefab
       value: 
@@ -6077,6 +6091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1215486109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15145,7 +15160,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.291667
+  orthographic size: 11.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -15314,6 +15329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1538223480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15478,6 +15494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1653966881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22995,7 +23012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1825317657
 Transform:
   m_ObjectHideFlags: 0
@@ -26468,7 +26485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1840963203
 Transform:
   m_ObjectHideFlags: 0
@@ -28886,6 +28903,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1825317657}
     m_Modifications:
     - target: {fileID: 857406296926760170, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
+      propertyPath: fireInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 857406296926760170, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 8813031212224460123, guid: 89e73431ec54e75459826132b8704477, type: 3}
@@ -29030,6 +29051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1871712234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29134,6 +29156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1885691563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29234,6 +29257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1933478883
 MonoBehaviour:
   m_ObjectHideFlags: 0
