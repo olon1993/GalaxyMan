@@ -109,7 +109,7 @@ namespace TheFrozenBanana
 
 			Vector3 projectileDirection = gameObject.transform.position + firingDirection;
 			GameObject tmp = Instantiate(_projectilesBySize[size], gameObject.transform.position, Quaternion.identity, null) as GameObject;
-			tmp.GetComponent<IProjectile>().Setup(gameObject.transform.position, projectileDirection, Quaternion.identity, owner);
+			tmp.GetComponent<IProjectile>().Setup(gameObject.transform.position, projectileDirection, owner);
 		}
 	}
 

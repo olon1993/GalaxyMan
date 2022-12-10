@@ -5,7 +5,12 @@ using UnityEngine;
 namespace TheFrozenBanana
 {
     public class LightningBeamProjectile : MonoBehaviour, IProjectile
-    {
+	{
+		//**************************************************\\
+		//********************* Fields *********************\\
+		//**************************************************\\
+
+		[SerializeField] protected bool _showDebugLog;
 		[SerializeField] private float _velocity;
 		[SerializeField] GameObject _child;
 		[SerializeField] GameObject _hitEffect;
@@ -23,6 +28,9 @@ namespace TheFrozenBanana
 		private LineRenderer line;
 		private BoxCollider2D myCollider;
 
+		//**************************************************\\
+		//******************** Methods *********************\\
+		//**************************************************\\
 
 		private void Awake() {
 			_vertexPoints = new Vector3[0];
@@ -35,16 +43,11 @@ namespace TheFrozenBanana
 			}
 		}
 
-		public void TriggerCollision(Collider2D col) {
-			RunCollisionCheck(col);
-		}
-
-		// This is the actual OnTriggerEnter2D, but it's called from the child
-		private void RunCollisionCheck(Collider2D col) {
-			if (!active) {
+		private void OnTriggerEnter2D(Collider2D col) {
+			if (!_active) {
 				return;
 			}
-			if (col.CompareTag(ownerTag)) {
+			if (col.CompareTag(_ownerTag)) {
 				return;
 			}
 			if (_hitEffect != null) {
@@ -52,43 +55,36 @@ namespace TheFrozenBanana
 			}
 			IHealth hpScript = col.GetComponent<IHealth>();
 			if (hpScript != null) {
-				// Do damage
 				hpScript.TakeDamage(_damage);
-				HandleDamageForce(col);
 			}
-		}
-
-		private void HandleDamageForce(Collider2D col) {
-			float damageDirection = transform.position.x < col.transform.position.x ? 1 : -1;
-
-		}
-
-		// only handles movement if active
-		private void FixedUpdate() {
-			if (active) {
-		//		gameObject.transform.Translate(direction.normalized * velocity * Time.fixedDeltaTime);
+			IRecoil recoil = col.GetComponent<IRecoil>();
+			if (recoil != null) {
+				if (_showDebugLog) {
+					Debug.Log("Recoil");
+				}
+				recoil.ApplyRecoil(_damage.KnockbackForce, gameObject.transform.position - _direction * 5);
 			}
 		}
 
 		// Setup gives the target to go to and the rotation of the projectile renderer
-		public void Setup(Vector3 start, Vector3 target, Quaternion projectileRotation, string owner) {
-			ownerTag = owner;
-			direction = target - start;
-			Debug.Log("Direction: " + direction);
-			child.transform.localPosition = direction.normalized * velocity;
+		public void Setup(Vector3 start, Vector3 target, string owner) {
+			_ownerTag = owner;
+			_direction = target - start;
+			Debug.Log("Direction: " + _direction);
+			_child.transform.localPosition = _direction.normalized * _velocity;
 			line = gameObject.GetComponent<LineRenderer>();
 			myCollider = gameObject.GetComponentInChildren<BoxCollider2D>();
-			active = true;
-			if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) {
-				myCollider.size = new Vector2(velocity, line.startWidth);
+			_active = true;
+			if (Mathf.Abs(_direction.x) > Mathf.Abs(_direction.y)) {
+				myCollider.size = new Vector2(_velocity, line.startWidth);
 			} else {
-				myCollider.size = new Vector2(line.startWidth, velocity);
+				myCollider.size = new Vector2(line.startWidth, _velocity);
 			}
-			Debug.Log("Local: " + child.transform.localPosition);
-			Debug.Log("World: " + child.transform.position);
+			Debug.Log("Local: " + _child.transform.localPosition);
+			Debug.Log("World: " + _child.transform.position);
 
 
-			Vector3 colliderOffsetLoc = - direction.normalized * velocity / 2;
+			Vector3 colliderOffsetLoc = - _direction.normalized * _velocity / 2;
 
 			myCollider.offset = colliderOffsetLoc; // Vector3.Lerp(child.transform.position, colliderEndLoc, 0.5f);
 			StartCoroutine(CreateLightningRendering());
@@ -97,7 +93,7 @@ namespace TheFrozenBanana
 
 		private IEnumerator CreateLightningRendering() {
 			Vector3 start = gameObject.transform.position;
-			Vector3 end = child.transform.position;
+			Vector3 end = _child.transform.position;
 			float distance = Vector3.Distance(start,end);
 			int vertices = Mathf.RoundToInt(distance / _vertexDistance);
 			Debug.Log("Start: " + start);
@@ -140,45 +136,40 @@ namespace TheFrozenBanana
 		// should it miss. calling destroy here as well will make destroy be called 
 		// twice and creating null reference exception. hence, deactivate.
 		private void Deactivate() {
-			active = false;
+			_active = false;
 			gameObject.SetActive(false);
 		}
 
-		// Getters and Setters from interface
-		public IDamage damage {
+		//**************************************************\\
+		//******************* Properties *******************\\
+		//**************************************************\\
+
+		public IDamage Damage {
 			get { return _damage; }
-			set { _damage = value; }
 		}
 
-		public GameObject child {
-			get { return _child; }
-			set { _child = value; }
-		}
-
-		public GameObject hitEffect {
-			get { return _hitEffect; }
-		}
-
-		public string ownerTag {
-			get { return _ownerTag; }
-			set { _ownerTag = value; }
-		}
-
-		public Vector3 direction {
-			get { return _direction; }
-			set { _direction = value; }
-		}
-
-		public bool active {
+		public bool Active {
 			get { return _active; }
 			set { _active = value; }
 		}
 
-		public float velocity {
+		public Vector3 Direction {
+			get { return _direction; }
+		}
+
+		public float Velocity {
 			get { return _velocity; }
-			set { _velocity = value; }
 
 		}
 
+		public string OwnerTag {
+			get { return _ownerTag; }
+			set {
+				if (_ownerTag != value) {
+					_ownerTag = value;
+				}
+			}
+		}
 	}
 }
+

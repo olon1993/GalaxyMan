@@ -46,7 +46,7 @@ namespace TheFrozenBanana
 			}
 			GameObject tmp = Instantiate(ProjectilePrefab, BossManager.Weapon.transform.position, Quaternion.identity, null) as GameObject;
 			Vector3 fireDirection = tmp.transform.position + rotation * Vector3.right * 20;
-			tmp.GetComponent<Projectile2DFreeAim>().Setup(tmp.transform.position, fireDirection, rotation, "Enemy");
+			tmp.GetComponent<IProjectile>().Setup(tmp.transform.position, fireDirection, "Enemy");
 		}
 	}
 

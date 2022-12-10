@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 2572242245428646387}
   - component: {fileID: 4230456935023283207}
   - component: {fileID: 4801757745646163441}
-  - component: {fileID: 5100787247208801041}
   m_Layer: 0
   m_Name: ProjectileGroup
   m_TagString: Untagged
@@ -92,15 +91,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a15add6136d4247ab46c3ac4b57b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _showDebugLog: 0
+  _velocity: 8
+  _hitEffect: {fileID: 0}
+  _useGravity: 0
+  _gravity: 8
   pattern: 1
-  projectilePrefab: {fileID: 7207289249070350620, guid: cd3390ca82f16f74faf4b153622a735c, type: 3}
+  projectilePrefab: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
   projectileCount: 7
   distanceFromCenter: 2
   expandTime: 1
   projectileContainer: {fileID: 6143231549581707763}
-  liveProjectiles: []
-  lerpI: 0
-  dir: {x: 0, y: 0, z: 0}
 --- !u!114 &4801757745646163441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,18 +118,3 @@ MonoBehaviour:
   _stunTime: 0
   _damageAmount: 0
   _knockbackForce: 0
---- !u!114 &5100787247208801041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8813031212224460123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22dc6b47e2e41c4db1b03e048fa30e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _velocity: 5
-  _child: {fileID: 6143231549581707763}
-  _hitEffect: {fileID: 0}

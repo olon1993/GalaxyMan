@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1541041785410589722}
   - component: {fileID: 5826890440385622086}
-  - component: {fileID: 4514822104215343938}
   - component: {fileID: 7071740950641319939}
-  - component: {fileID: -858753601748714547}
+  - component: {fileID: 7988377539284703232}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: PlasmaChargeMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5128333805578873701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4514822104215343938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5128333805578873701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431aff2cc37d9ca4b8d8f590f1b53316, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _velocity: 20
-  _hitEffect: {fileID: 0}
-  _ownerTag: Player
 --- !u!114 &7071740950641319939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,21 +100,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damageTypeDefinition: 0
   _stunTime: 0
-  _damageAmount: 5
+  _damageAmount: 10
   _knockbackForce: 0
---- !u!58 &-858753601748714547
-CircleCollider2D:
+--- !u!114 &7988377539284703232
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5128333805578873701}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc2af17df3645341a29a87ede8e7e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugLog: 0
+  _velocity: 20
+  _hitEffect: {fileID: 0}
+  _useGravity: 0
+  _gravity: 8

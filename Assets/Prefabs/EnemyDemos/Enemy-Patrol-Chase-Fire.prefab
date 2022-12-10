@@ -134,11 +134,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pointOfOrigin: {fileID: 2830779919662455991}
   _pointOfTargetting: {fileID: 2830779919550070424}
-  DefaultProjectile: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
-  _halfChargeTime: 0.5
-  HalfChargedProjectile: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
-  _fullChargeTime: 1
-  FullChargedProjectile: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
+  DefaultProjectile: {fileID: 5460237704629442253, guid: 9b3c05f6184b05740b6076ccb8d93d2d, type: 3}
+  ChargingParticleSystem: {fileID: 0}
+  _chargedShotTime: []
+  _chargeProjectile: []
+  _chargeAmmoCost: 
   _isLimitedAmmo: 0
   _maxAmmo: 10
   _currentAmmo: 10
@@ -517,6 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Enemy
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &2830779920672102528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,6 +575,7 @@ MonoBehaviour:
   locations:
   - {fileID: 0}
   - {fileID: 0}
+  allowJump: 1
   currentLocation: 1
 --- !u!114 &2830779920672102539
 MonoBehaviour:
@@ -618,6 +620,7 @@ MonoBehaviour:
   _actionInterruptable: 1
   _projectileWeapon: {fileID: 2830779919068573576}
   _aimSpeed: 3
+  _chargeParticles: {fileID: 0}
 --- !u!1 &2830779920750650254
 GameObject:
   m_ObjectHideFlags: 0

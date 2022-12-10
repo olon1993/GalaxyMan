@@ -379,6 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Enemy
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &6362751488586736712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +395,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 2
-  _knockbackForce: 0
+  _knockbackForce: 10
 --- !u!114 &6362751488586736715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +437,7 @@ MonoBehaviour:
   locations:
   - {fileID: 0}
   - {fileID: 0}
+  allowJump: 1
   currentLocation: 0
 --- !u!114 &6362751488586736725
 MonoBehaviour:

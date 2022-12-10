@@ -63,7 +63,7 @@ namespace TheFrozenBanana
             }
             
             IProjectile projectile = insProjectile.GetComponent<IProjectile>();
-            projectile.Setup(_pointOfOrigin.position, _pointOfTargetting.position, _pointOfTargetting.rotation, _owner);
+            projectile.Setup(_pointOfOrigin.position, _pointOfTargetting.position, _owner);
         }
 
         private bool CheckAmmo(int i) {
