@@ -22,6 +22,7 @@ namespace TheFrozenBanana
 		private bool _isDash;
 		private bool _isAttack;
 		private bool _isAttacking;
+		private bool _isToggleWeapons;
 		private bool overrideInput;
 		[SerializeField] private bool _isEnabled;
 
@@ -64,6 +65,7 @@ namespace TheFrozenBanana
 
 				_isAttack = Input.GetButtonUp("Fire1");
 				_isAttacking = Input.GetButton("Fire1");
+				_isToggleWeapons = Input.GetButtonDown("ToggleWeapon");
 
 				_isToggleInventory = Input.GetKeyDown(KeyCode.I);
 
@@ -75,6 +77,7 @@ namespace TheFrozenBanana
 					Debug.Log("IsDashing: " + _isDash);
 					Debug.Log("IsAttack: " + _isAttack);
 					Debug.Log("IsAttacking: " + _isAttacking);
+					Debug.Log("IsToggleWeapon: " + _isToggleWeapons);
 					Debug.Log("IsToggleInventory: " + _isToggleInventory);
 				}
 			} else if (overrideInput) {
@@ -118,6 +121,8 @@ namespace TheFrozenBanana
 		public bool IsAttack { get { return _isAttack; } }
 
 		public bool IsAttacking { get { return _isAttacking; } }
+
+		public bool IsToggleWeapons { get { return _isToggleWeapons; } }
 
 		public bool IsEnabled {
 			get { return _isEnabled; }

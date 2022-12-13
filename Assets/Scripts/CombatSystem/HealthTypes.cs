@@ -12,6 +12,8 @@ namespace TheFrozenBanana
 		[SerializeField] private IDamage.DamageType[] _resistanceTypeDefinition;
 		[SerializeField] private IDamage.DamageType[] _vulnerableTypeDefinition;
 		[SerializeField] private float _timeInvulnerable;
+		[SerializeField] private float _resistFactor = 0.5f;
+		[SerializeField] private float _vulnerableFactor = 1.5f;
 
 		//**************************************************\\
 		//******************** Methods *********************\\
@@ -41,7 +43,7 @@ namespace TheFrozenBanana
 
 			for (int i = 0; i < _resistanceTypeDefinition.Length; i++) {
 				if ((int)_resistanceTypeDefinition[i] == (int)dmgDefinition.DamageTypeDefinition) {
-					effectiveDamage /= 2;
+					effectiveDamage *= _resistFactor;
 					resist = true;
 					break;
 				}
@@ -50,7 +52,7 @@ namespace TheFrozenBanana
 			if (!resist) {
 				for (int i = 0; i < _vulnerableTypeDefinition.Length; i++) {
 					if ((int)_vulnerableTypeDefinition[i] == (int)dmgDefinition.DamageTypeDefinition) {
-						effectiveDamage *= 1.5f;
+						effectiveDamage *= _vulnerableFactor;
 						vulnerable = true;
 						break;
 					}
@@ -59,6 +61,7 @@ namespace TheFrozenBanana
 
 			effectiveDamage = Mathf.RoundToInt(effectiveDamage);
 			CurrentHealth -= (int)effectiveDamage;
+
 			if (_showDebugLog) {
 				Debug.Log(gameObject.name + ": Current Health: " + _currentHealth);
 			}

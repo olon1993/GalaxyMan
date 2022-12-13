@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheFrozenBanana;
+using Cinemachine;
 
 public class SuperJumpAction : BossAction
 {
@@ -10,10 +11,25 @@ public class SuperJumpAction : BossAction
 	[SerializeField] protected GameObject WavePrefab;
 	[SerializeField] protected Vector2 CameraVibration;
 	private GameObject cam;
+	public CinemachineStateDrivenCamera sdcam;
+	public CinemachineVirtualCamera vcam;
 
 	protected override void Awake() {
 		base.Awake();
 		cam = GameObject.FindGameObjectWithTag("MainCamera");
+		// Cinemachine requires to wait a second before getting the active camera, delay the camera retrieval
+		StartCoroutine(RetrieveVirtualCamera());
+
+	}
+
+	private IEnumerator RetrieveVirtualCamera() {
+		CinemachineBrain cine = cam.GetComponent<CinemachineBrain>();
+		Debug.Log("Cinemachine Brain on : " + cine.gameObject.name);
+		yield return new WaitForSeconds(1f);
+		sdcam = cine.ActiveVirtualCamera as CinemachineStateDrivenCamera;
+		vcam = sdcam.LiveChild as CinemachineVirtualCamera;
+		yield return new WaitForSeconds(1f);
+		Debug.Log("V Cam: " + vcam);
 	}
 
 	protected override IEnumerator CarryOutSpecificAction() {
@@ -78,18 +94,15 @@ public class SuperJumpAction : BossAction
 
 	private IEnumerator ShakeCamera() {
 		float maxTime = 20 / WaveSpeed.x;
-		Vector3 pos = cam.transform.position;
+		vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1;
 		float t = 0;
 		float i = 0;
 		while (t < maxTime) {
 			t += Time.deltaTime;
 			i = t / maxTime;
 			yield return new WaitForEndOfFrame();
-			float randomX = Random.Range(-CameraVibration.x, CameraVibration.x);
-			float randomY = Random.Range(-CameraVibration.y, CameraVibration.y);
-			Vector3 ranPos = new Vector3(pos.x + randomX, pos.y + randomY, pos.z);
-			cam.transform.position = Vector3.Lerp(ranPos,pos,i);
+			vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = (1-i);
 		}
-		cam.transform.position = pos;
+		vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
 	}
 }

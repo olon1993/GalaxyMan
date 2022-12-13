@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 103179866519204009}
   - component: {fileID: 103179866519204003}
   - component: {fileID: 103179866519204002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy-Tracked
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -141,9 +141,12 @@ MonoBehaviour:
   _currentHealth: 0
   _timeToDie: 0
   hpSlider: {fileID: 0}
+  _destroyBounds: 0
   _resistanceTypeDefinition: 
   _vulnerableTypeDefinition: 
   _timeInvulnerable: 0
+  _resistFactor: 0.5
+  _vulnerableFactor: 1.5
 --- !u!114 &103179866519204005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +245,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 2
-  _knockbackForce: 0
+  _knockbackForce: 2
 --- !u!114 &103179866519204007
 MonoBehaviour:
   m_ObjectHideFlags: 0

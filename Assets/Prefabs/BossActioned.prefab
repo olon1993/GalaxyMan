@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beee7788d9cafe845b9209e1c3945124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 1
+  _showDebugLog: 0
   rndrr: {fileID: 1267961330281103876}
   _weapon: {fileID: 1267961331590600176}
   pauseBetweenActions: 1
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Jump
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 404640324}
   - {fileID: 1620693453}
@@ -466,6 +466,8 @@ MonoBehaviour:
   WaveSpeed: {x: 10, y: 8}
   WavePrefab: {fileID: 7025187141464383285, guid: cfdef05f1d8d1e34a88326a1958c5091, type: 3}
   CameraVibration: {x: 1, y: 1}
+  sdcam: {fileID: 0}
+  vcam: {fileID: 0}
 --- !u!114 &1267961329942988965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Quick Move
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 1359907102}
   _endLocationsGO:
@@ -505,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Fire Gun
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 404640324}
   - {fileID: 1620693453}
@@ -539,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionName: Charge
-  _showDebugLog: 1
+  _showDebugLog: 0
   _startLocationsGO:
   - {fileID: 404640324}
   - {fileID: 1031319802}
@@ -575,9 +577,12 @@ MonoBehaviour:
   _currentHealth: 100
   _timeToDie: 0
   hpSlider: {fileID: 0}
+  _destroyBounds: 0
   _resistanceTypeDefinition: 
   _vulnerableTypeDefinition: 
   _timeInvulnerable: 0
+  _resistFactor: 0.5
+  _vulnerableFactor: 1.5
 --- !u!114 &1267961329942988976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
 --- !u!114 &1267961329942988975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,7 +613,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 2
-  _knockbackForce: 0
+  _knockbackForce: 5
 --- !u!1 &1267961330281103876
 GameObject:
   m_ObjectHideFlags: 0

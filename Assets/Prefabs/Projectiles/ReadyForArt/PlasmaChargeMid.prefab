@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5826890440385622086}
   - component: {fileID: 7071740950641319939}
   - component: {fileID: 7988377539284703232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlasmaChargeMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cea4fb8cca32eb4caeb6367313c0b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageTypeDefinition: 0
+  _damageTypeDefinition: 1
   _stunTime: 0
   _damageAmount: 10
   _knockbackForce: 0

@@ -7,11 +7,20 @@ namespace TheFrozenBanana
  	public class EnemyJumpAction : EnemyAction
 	{
 		private float dir;
+		private Animator ac;
+
+		protected override void Awake() {
+			base.Awake();
+			ac = gameObject.GetComponentInChildren<Animator>();
+		}
 
 		protected override IEnumerator CarryOutAction() {
 			if (_showDebugLog) {
 				Debug.Log("EnemyJumpAction.CarryOutAction");
 			}
+
+			StartCoroutine(DelayJumpAnimation());
+
 			_actionInEffect = true;
 			float t = 0;
 			while (t < _actionTime) {
@@ -32,6 +41,13 @@ namespace TheFrozenBanana
 				yield return new WaitForEndOfFrame();
 			}
 			StopAction();
+		}
+
+		private IEnumerator DelayJumpAnimation() {
+			yield return new WaitForSeconds(0.2f);
+			if (ac != null) {
+				ac.SetTrigger("ToggleJump");
+			}
 		}
 	}
 }

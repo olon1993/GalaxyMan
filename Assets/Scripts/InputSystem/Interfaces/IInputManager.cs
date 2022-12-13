@@ -14,6 +14,7 @@ namespace TheFrozenBanana
         bool IsDash { get; }
         bool IsAttack { get; }
         bool IsAttacking { get; }
+        bool IsToggleWeapons { get; }
         bool IsToggleInventory { get; }
 
         // Input

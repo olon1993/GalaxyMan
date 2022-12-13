@@ -16,6 +16,7 @@ namespace TheFrozenBanana
 		[SerializeField] protected int _currentHealth;
 		[SerializeField] private float _timeToDie;
 		[SerializeField] private Slider hpSlider;
+		[SerializeField] private bool _destroyBounds = false;
 		protected bool _isDead;
 		private bool _isHurt;
 
@@ -83,7 +84,9 @@ namespace TheFrozenBanana
 			if (_showDebugLog) {
 				Debug.Log(gameObject.name + " has died!");
 			}
-
+			if (_destroyBounds) {
+				gameObject.GetComponent<Collider2D>().enabled = false;
+			}
 			StartCoroutine(DelayDeath());
 		}
 

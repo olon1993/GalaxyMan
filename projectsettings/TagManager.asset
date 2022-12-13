@@ -8,6 +8,7 @@ TagManager:
   - Hand
   - PassableObstacle
   - Hazard
+  - Destructible
   layers:
   - Default
   - TransparentFX

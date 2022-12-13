@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 6362751488586736715}
   - component: {fileID: 6362751488586736714}
   - component: {fileID: 6362751488586736725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy-Charge
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -307,9 +307,12 @@ MonoBehaviour:
   _currentHealth: 0
   _timeToDie: 0
   hpSlider: {fileID: 0}
+  _destroyBounds: 0
   _resistanceTypeDefinition: 
   _vulnerableTypeDefinition: 
   _timeInvulnerable: 0
+  _resistFactor: 0.5
+  _vulnerableFactor: 1.5
 --- !u!114 &6362751488586736719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,7 +398,7 @@ MonoBehaviour:
   _damageTypeDefinition: 0
   _stunTime: 0
   _damageAmount: 2
-  _knockbackForce: 10
+  _knockbackForce: 5
 --- !u!114 &6362751488586736715
 MonoBehaviour:
   m_ObjectHideFlags: 0

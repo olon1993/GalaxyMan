@@ -47,10 +47,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pointOfOrigin: {fileID: 2820402607794095308}
   _pointOfTargetting: {fileID: 0}
-  DefaultProjectile: {fileID: 5460237704629442253, guid: 5213e1fdc88079e4794688e36b6b5505, type: 3}
+  DefaultProjectile: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
   ChargingParticleSystem: {fileID: 0}
-  _chargedShotTime: []
-  _chargeProjectile: []
+  _chargedShotTime:
+  - 0
+  - 0.6
+  - 1.5
+  _chargeProjectile:
+  - {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
+  - {fileID: 5128333805578873701, guid: 75d017bcf09c5a5479c0b30ae68ba502, type: 3}
+  - {fileID: 5128333805578873701, guid: 82b399a9613498a45b0dde76b31a6a09, type: 3}
   _chargeAmmoCost: 
   _isLimitedAmmo: 0
   _maxAmmo: 10

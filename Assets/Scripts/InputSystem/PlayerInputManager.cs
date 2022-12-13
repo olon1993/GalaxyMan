@@ -22,6 +22,7 @@ namespace TheFrozenBanana
 		private bool _isDash;
 		private bool _isAttack;
 		private bool _isAttacking;
+		private bool _isToggleWeapons;
 		[SerializeField] private bool _isEnabled;
 
 		//**************************************************\\
@@ -91,6 +92,7 @@ namespace TheFrozenBanana
 		public bool IsDash { get { return _isDash; } }
 		public bool IsAttack { get { return _isAttack; } }
 		public bool IsAttacking { get { return _isAttacking; } }
+		public bool IsToggleWeapons { get { return _isToggleWeapons; } }
 
 		public bool IsEnabled {
 			get { return _isEnabled; }

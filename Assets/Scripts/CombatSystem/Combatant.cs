@@ -24,6 +24,8 @@ namespace TheFrozenBanana
         private IWeapon _currentWeapon;
         private int _currentWeaponIndex = 0;
 
+        private bool _isCycleWeaponsEnabled = true;
+
         private int _horizontalFacingDirection = 1;
 
         private bool _isCharging = false;
@@ -81,6 +83,7 @@ namespace TheFrozenBanana
         {
             IsAttack = _inputManager.IsAttack;
             IsAttacking = _inputManager.IsAttacking;
+            IsCycleWeapons = _inputManager.IsToggleWeapons;
 
             bool isUp = _inputManager.Vertical > Mathf.Epsilon;
             
@@ -215,7 +218,7 @@ namespace TheFrozenBanana
             }
         }
 
-        public bool IsCycleWeaponsEnabled { get; set; }
+        public bool IsCycleWeaponsEnabled { get { return _isCycleWeaponsEnabled; } set { _isCycleWeaponsEnabled = value;  } }
         public bool IsCycleWeapons { get; set; }
         public bool IsHotKeyOne { get; set; }
         public bool IsHotKeyOneEnabled { get; set; }
