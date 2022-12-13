@@ -70,7 +70,6 @@ namespace TheFrozenBanana
 		public void Setup(Vector3 start, Vector3 target, string owner) {
 			_ownerTag = owner;
 			_direction = target - start;
-			Debug.Log("Direction: " + _direction);
 			_child.transform.localPosition = _direction.normalized * _velocity;
 			line = gameObject.GetComponent<LineRenderer>();
 			myCollider = gameObject.GetComponentInChildren<BoxCollider2D>();
@@ -80,8 +79,6 @@ namespace TheFrozenBanana
 			} else {
 				myCollider.size = new Vector2(line.startWidth, _velocity);
 			}
-			Debug.Log("Local: " + _child.transform.localPosition);
-			Debug.Log("World: " + _child.transform.position);
 
 
 			Vector3 colliderOffsetLoc = - _direction.normalized * _velocity / 2;
@@ -96,9 +93,6 @@ namespace TheFrozenBanana
 			Vector3 end = _child.transform.position;
 			float distance = Vector3.Distance(start,end);
 			int vertices = Mathf.RoundToInt(distance / _vertexDistance);
-			Debug.Log("Start: " + start);
-			Debug.Log("End: " + end);
-			Debug.Log("Distance: " + distance + "  ; Vertices: " + vertices);
 
 			float t = 0;
 			bool debugOnce = false;

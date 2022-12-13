@@ -46,7 +46,12 @@ namespace TheFrozenBanana
             
             GameObject insProjectile = null;
             if (_chargedShotTime.Length == 0 || _chargeProjectile.Length == 0) {
-                insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, Quaternion.identity, null);
+                if (CheckAmmo(0)) {
+                    insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, Quaternion.identity, null);
+                } else {
+                    Debug.LogWarning("Not enough ammo");
+                    return;
+                }
             } else {
                 // Loop backwards to 0, not from 0 and up
                 for (int i = _chargedShotTime.Length - 1; i > -1 ; i--) {
