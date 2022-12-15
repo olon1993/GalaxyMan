@@ -27,7 +27,7 @@ namespace TheFrozenBanana
 				yield return new WaitForEndOfFrame();
 				t += Time.deltaTime;
 				// Turn around
-				_locomotion.HorizontalLook = Mathf.Sign(ec.target.transform.position.x - gameObject.transform.position.x);
+				_locomotion.HorizontalLook = Mathf.Sign(ec.Target.transform.position.x - gameObject.transform.position.x);
 				dir = _locomotion.HorizontalLook;
 			}
 
@@ -35,7 +35,7 @@ namespace TheFrozenBanana
 			ec.Jump();
 			yield return new WaitForSeconds(0.1f);
 			while (!_locomotion.IsGrounded) {
-				if (dir != Mathf.Sign(ec.target.transform.position.x - gameObject.transform.position.x)) {
+				if (dir != Mathf.Sign(ec.Target.transform.position.x - gameObject.transform.position.x)) {
 					_inputManager.EndOverride();
 				}
 				yield return new WaitForEndOfFrame();

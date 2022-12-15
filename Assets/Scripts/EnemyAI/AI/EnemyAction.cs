@@ -87,13 +87,13 @@ namespace TheFrozenBanana
 			RaycastHit2D hit;
 			RaycastHit2D hitUp;
 			RaycastHit2D hitDown;
-			hit = Physics2D.Raycast(gameObject.transform.position, ec.target.transform.position - gameObject.transform.position);
-			hitUp = Physics2D.Raycast(gameObject.transform.position, ec.target.transform.position - gameObject.transform.position + Vector3.up);
-			hitDown = Physics2D.Raycast(gameObject.transform.position, ec.target.transform.position - gameObject.transform.position + Vector3.down);
+			hit = Physics2D.Raycast(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position);
+			hitUp = Physics2D.Raycast(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.up);
+			hitDown = Physics2D.Raycast(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.down);
 			if (_showDebugLog) { 
-				Debug.DrawRay(gameObject.transform.position, ec.target.transform.position - gameObject.transform.position, Color.magenta, 4f);
-				Debug.DrawRay(gameObject.transform.position, ec.target.transform.position - gameObject.transform.position + Vector3.up, Color.cyan, 1f);
-				Debug.DrawRay(gameObject.transform.position, ec.target.transform.position - gameObject.transform.position + Vector3.down, Color.blue, 1f);
+				Debug.DrawRay(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position, Color.magenta, 4f);
+				Debug.DrawRay(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.up, Color.cyan, 1f);
+				Debug.DrawRay(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.down, Color.blue, 1f);
 			}
 			inSight = CheckHit(hit) ? true : inSight;
 			inSight = CheckHit(hitUp) ? true : inSight;

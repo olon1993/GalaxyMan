@@ -84,6 +84,14 @@ namespace TheFrozenBanana
 			IsHurt = false;
 		}
 
+		protected override void Die() {
+			base.Die();
+			IDropLoot idl = gameObject.GetComponent<IDropLoot>();
+			if (idl != null) {
+				idl.DropRandomLoot();
+			}
+		}
+
 		//**************************************************\\
 		//******************* Properties *******************\\
 		//**************************************************\\

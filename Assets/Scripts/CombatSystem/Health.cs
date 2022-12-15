@@ -73,6 +73,7 @@ namespace TheFrozenBanana
 
 		public void AddHealth(int hp) {
 			_currentHealth += hp;
+			UpdateSlider(_currentHealth);
 			if (_currentHealth > _maxHealth) {
 				_currentHealth = _maxHealth;
 			}

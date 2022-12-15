@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.25
+  orthographic size: 0
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -19476,30 +19476,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1816720375 stripped
+--- !u!1 &1653884000 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5792141944326332766, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
-  m_PrefabInstance: {fileID: 278025024}
+  m_CorrespondingSourceObject: {fileID: 2830779920672102534, guid: fe26c5255efa4404da8226fcbb40227a, type: 3}
+  m_PrefabInstance: {fileID: 2830779919726230053}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1816720383
+--- !u!114 &1653884014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816720375}
+  m_GameObject: {fileID: 1653884000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c27af4e652b914ebf7578088c0a149, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e0fef508883f374393d3f68aacf837d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 0
-  _horizontalInput: 0
-  _verticalInput: 0
-  _jumpInput: 0
-  _dashInput: 0
-  _interactInput: 0
-  _weaponInput: 0
+  _showDebugLog: 1
+  _dropChance: 50
+  _lootList:
+  - {fileID: 7002899403893113764, guid: 926de72453481964fbe49fb434c0effa, type: 3}
+  _lootWeightedChance:
+  - 1
 --- !u!1 &1884135517
 GameObject:
   m_ObjectHideFlags: 0
@@ -20431,7 +20430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6826479877702706515, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}

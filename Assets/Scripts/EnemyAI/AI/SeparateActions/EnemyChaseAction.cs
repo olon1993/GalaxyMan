@@ -23,7 +23,7 @@ namespace TheFrozenBanana
 					}
 					break;
 				}
-				if (ec.target.transform.position.x > gameObject.transform.position.x) {
+				if (ec.Target.transform.position.x > gameObject.transform.position.x) {
 					dir = 1f;
 				} else {
 					dir = -1f;
@@ -34,7 +34,7 @@ namespace TheFrozenBanana
 					ec.Jump();
 				}
 				if (_jumpToPlayer) {
-					if (Mathf.Abs(gameObject.transform.position.x - ec.target.transform.position.x) < ec.target.transform.position.y - gameObject.transform.position.y) {
+					if (Mathf.Abs(gameObject.transform.position.x - ec.Target.transform.position.x) < ec.Target.transform.position.y - gameObject.transform.position.y) {
 						ec.Jump();
 					}
 				}

@@ -33,15 +33,15 @@ namespace TheFrozenBanana
 		private IEnemyAction[] possibleActions;
 		private IEnemyAction currentAction;
 		protected ILocomotion2dSideScroller _locomotion;
-		public GameObject target;
-		public float _distance;
+		protected GameObject _target;
+		private float _distance;
 		//**************************************************\\
 		//******************** Methods *********************\\
 		//**************************************************\\
 		private void Awake() {
 			_locomotion = gameObject.GetComponent<ILocomotion2dSideScroller>();
 			allActions = GetComponents<IEnemyAction>();
-			target = GameObject.FindGameObjectWithTag("Player");
+			_target = GameObject.FindGameObjectWithTag("Player");
 		}
 
 		private void OnDrawGizmosSelected() {
@@ -50,7 +50,7 @@ namespace TheFrozenBanana
 		}
 
 		private void Update() {
-			float distance = Vector3.Distance(transform.position, target.transform.position);
+			float distance = Vector3.Distance(transform.position, _target.transform.position);
 			_distance = distance;
 			if (currentAction == null) {
 				DetermineAction(distance);
@@ -171,6 +171,9 @@ namespace TheFrozenBanana
 			}
 		}
 
+		public GameObject Target {
+			get { return _target; }
+		}
 		public float AggroRange {
 			get { return _aggroRange; }
 		}

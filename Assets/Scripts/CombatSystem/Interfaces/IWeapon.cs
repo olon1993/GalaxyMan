@@ -12,7 +12,7 @@ namespace TheFrozenBanana
         AmmoType AmmoTypeDefinition { get; set; }
         Transform PointOfOrigin { get; set; }
         Transform PointOfTargetting { get; set; }
-        public float AttackActionTime { get; }
+        float AttackActionTime { get; }
 		int AnimationLayer { get; set; }
         float AttackCharge { get; set; }
         void ChargeEffect();

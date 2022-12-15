@@ -23,7 +23,7 @@ namespace TheFrozenBanana
 				Debug.Log("EnemyChargeAction.CarryOutAction");
 			}
 			_actionInEffect = true;
-			_locomotion.HorizontalLook = Mathf.Sign(ec.target.transform.position.x - gameObject.transform.position.x);
+			_locomotion.HorizontalLook = Mathf.Sign(ec.Target.transform.position.x - gameObject.transform.position.x);
 			dir = _locomotion.HorizontalLook;
 			yield return new WaitForSeconds(_preChargeTime);
 

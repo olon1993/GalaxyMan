@@ -29,10 +29,10 @@ namespace TheFrozenBanana
 					break;
 				}
 				// Turn around
-				_locomotion.HorizontalLook = Mathf.Sign(ec.target.transform.position.x - gameObject.transform.position.x);
+				_locomotion.HorizontalLook = Mathf.Sign(ec.Target.transform.position.x - gameObject.transform.position.x);
 
 				// Angle handling
-				Vector3 vectorToTarget = ec.target.transform.position - _projectileWeapon.transform.position;
+				Vector3 vectorToTarget = ec.Target.transform.position - _projectileWeapon.transform.position;
 				angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
 				if (ec.gameObject.transform.localScale.x < 0) {
 					angle += 180;
