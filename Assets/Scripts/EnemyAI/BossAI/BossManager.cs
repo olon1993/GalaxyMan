@@ -18,7 +18,7 @@ public class BossManager : MonoBehaviour
 	private Transform _target;
 	private IBossAction[] allActions;
 	private IBossAction[] possibleActions;
-	private IBossAction currentAction;
+	private IBossAction _currentAction;
 
 	private bool acting;
 	private bool active;
@@ -45,19 +45,19 @@ public class BossManager : MonoBehaviour
 		if (!active) {
 			return;
 		}
-		if (currentAction == null) {
+		if (_currentAction == null) {
 			SelectAction();
 		}
-		if (currentAction.ActionBusy) {
+		if (_currentAction.ActionBusy) {
 
-		} else if (pausing || currentAction.ActionDelay) {
+		} else if (pausing || _currentAction.ActionDelay) {
 			UpdateDirection();
 		} else {
 			if (_showDebugLog) {
 				Debug.Log("NEW ACTION SELECTION");
 			}
 			UpdateDirection();
-			currentLocationId = currentAction.EndLocationId;
+			currentLocationId = _currentAction.EndLocationId;
 			SelectAction();
 		}
 	}
@@ -76,14 +76,14 @@ public class BossManager : MonoBehaviour
 			}
 		}
 		pausing = true;
-		currentAction = possibleActions[Random.Range(0, possibleActions.Length)];
+		_currentAction = possibleActions[Random.Range(0, possibleActions.Length)];
 		StartCoroutine(DelayedStartAction());
 		//currentAction.RunAction();
 	}
 
 	private IEnumerator DelayedStartAction() {
 		yield return new WaitForSeconds(pauseBetweenActions);
-		currentAction.RunAction();
+		_currentAction.RunAction();
 		yield return new WaitForEndOfFrame();
 		pausing = false;
 	}
@@ -103,4 +103,5 @@ public class BossManager : MonoBehaviour
 
 	public GameObject Weapon { get { return _weapon; } }
 	public Transform Target { get { return _target; } }
+	public IBossAction CurrentAction { get { return _currentAction; } }
 }

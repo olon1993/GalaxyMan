@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.229167
+  orthographic size: 11.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -20105,6 +20105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelController
       objectReference: {fileID: 0}
+    - target: {fileID: 1354495757305892249, guid: 124e395f475b711419df56ee0540dd32, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 4504868203981869190, guid: c25e1a4172d23724bb0bcb9701a1b02b, type: 3}
     - target: {fileID: 1354495757305892250, guid: 124e395f475b711419df56ee0540dd32, type: 3}
       propertyPath: m_RootOrder
       value: 9
