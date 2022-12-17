@@ -241,8 +241,13 @@ namespace TheFrozenBanana
 				} 
 				else
 				{
-					_velocity.x = Movement.normalized.x * _dashSpeed;
-					_velocity.y = Movement.normalized.y * _dashSpeed;
+					if (HorizontalMovement == 0 && VerticalMovement == 0) {
+						_velocity.x = HorizontalLook * _dashSpeed;
+						_velocity.y = 0f;
+					} else { 
+						_velocity.x = Movement.normalized.x * _dashSpeed;
+						_velocity.y = Movement.normalized.y * _dashSpeed;
+					}
 				}
 
 				IsDashing = true;
