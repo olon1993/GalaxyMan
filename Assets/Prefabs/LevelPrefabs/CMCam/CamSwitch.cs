@@ -14,8 +14,8 @@ namespace TheFrozenBanana
 			currentCam = 0;
 			anim = GetComponent<Animator>();
 		}
-		public void SwitchCamera() {
-			currentCam++;
+		public void SwitchCamera(int id) {
+			currentCam = id;
 			anim.Play(camStateNames[currentCam]);
 		}
     }

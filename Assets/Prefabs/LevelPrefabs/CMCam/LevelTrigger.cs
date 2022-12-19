@@ -10,6 +10,9 @@ namespace TheFrozenBanana
 		public GameObject CMCamSwitch;
 		private CamSwitch cmSwitch;
 		public bool bossTrigger;
+		public bool inputOverride;
+		public bool repeatableTrigger;
+		public int camId;
 
 		private void Awake() {
 			cmSwitch = CMCamSwitch.GetComponent<CamSwitch>();
@@ -18,9 +21,11 @@ namespace TheFrozenBanana
 
 		private void OnTriggerEnter2D(Collider2D col) {
 			if (col.CompareTag("Player")) {
-				cmSwitch.SwitchCamera();
-				lc.LevelTrigger(bossTrigger);
-				this.gameObject.SetActive(false);
+				cmSwitch.SwitchCamera(camId);
+				lc.LevelTrigger(bossTrigger, inputOverride);
+				if (!repeatableTrigger) {
+					this.gameObject.SetActive(false);
+				}
 			}
 		}
 	}
