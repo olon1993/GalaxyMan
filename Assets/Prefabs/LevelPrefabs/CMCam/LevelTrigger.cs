@@ -22,7 +22,7 @@ namespace TheFrozenBanana
 		private void OnTriggerEnter2D(Collider2D col) {
 			if (col.CompareTag("Player")) {
 				cmSwitch.SwitchCamera(camId);
-				lc.LevelTrigger(bossTrigger, inputOverride);
+				lc.LevelCameraTrigger(bossTrigger, inputOverride);
 				if (!repeatableTrigger) {
 					this.gameObject.SetActive(false);
 				}

@@ -18,15 +18,15 @@ namespace TheFrozenBanana
 			player = GameObject.FindGameObjectWithTag("Player");
 			
 		}
-		public void LevelTrigger(bool boss, bool inputOverride) {
+		public void LevelCameraTrigger(bool boss, bool inputOverride) {
 			if (boss) {
-				StartCoroutine(RunBossTrigger());
+				StartCoroutine(RunCameraBossTrigger());
 			} else {
-				StartCoroutine(RunTrigger(inputOverride));
+				StartCoroutine(RunCameraTrigger(inputOverride));
 			}
 		}
 
-        private IEnumerator RunTrigger(bool inputOverride) {
+        private IEnumerator RunCameraTrigger(bool inputOverride) {
 			if (inputOverride) {
 				IInputManager input = player.GetComponent<IInputManager>();
 				musicAudio.Stop();
@@ -39,7 +39,7 @@ namespace TheFrozenBanana
 			}
 		}
 
-		private IEnumerator RunBossTrigger() {
+		private IEnumerator RunCameraBossTrigger() {
 			IInputManager input = player.GetComponent<IInputManager>();
 			input.IsEnabled = false;
 			input.OverrideHorizontalInput(1);
