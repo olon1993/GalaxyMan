@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 11.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9007,7 +9007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79b928b68157e14f9e1bdda3f9bd3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CMCamSwitch: {fileID: 0}
+  CMCamSwitch: {fileID: 2043642016}
   respawnPoint: {fileID: 956667495}
   bossTrigger: 0
   inputOverride: 0
@@ -9163,7 +9163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79b928b68157e14f9e1bdda3f9bd3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CMCamSwitch: {fileID: 0}
+  CMCamSwitch: {fileID: 2043642016}
   respawnPoint: {fileID: 1110618452}
   bossTrigger: 0
   inputOverride: 0
@@ -10998,11 +10998,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1e3a16eafbbc3489049f0d2315cfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 0
+  _showDebugLog: 1
   _ignoreTag: Untagged
   _CalculateRecoilFromCenter: 0
   _respawnOnTouch: 0
-  _respawnLocation: {fileID: 0}
+  _respawnLocation: {fileID: 1110618452}
   testPS: {fileID: 107972537797418217, guid: bab9191f39a4747498ac5d176e65f1dd, type: 3}
 --- !u!114 &1198146952
 MonoBehaviour:
