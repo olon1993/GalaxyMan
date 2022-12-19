@@ -76,7 +76,14 @@ public class BossManager : MonoBehaviour
 			}
 		}
 		pausing = true;
-		_currentAction = possibleActions[Random.Range(0, possibleActions.Length)];
+		bool actionSelected = false;
+		while (!actionSelected) {
+			int ran = Random.Range(0, possibleActions.Length);
+			if (_currentAction != possibleActions[ran]) {
+				_currentAction = possibleActions[ran];
+				actionSelected = true;
+			}
+		}
 		StartCoroutine(DelayedStartAction());
 		//currentAction.RunAction();
 	}
