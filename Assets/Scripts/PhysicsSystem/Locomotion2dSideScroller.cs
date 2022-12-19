@@ -470,19 +470,21 @@ namespace TheFrozenBanana
 			_collisions.FallingThroughPlatform = false;
 		}
 
-		public void ApplyRecoil(float amount, Vector3 source) {
-			StartCoroutine(RunRecoil(amount, source));
+		public void ApplyRecoil(float amount, Vector3 source, float stunTime) {
+			StartCoroutine(RunRecoil(amount, source, stunTime));
 		}
 
 		//**************************************************\\
 		//********************* Recoil *********************\\
 		//**************************************************\\
 
-		private IEnumerator RunRecoil(float forceValue, Vector3 forceSource) {
+		private IEnumerator RunRecoil(float forceValue, Vector3 forceSource, float stunTime) {
 			if (_showDebugLog) {
 				Debug.Log("Applying Damage Force: " + gameObject.name + " Source: " + forceSource);
 			}
-
+			if (stunTime < Mathf.Epsilon) {
+				stunTime = 0.1f;
+			}
 			Vector3 direction = (gameObject.transform.position - forceSource).normalized;
 			if (_showDebugLog) {
 				Debug.Log("Applying Damage Force: " + gameObject.name + " Source: " + forceSource + " Direction: " + direction);
@@ -494,7 +496,7 @@ namespace TheFrozenBanana
 			if (_velocity.y > 0) {
 				_velocity.y *= 4;
 			}
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(stunTime);
 			HorizontalMovement = 0f;
 			_handlingKnockback = false;
 		}

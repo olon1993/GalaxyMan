@@ -45,7 +45,7 @@ namespace TheFrozenBanana
 				if (_showDebugLog) {
 					Debug.Log("Recoil");
 				}
-				recoil.ApplyRecoil(_damage.KnockbackForce, gameObject.transform.position - _direction * 5);
+				recoil.ApplyRecoil(_damage.KnockbackForce, gameObject.transform.position - _direction * 5, _damage.StunTime);
 			}
 			if (_active) {
 				Deactivate();

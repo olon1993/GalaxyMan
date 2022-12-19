@@ -69,7 +69,7 @@ namespace TheFrozenBanana
 				Vector2 closest = col.ClosestPoint(gameObject.transform.position);
 				Vector3 src = new Vector3(closest.x, closest.y, 0);
 
-				recoil.ApplyRecoil(_damage.KnockbackForce, src);
+				recoil.ApplyRecoil(_damage.KnockbackForce, src, _damage.StunTime);
 			}
 			Destroy(gameObject);
 		}

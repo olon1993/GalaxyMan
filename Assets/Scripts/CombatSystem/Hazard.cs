@@ -48,7 +48,7 @@ namespace TheFrozenBanana
                 if (_CalculateRecoilFromCenter) {
                     src = gameObject.transform.position;
 				}
-                recoil.ApplyRecoil(_damage.KnockbackForce, src);
+                recoil.ApplyRecoil(_damage.KnockbackForce, src, _damage.StunTime);
             }
         }
 

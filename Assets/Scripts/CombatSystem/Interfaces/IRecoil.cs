@@ -6,7 +6,7 @@ namespace TheFrozenBanana
 {
     public interface IRecoil
     {
-        void ApplyRecoil(float knockbackForce, Vector3 forceSource);
+        void ApplyRecoil(float knockbackForce, Vector3 forceSource, float stunTime);
     }
 }
 

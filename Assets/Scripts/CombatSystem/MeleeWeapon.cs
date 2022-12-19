@@ -83,7 +83,7 @@ namespace TheFrozenBanana
 					if (_showDebugLog) {
 						Debug.Log("Recoil");
 					}
-					recoil.ApplyRecoil(_damage.KnockbackForce, _pointOfOrigin.position);
+					recoil.ApplyRecoil(_damage.KnockbackForce, _pointOfOrigin.position, _damage.StunTime);
 				}
 
 				if (_showDebugLog) {
@@ -116,7 +116,7 @@ namespace TheFrozenBanana
 					if (_showDebugLog) {
 						Debug.Log("Recoil");
 					}
-					recoil.ApplyRecoil(_damage.KnockbackForce, _pointOfOrigin.position);
+					recoil.ApplyRecoil(_damage.KnockbackForce, _pointOfOrigin.position, _damage.StunTime);
 				}
 
 				if (_showDebugLog) {
