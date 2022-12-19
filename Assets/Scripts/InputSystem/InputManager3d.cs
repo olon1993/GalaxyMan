@@ -79,5 +79,7 @@ namespace TheFrozenBanana
 		public bool IsJumpCancelled => throw new System.NotImplementedException();
 
 		public Vector3 CurrentTarget => throw new System.NotImplementedException();
+
+		public bool IsSecondaryAttack => throw new NotImplementedException();
 	}
 }

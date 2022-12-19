@@ -26,7 +26,7 @@ namespace TheFrozenBanana
 				return;
 			}
 			if (_collectableTypeDefinition == ICollectable.CollectableType.AMMO) {
-				IWeapon weapon = col.GetComponent<ICombatant>().CurrentWeapon;
+				IWeapon weapon = col.GetComponent<ICombatant>().CurrentMainWeapon;
 				if (_showDebugLog) {
 					Debug.Log("Collectable is Ammo.");
 				}

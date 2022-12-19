@@ -272,5 +272,7 @@ namespace TheFrozenBanana
                 }
             }
         }
-    }
+
+		public bool IsSecondaryAttack => throw new NotImplementedException();
+	}
 }

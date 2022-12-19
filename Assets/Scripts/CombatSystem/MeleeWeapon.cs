@@ -14,21 +14,25 @@ namespace TheFrozenBanana
 		//**************************************************\\
 
 		// Dependencies
-		private Damage _damage;
+		private IDamage _damage;
 		[SerializeField] private IWeapon.AmmoType _ammoTypeDefinition;
+		[SerializeField] private IWeapon.WeaponType _weaponTypeDefinition = IWeapon.WeaponType.MELEE;
 
 		[SerializeField] private bool _isLimitedAmmo;
 		[SerializeField] private int _maxAmmo;
 		[SerializeField] private int _currentAmmo;
 
 		[SerializeField] protected Transform _pointOfOrigin;
+		[SerializeField] protected Transform _pointOfTargetting;
 		[SerializeField] protected float _radiusOfInteraction;
 
 		[SerializeField] float _delayToHit = 0f;
 		[SerializeField] float _attackActionTime = 0.1f;
 
 		[SerializeField] private int _animationLayer;
+		[SerializeField] private string _owner;
 
+		[SerializeField] private GameObject _attackGraphics;
 		// Sound
 		[SerializeField] private AudioSource _audioSource;
 		[SerializeField] private AudioClip[] _audioClips;
@@ -40,7 +44,7 @@ namespace TheFrozenBanana
 		//**************************************************\\
 
 		private void Awake() {
-			_damage = GetComponent<Damage>();
+			_damage = GetComponent<IDamage>();
 			if (_damage == null) {
 				Debug.LogError("Damage not found on " + gameObject.name);
 			}
@@ -66,6 +70,9 @@ namespace TheFrozenBanana
 		private void HandleDamage() {
 			Collider[] colliders = Physics.OverlapSphere(_pointOfOrigin.position, _radiusOfInteraction);
 			foreach (Collider col in colliders) {
+				if (col.CompareTag(_owner)) {
+					continue;
+				}
 				IHealth health = col.GetComponent<IHealth>();
 				if (health != null) {
 					health.TakeDamage(Damage);
@@ -76,11 +83,7 @@ namespace TheFrozenBanana
 					if (_showDebugLog) {
 						Debug.Log("Recoil");
 					}
-					float damageDirection = transform.position.x < col.transform.position.x ? 1 : -1;
-					Vector2 closest = col.ClosestPoint(gameObject.transform.position);
-					Vector3 src = new Vector3(closest.x, closest.y, 0);
-
-					recoil.ApplyRecoil(_damage.KnockbackForce, src);
+					recoil.ApplyRecoil(_damage.KnockbackForce, _pointOfOrigin.position);
 				}
 
 				if (_showDebugLog) {
@@ -94,11 +97,15 @@ namespace TheFrozenBanana
 
 		protected virtual void HandleDamage2D() {
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(_pointOfOrigin.position, _radiusOfInteraction);
+			StartCoroutine(DisplayGraphics(_pointOfOrigin.position));
 			if (colliders.Length > 0) {
 				HandleSound();
 			}
 			foreach (Collider2D col in colliders) {
 
+				if (col.CompareTag(_owner)) {
+					continue;
+				}
 				IHealth health = col.GetComponent<IHealth>();
 				if (health != null) {
 					health.TakeDamage(Damage);
@@ -109,19 +116,24 @@ namespace TheFrozenBanana
 					if (_showDebugLog) {
 						Debug.Log("Recoil");
 					}
-					float damageDirection = transform.position.x < col.transform.position.x ? 1 : -1;
-					Vector2 closest = col.ClosestPoint(gameObject.transform.position);
-					Vector3 src = new Vector3(closest.x, closest.y, 0);
-
-					recoil.ApplyRecoil(_damage.KnockbackForce, src);
+					recoil.ApplyRecoil(_damage.KnockbackForce, _pointOfOrigin.position);
 				}
 
 				if (_showDebugLog) {
 					Debug.Log(gameObject.name + " attacks dealing " + Damage.DamageAmount + " damage to " + col.gameObject.name + "!");
 
 					Debug.Log(col.gameObject.name + " health = " + health.CurrentHealth + " / " + health.MaxHealth);
+
 				}
 			}
+		}
+
+		private IEnumerator DisplayGraphics(Vector3 origin) {
+			GameObject tmp = Instantiate(_attackGraphics, origin, Quaternion.identity,null) as GameObject;
+			tmp.transform.localScale = new Vector3(AttackDirection ,1,1) * _radiusOfInteraction * 2;
+			Destroy(tmp, AttackActionTime);
+			yield return new WaitForEndOfFrame();
+
 		}
 
 		private void HandleSound() {
@@ -146,7 +158,7 @@ namespace TheFrozenBanana
 		//******************* Properties *******************\\
 		//**************************************************\\
 
-		public Damage Damage {
+		public IDamage Damage {
 			get { return _damage; }
 			set { _damage = value; }
 		}
@@ -168,12 +180,20 @@ namespace TheFrozenBanana
 
 		public IWeapon.AmmoType AmmoTypeDefinition {
 			get { return _ammoTypeDefinition; }
-			set { _ammoTypeDefinition = value; }
+		}
+
+		public IWeapon.WeaponType WeaponTypeDefinition {
+			get { return _weaponTypeDefinition; }
 		}
 
 		public Transform PointOfOrigin {
 			get { return _pointOfOrigin; }
 			set { _pointOfOrigin = value; }
+		}
+
+		public Transform PointOfTargetting {
+			get { return _pointOfTargetting; }
+			set { _pointOfTargetting = value; }
 		}
 
 		public float AttackRange { get { return _radiusOfInteraction; } }
@@ -187,7 +207,10 @@ namespace TheFrozenBanana
 			get { return _attackActionTime; }
 		}
 
-        public Transform PointOfTargetting { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+		public float AttackDirection {
+			get { return Mathf.Sign(PointOfTargetting.position.x - PointOfOrigin.position.x); }
+		}
+
         public float AttackCharge { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
 	}

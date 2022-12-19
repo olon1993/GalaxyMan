@@ -7,6 +7,6 @@ namespace TheFrozenBanana
     public interface IMeleeWeapon : IWeapon
     {
         float AttackRange { get; }
-        Damage Damage { get; set; }
+        IDamage Damage { get; set; }
     }
 }

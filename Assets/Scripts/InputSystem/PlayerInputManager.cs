@@ -103,5 +103,7 @@ namespace TheFrozenBanana
 		public bool IsSwitchWeapon => throw new System.NotImplementedException();
 		public bool IsRunning => throw new System.NotImplementedException();
 		public Vector3 CurrentTarget => throw new System.NotImplementedException();
+
+		public bool IsSecondaryAttack => throw new System.NotImplementedException();
 	}
 }

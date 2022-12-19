@@ -9,25 +9,25 @@ namespace TheFrozenBanana
         bool IsLimitedAmmo { get; set; }
         int MaxAmmo { get; set; }
         int CurrentAmmo { get; set; }
-        AmmoType AmmoTypeDefinition { get; set; }
+        AmmoType AmmoTypeDefinition { get; }
+        WeaponType WeaponTypeDefinition { get; }
         Transform PointOfOrigin { get; set; }
         Transform PointOfTargetting { get; set; }
         float AttackActionTime { get; }
 		int AnimationLayer { get; set; }
         float AttackCharge { get; set; }
-        void ChargeEffect();
 
-		public enum DamageType
-        {
-            PHYSICAL, FIRE
-        }
+        void Attack(float charge);
+        void ChargeEffect();
 
         public enum AmmoType
         {
             NONE, MAGIC
         }
 
-        void Attack(float charge);
-
+        public enum WeaponType
+		{
+            MELEE, RANGED
+		}
     }
 }

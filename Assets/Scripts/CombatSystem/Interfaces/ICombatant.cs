@@ -7,8 +7,8 @@ namespace TheFrozenBanana
     public interface ICombatant
     {
         IHealth Health { get; set; }
-        IList<IWeapon> Weapons { get; set; }
-        IWeapon CurrentWeapon { get; set; }
+        IList<IWeapon> MainWeapons { get; set; }
+        IWeapon CurrentMainWeapon { get; set; }
         bool IsAttack { get; set; }
         bool IsAttacking { get; set; }
         int HorizontalFacingDirection { get; set; }

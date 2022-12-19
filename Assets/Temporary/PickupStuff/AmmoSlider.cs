@@ -27,8 +27,8 @@ namespace TheFrozenBanana
 				player = GameObject.FindGameObjectWithTag("Player");
 			}
 			cmb = player.GetComponent<ICombatant>();
-			weaponDisplayed = cmb.CurrentWeapon;
-			if (!cmb.CurrentWeapon.IsLimitedAmmo) {
+			weaponDisplayed = cmb.CurrentMainWeapon;
+			if (!cmb.CurrentMainWeapon.IsLimitedAmmo) {
 				DisplaySlider(false);
 			}
 			ready = true;
@@ -38,8 +38,8 @@ namespace TheFrozenBanana
 			if (!ready) {
 				return;
 			}
-			if (weaponDisplayed != cmb.CurrentWeapon) {
-				weaponDisplayed = cmb.CurrentWeapon;
+			if (weaponDisplayed != cmb.CurrentMainWeapon) {
+				weaponDisplayed = cmb.CurrentMainWeapon;
 				if (weaponDisplayed.IsLimitedAmmo) {
 					DisplaySlider(true);
 				} else {

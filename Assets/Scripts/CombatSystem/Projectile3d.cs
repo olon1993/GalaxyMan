@@ -11,11 +11,10 @@ namespace TheFrozenBanana
 		//**************************************************\\
 
 		// Dependencies
-		private Damage _damage;
+		private IDamage _damage;
 		private Rigidbody _rigidbody;
 
 		[SerializeField] int DamageAmount;
-		[SerializeField] IWeapon.DamageType DamageTypeDefinition;
 		[SerializeField] public float ProjectileSpeed;
 		[SerializeField] private LayerMask _collisionMask;
 
@@ -29,7 +28,7 @@ namespace TheFrozenBanana
 				Debug.LogError("No Rigidbody found on " + name);
 			}
 
-			_damage = GetComponent<Damage>();
+			_damage = GetComponent<IDamage>();
 			if (_damage == null) {
 				Debug.LogError("Damage not found on " + name);
 			}

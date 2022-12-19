@@ -21,7 +21,8 @@ namespace TheFrozenBanana
         [SerializeField] private bool _isLimitedAmmo;
         [SerializeField] private int _maxAmmo;
         [SerializeField] private int _currentAmmo;
-        [SerializeField] private IWeapon.AmmoType _ammoType;
+        [SerializeField] private IWeapon.AmmoType _ammoTypeDefinition;
+		[SerializeField] private IWeapon.WeaponType _weaponTypeDefinition = IWeapon.WeaponType.RANGED;
 		[SerializeField] private int _animationLayer;
         [SerializeField] private string _owner;
 
@@ -111,10 +112,12 @@ namespace TheFrozenBanana
             set { _currentAmmo = value; }
         }
 
-        public IWeapon.AmmoType AmmoTypeDefinition
-        {
-            get { return _ammoType; }
-            set { _ammoType = value; }
+        public IWeapon.AmmoType AmmoTypeDefinition {
+            get { return _ammoTypeDefinition; }
+        }
+
+        public IWeapon.WeaponType WeaponTypeDefinition {
+            get { return _weaponTypeDefinition; }
         }
 
         public Transform PointOfOrigin

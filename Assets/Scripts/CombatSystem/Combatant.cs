@@ -20,9 +20,15 @@ namespace TheFrozenBanana
         private ILocomotion2dSideScroller _locomotion;
         private IHealth _health;
 
-        private IList<IWeapon> _weapons;
-        private IWeapon _currentWeapon;
-        private int _currentWeaponIndex = 0;
+        [SerializeField] private IWeapon.WeaponType _mainWeaponType = IWeapon.WeaponType.RANGED;
+        private IList<IWeapon> _mainWeapons;
+        private IWeapon _currentMainWeapon;
+        private int _currentMainWeaponIndex = 0;
+
+        private IList<IWeapon> _secondaryWeapons;
+        private IWeapon _currentSecondaryWeapon;
+        private int _currentSecondaryWeaponIndex = 0;
+
 
         private bool _isCycleWeaponsEnabled = true;
 
@@ -66,16 +72,30 @@ namespace TheFrozenBanana
                 Debug.LogError("IHealth not found on " + gameObject.name);
             }
 
-            _weapons = new List<IWeapon>();
-            IList<IWeapon> weapons = transform.GetComponentsInChildren<IWeapon>().ToList();
-            foreach (IWeapon weapon in weapons)
+            _mainWeapons = new List<IWeapon>();
+            _secondaryWeapons = new List<IWeapon>();
+
+            IList<IWeapon> allWeapons = transform.GetComponentsInChildren<IWeapon>().ToList();
+
+            foreach (IWeapon weapon in allWeapons)
             {
-                _weapons.Add(weapon);
+                if (weapon.WeaponTypeDefinition == _mainWeaponType) 
+                {
+                    _mainWeapons.Add(weapon);
+                } else 
+                {
+                    _secondaryWeapons.Add(weapon);
+				}
             }
 
-            if(_weapons.Count > 0)
+            if(_mainWeapons.Count > 0)
             {
-                _currentWeapon = _weapons[0];
+                _currentMainWeapon = _mainWeapons[0];
+            }
+
+            if (_secondaryWeapons.Count > 0) 
+            {
+                _currentSecondaryWeapon = _secondaryWeapons[0];
             }
         }
 
@@ -83,30 +103,31 @@ namespace TheFrozenBanana
         {
             IsAttack = _inputManager.IsAttack;
             IsAttacking = _inputManager.IsAttacking;
+            IsSecondaryAttack = _inputManager.IsSecondaryAttack;
             IsCycleWeapons = _inputManager.IsToggleWeapons;
 
             bool isUp = _inputManager.Vertical > Mathf.Epsilon;
-            
+
             if (IsAttacking && !_isCharging) {
-                CurrentWeapon.ChargeEffect();
+                CurrentMainWeapon.ChargeEffect();
                 _isCharging = true;
 			}
 
             if (isUp)
             {
-                CurrentWeapon.PointOfOrigin.localPosition = new Vector3(0, 1.5f, 0);
-                CurrentWeapon.PointOfTargetting.localPosition = new Vector3(0, 5f, 0);
+                CurrentMainWeapon.PointOfOrigin.localPosition = new Vector3(0, 1.5f, 0);
+                CurrentMainWeapon.PointOfTargetting.localPosition = new Vector3(0, 5f, 0);
             }
             else if (_locomotion.IsWallSliding)
             {
 
-                CurrentWeapon.PointOfOrigin.localPosition = new Vector3(-1, 0, 0);
-                CurrentWeapon.PointOfTargetting.localPosition = new Vector3(-5, 0, 0);
+                CurrentMainWeapon.PointOfOrigin.localPosition = new Vector3(-1, 0, 0);
+                CurrentMainWeapon.PointOfTargetting.localPosition = new Vector3(-5, 0, 0);
             }
             else 
             {
-                CurrentWeapon.PointOfOrigin.localPosition = new Vector3(_horizontalFacingDirection, 0, 0);
-                CurrentWeapon.PointOfTargetting.localPosition = new Vector3(_horizontalFacingDirection * 5, 0, 0);
+                CurrentMainWeapon.PointOfOrigin.localPosition = new Vector3(_horizontalFacingDirection, 0, 0);
+                CurrentMainWeapon.PointOfTargetting.localPosition = new Vector3(_horizontalFacingDirection * 5, 0, 0);
             }
 
             if (IsAttacking)
@@ -116,10 +137,17 @@ namespace TheFrozenBanana
 
             if (IsAttack)
             {
-                CurrentWeapon.Attack(_attackChargeTime);
+                CurrentMainWeapon.Attack(_attackChargeTime);
                 _attackChargeTime = 0f;
                 _isCharging = false;
+                return;
             }
+            if (IsSecondaryAttack) {
+                _attackChargeTime = 0f;
+                _isCharging = false;
+                _currentSecondaryWeapon.Attack(_attackChargeTime);
+                return;
+			}
 
             CheckWeaponToggle();
         }
@@ -130,25 +158,25 @@ namespace TheFrozenBanana
             {
                 if (IsCycleWeapons)
                 {
-                    _currentWeaponIndex++;
-                    if (_currentWeaponIndex >= _weapons.Count) 
+                    _currentMainWeaponIndex++;
+                    if (_currentMainWeaponIndex >= _mainWeapons.Count) 
                     { 
-                        _currentWeaponIndex = 0; 
+                        _currentMainWeaponIndex = 0; 
                     }
 
-                    CurrentWeapon = _weapons[_currentWeaponIndex];
+                    CurrentMainWeapon = _mainWeapons[_currentMainWeaponIndex];
                 }
 
                 if (IsHotKeyOne && IsHotKeyOneEnabled)
                 {
-                    _currentWeaponIndex = 0;
-                    CurrentWeapon = _weapons[_currentWeaponIndex];
+                    _currentMainWeaponIndex = 0;
+                    CurrentMainWeapon = _mainWeapons[_currentMainWeaponIndex];
                 }
 
                 if (IsHotKeyTwo && IsHotKeyTwoEnabled)
                 {
-                    _currentWeaponIndex = 1;
-                    CurrentWeapon = _weapons[_currentWeaponIndex];
+                    _currentMainWeaponIndex = 1;
+                    CurrentMainWeapon = _mainWeapons[_currentMainWeaponIndex];
                 }
 
                 IsCycleWeapons = false;
@@ -173,26 +201,26 @@ namespace TheFrozenBanana
             }
         }
 
-        public IList<IWeapon> Weapons
+        public IList<IWeapon> MainWeapons
         {
-            get { return _weapons; }
+            get { return _mainWeapons; }
             set
             {
-                if (_weapons != value)
+                if (_mainWeapons != value)
                 {
-                    _weapons = value;
+                    _mainWeapons = value;
                 }
             }
         }
 
-        public IWeapon CurrentWeapon
+        public IWeapon CurrentMainWeapon
         {
-            get { return _currentWeapon; }
+            get { return _currentMainWeapon; }
             set
             {
-                if (_currentWeapon != value)
+                if (_currentMainWeapon != value)
                 {
-                    _currentWeapon = value;
+                    _currentMainWeapon = value;
                 }
             }
         }
@@ -200,6 +228,8 @@ namespace TheFrozenBanana
         public bool IsAttack { get; set; }
 
         public bool IsAttacking { get; set; }
+
+        public bool IsSecondaryAttack { get; set; }
 
         public int HorizontalFacingDirection
         {
@@ -209,10 +239,10 @@ namespace TheFrozenBanana
                 if (_horizontalFacingDirection != value && value != 0)
                 {
                     _horizontalFacingDirection = value;
-                    if (Mathf.Sign(CurrentWeapon.PointOfOrigin.localPosition.x) != Mathf.Sign(_horizontalFacingDirection))
+                    if (Mathf.Sign(CurrentMainWeapon.PointOfOrigin.localPosition.x) != Mathf.Sign(_horizontalFacingDirection))
                     {
-                        CurrentWeapon.PointOfOrigin.transform.localPosition *= -1;
-                        CurrentWeapon.PointOfTargetting.transform.localPosition *= -1;
+                        CurrentMainWeapon.PointOfOrigin.transform.localPosition *= -1;
+                        CurrentMainWeapon.PointOfTargetting.transform.localPosition *= -1;
                     }
                 }
             }
