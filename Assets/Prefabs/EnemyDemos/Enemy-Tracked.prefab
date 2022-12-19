@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 103179866519204009}
   - component: {fileID: 103179866519204003}
   - component: {fileID: 103179866519204002}
+  - component: {fileID: 1574001908217598159}
   m_Layer: 6
   m_Name: Enemy-Tracked
   m_TagString: Enemy
@@ -192,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
+  _mainWeaponType: 1
 --- !u!114 &103179866519204010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +232,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Enemy
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &103179866519204008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,8 +266,6 @@ MonoBehaviour:
   IsMovementEnabled: 1
   _isEnabled: 1
   _aggroRange: 16
-  target: {fileID: 0}
-  _distance: 0
 --- !u!114 &103179866519204009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +335,24 @@ MonoBehaviour:
   _projectileWeapon: {fileID: 103179867029587872}
   _aimSpeed: 3
   _chargeParticles: {fileID: 7594106539542797427, guid: 0c27f4077a9e9ca449c35cf0b2278f1e, type: 3}
+--- !u!114 &1574001908217598159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103179866519204014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0fef508883f374393d3f68aacf837d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugLog: 1
+  _dropChance: 50
+  _lootList:
+  - {fileID: 7002899403893113764, guid: 926de72453481964fbe49fb434c0effa, type: 3}
+  _lootWeightedChance:
+  - 1
 --- !u!1 &103179867046294626
 GameObject:
   m_ObjectHideFlags: 0

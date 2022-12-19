@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 6826479877702706512}
   - component: {fileID: 6826479877702706513}
   - component: {fileID: 6826479877702706514}
+  - component: {fileID: 8249291111603549427}
   m_Layer: 6
   m_Name: Enemy-Jump
   m_TagString: Enemy
@@ -355,6 +356,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Enemy
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &6826479877702706519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,8 +390,6 @@ MonoBehaviour:
   IsMovementEnabled: 1
   _isEnabled: 1
   _aggroRange: 12
-  target: {fileID: 0}
-  _distance: 0
 --- !u!114 &6826479877702706513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +430,24 @@ MonoBehaviour:
   _requiresLineOfSight: 0
   _moveAction: 0
   _actionInterruptable: 1
+--- !u!114 &8249291111603549427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826479877702706515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0fef508883f374393d3f68aacf837d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugLog: 1
+  _dropChance: 50
+  _lootList:
+  - {fileID: 7002899403893113764, guid: 926de72453481964fbe49fb434c0effa, type: 3}
+  _lootWeightedChance:
+  - 1
 --- !u!1 &6826479877927636096
 GameObject:
   m_ObjectHideFlags: 0

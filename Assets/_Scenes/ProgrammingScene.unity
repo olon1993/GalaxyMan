@@ -59213,14 +59213,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy-Tracked
       objectReference: {fileID: 0}
-    - target: {fileID: 103179866519204014, guid: 9216a9607019c4d4781b5378d13fef4e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 103179866519204029, guid: 9216a9607019c4d4781b5378d13fef4e, type: 3}
-      propertyPath: _mainWeaponType
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9216a9607019c4d4781b5378d13fef4e, type: 3}
 --- !u!1001 &6362751486518702330
@@ -59417,6 +59409,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1859130961, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859130961, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859130961, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x
+      value: -18
+      objectReference: {fileID: 0}
     - target: {fileID: 5081439703878405475, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.y
       value: 18.5

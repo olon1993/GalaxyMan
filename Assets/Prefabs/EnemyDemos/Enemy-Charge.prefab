@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 6362751488586736715}
   - component: {fileID: 6362751488586736714}
   - component: {fileID: 6362751488586736725}
+  - component: {fileID: 4307273347309930388}
   m_Layer: 6
   m_Name: Enemy-Charge
   m_TagString: Enemy
@@ -383,6 +384,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Enemy
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &6362751488586736712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,8 +418,6 @@ MonoBehaviour:
   IsMovementEnabled: 1
   _isEnabled: 1
   _aggroRange: 20
-  target: {fileID: 0}
-  _distance: 0
 --- !u!114 &6362751488586736714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,3 +467,21 @@ MonoBehaviour:
   _maxChargeTime: 3
   _stopChargeTime: 0.5
   _chargeSpeedFactor: 3
+--- !u!114 &4307273347309930388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362751488586736724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0fef508883f374393d3f68aacf837d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugLog: 1
+  _dropChance: 50
+  _lootList:
+  - {fileID: 7002899403893113764, guid: 926de72453481964fbe49fb434c0effa, type: 3}
+  _lootWeightedChance:
+  - 1
