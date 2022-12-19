@@ -23,7 +23,16 @@ namespace TheFrozenBanana
 			base.Awake();
 		}
 
+		protected void OnEnable() {
+			if (IsHurt) {
+				StartCoroutine(FadeHurt());
+			}
+		}
+
 		public override void TakeDamage(IDamage dmgDefinition) {
+			if (_showDebugLog) {
+				Debug.Log(gameObject.name + " health script: Take Damage Script. Hurt?: "+ IsHurt);
+			}
 			if (IsHurt) {
 				return;
 			}

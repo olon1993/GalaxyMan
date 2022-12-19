@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace TheFrozenBanana
 {
-    public class Hazard : MonoBehaviour
+    public class Hazard : MonoBehaviour, IHazard
     {
         [SerializeField] protected bool _showDebugLog = false;
         [SerializeField] protected IDamage _damage;
         [SerializeField] protected string _ignoreTag= "Untagged";
         [SerializeField] protected bool _CalculateRecoilFromCenter = false;
+        [SerializeField] protected bool _respawnOnTouch = false;
+        [SerializeField] protected Transform _respawnLocation;
 
         private void Awake()
         {
@@ -49,6 +51,13 @@ namespace TheFrozenBanana
                 recoil.ApplyRecoil(_damage.KnockbackForce, src);
             }
         }
+
+        public void ChangeRespawnLocation(Transform newLocation) {
+            _respawnLocation = newLocation;
+		}
+
+        public bool RespawnOnTouch { get { return _respawnOnTouch; } }
+        public Transform RespawnLocation { get { return _respawnLocation; } }
     }
 }
 

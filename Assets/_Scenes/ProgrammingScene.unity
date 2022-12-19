@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.25
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.22222, y: 20, z: -10}
+  m_LocalPosition: {x: -87.22222, y: 18.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7944,9 +7944,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CMCamSwitch: {fileID: 2043642016}
+  respawnPoint: {fileID: 0}
   bossTrigger: 0
   inputOverride: 0
   repeatableTrigger: 1
+  respawnTrigger: 0
   camId: 3
 --- !u!61 &200755333
 BoxCollider2D:
@@ -8038,7 +8040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.7
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8240,6 +8242,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Untagged
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &390668352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8376,6 +8380,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Untagged
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &414784613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8605,9 +8611,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CMCamSwitch: {fileID: 2043642016}
+  respawnPoint: {fileID: 0}
   bossTrigger: 0
   inputOverride: 0
   repeatableTrigger: 1
+  respawnTrigger: 0
   camId: 0
 --- !u!61 &452007069
 BoxCollider2D:
@@ -8954,6 +8962,84 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5692b7ff56b1914a954f2d7cd40159f, type: 3}
+--- !u!1 &956667494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956667495}
+  - component: {fileID: 956667497}
+  - component: {fileID: 956667496}
+  m_Layer: 0
+  m_Name: RespawnB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &956667495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956667494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -62, y: 14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1198146947}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956667496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956667494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79b928b68157e14f9e1bdda3f9bd3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CMCamSwitch: {fileID: 0}
+  respawnPoint: {fileID: 956667495}
+  bossTrigger: 0
+  inputOverride: 0
+  repeatableTrigger: 0
+  respawnTrigger: 1
+  camId: 0
+--- !u!61 &956667497
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956667494}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1033844187
 GameObject:
   m_ObjectHideFlags: 0
@@ -9032,6 +9118,84 @@ Transform:
   m_Father: {fileID: 60090701}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1110618451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110618452}
+  - component: {fileID: 1110618454}
+  - component: {fileID: 1110618453}
+  m_Layer: 0
+  m_Name: RespawnA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110618452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110618451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -88, y: 14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1198146947}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110618453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110618451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79b928b68157e14f9e1bdda3f9bd3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CMCamSwitch: {fileID: 0}
+  respawnPoint: {fileID: 1110618452}
+  bossTrigger: 0
+  inputOverride: 0
+  repeatableTrigger: 0
+  respawnTrigger: 1
+  camId: 0
+--- !u!61 &1110618454
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110618451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &1194085266 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2058993458824567646, guid: b5692b7ff56b1914a954f2d7cd40159f, type: 3}
@@ -9145,6 +9309,8 @@ GameObject:
   - component: {fileID: 1198146950}
   - component: {fileID: 1198146949}
   - component: {fileID: 1198146948}
+  - component: {fileID: 1198146951}
+  - component: {fileID: 1198146952}
   m_Layer: 0
   m_Name: The Pit Below
   m_TagString: Untagged
@@ -9163,7 +9329,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1110618452}
+  - {fileID: 956667495}
   m_Father: {fileID: 1033844189}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9177,7 +9345,7 @@ TilemapCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10818,6 +10986,40 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1198146951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198146946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1e3a16eafbbc3489049f0d2315cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugLog: 0
+  _ignoreTag: Untagged
+  _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
+  testPS: {fileID: 107972537797418217, guid: bab9191f39a4747498ac5d176e65f1dd, type: 3}
+--- !u!114 &1198146952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198146946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cea4fb8cca32eb4caeb6367313c0b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageTypeDefinition: 0
+  _stunTime: 0
+  _damageAmount: 1
+  _knockbackForce: 0
 --- !u!1 &1253024532
 GameObject:
   m_ObjectHideFlags: 0
@@ -11102,9 +11304,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CMCamSwitch: {fileID: 2043642016}
+  respawnPoint: {fileID: 0}
   bossTrigger: 1
   inputOverride: 1
   repeatableTrigger: 0
+  respawnTrigger: 0
   camId: 2
 --- !u!61 &1570915721
 BoxCollider2D:
@@ -57831,6 +58035,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Untagged
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &1637891802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58043,6 +58249,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Untagged
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &1752562250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59211,7 +59419,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5081439703878405475, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.7
+      value: 18.5
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978079836987, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_RootOrder
@@ -59291,7 +59499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978750165739, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.7
+      value: 18.5
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978750165740, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_Follow

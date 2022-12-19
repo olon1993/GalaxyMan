@@ -6,8 +6,8 @@ namespace TheFrozenBanana
 {
     public class FallHazard : Hazard
     {
-        [SerializeField] private Transform knockbackToLocation;
         public GameObject testPS;
+
         protected override void OnTriggerEnter2D(Collider2D col) {
             if (_showDebugLog) {
                 Debug.Log("Hazard hit :" + col.gameObject.name);
@@ -20,19 +20,23 @@ namespace TheFrozenBanana
             }
 
             IHealth otherHealth = col.GetComponent<IHealth>();
+            if (_showDebugLog) {
+                Debug.Log("Health object: " + otherHealth);
+			}
             if (otherHealth != null) {
                 otherHealth.TakeDamage(_damage);
             }
             if (col.CompareTag("Player")) {
                 StartCoroutine(TransportPlayer(col));
-             //   col.transform.position = knockbackToLocation.position;
 			}
         }
+
+
 
         private IEnumerator TransportPlayer(Collider2D col) {
             GameObject player = col.gameObject;
             Vector3 start = player.transform.position;
-            Vector3 end = knockbackToLocation.position;
+            Vector3 end = _respawnLocation.position;
 
             player.SetActive(false);
             GameObject ps = Instantiate(testPS, start, Quaternion.identity, null) as GameObject;
