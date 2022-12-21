@@ -164,6 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _velocity: 16
-  _hitEffect: {fileID: 0}
+  _hitEffect: {fileID: 5092710910842257738, guid: 121f63aa84ade2042bc0db1da271df4b, type: 3}
   _useGravity: 0
   _gravity: 2

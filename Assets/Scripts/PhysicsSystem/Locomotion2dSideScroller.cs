@@ -77,6 +77,13 @@ namespace TheFrozenBanana
 			Init();
 		}
 
+		protected void OnEnable() {
+			_velocity.x = 0;
+			_velocity.y = 0;
+			HorizontalMovement = 0f;
+			_handlingKnockback = false;
+		}
+
 		private void Init() {
 			_collisions.FaceDirection = 1;
 			_gravityStrength = -(2 * _maxJumpHeight) / Mathf.Pow(_timeToJumpApex, 2);
