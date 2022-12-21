@@ -5,8 +5,7 @@ using UnityEngine;
 namespace TheFrozenBanana
 {
 	[RequireComponent(typeof(Damage))]
-	public class MeleeWeapon : MonoBehaviour, IMeleeWeapon
-	{
+	public class MeleeWeapon : MonoBehaviour, IMeleeWeapon {
 		[SerializeField] protected bool _showDebugLog = false;
 
 		//**************************************************\\
@@ -17,6 +16,9 @@ namespace TheFrozenBanana
 		private IDamage _damage;
 		[SerializeField] private IWeapon.AmmoType _ammoTypeDefinition;
 		[SerializeField] private IWeapon.WeaponType _weaponTypeDefinition = IWeapon.WeaponType.MELEE;
+
+
+		[SerializeField] private float _attackSpeed = 0.1f;
 
 		[SerializeField] private bool _isLimitedAmmo;
 		[SerializeField] private int _maxAmmo;
@@ -39,6 +41,10 @@ namespace TheFrozenBanana
 
 		private bool _is2D = true;
 
+		// Minimum interval variables
+		private bool _isAttacking;
+		private bool _isQueuedAttack;
+
 		//**************************************************\\
 		//******************** Methods *********************\\
 		//**************************************************\\
@@ -54,18 +60,32 @@ namespace TheFrozenBanana
 
 		}
 
-		public void Attack(float charge) {
+		public void Attack(float chargeTime) {
 			if (_showDebugLog) {
 				Debug.Log("Attacking with " + name);
 			}
+			if (!_isAttacking) {
+				StartCoroutine(HandleAttack());
+			} else if (!_isQueuedAttack) {
+				_isQueuedAttack = true;
+			}
+		}
 
+		private IEnumerator HandleAttack() {
 			// This should be broken out into a 2d and a 3d version of this mechanic
+			_isAttacking = true;
 			if (_is2D) {
 				Invoke("HandleDamage2D", _delayToHit);
 			} else {
 				HandleDamage();
 			}
-		}
+			yield return new WaitForSeconds(_attackSpeed);
+			_isAttacking = false;
+			if (_isQueuedAttack) {
+				_isQueuedAttack = false;
+				StartCoroutine(HandleAttack());
+			}
+		} 
 
 		private void HandleDamage() {
 			Collider[] colliders = Physics.OverlapSphere(_pointOfOrigin.position, _radiusOfInteraction);
@@ -211,7 +231,9 @@ namespace TheFrozenBanana
 			get { return Mathf.Sign(PointOfTargetting.position.x - PointOfOrigin.position.x); }
 		}
 
-        public float AttackCharge { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+		public float AttackSpeed { get { return _attackSpeed; } }
+
+		public bool IsAttacking { get { return _isAttacking; } }
 
 	}
 }

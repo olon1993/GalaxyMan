@@ -15,7 +15,8 @@ namespace TheFrozenBanana
         Transform PointOfTargetting { get; set; }
         float AttackActionTime { get; }
 		int AnimationLayer { get; set; }
-        float AttackCharge { get; set; }
+        float AttackSpeed { get; }
+        bool IsAttacking { get; }
 
         void Attack(float charge);
         void ChargeEffect();

@@ -35,6 +35,7 @@ namespace TheFrozenBanana
         private int _horizontalFacingDirection = 1;
 
         private bool _isCharging = false;
+        private bool includeSeconary = false;
         private float _attackChargeTime = 0f;
         private Vector3 _combatDirection = Vector3.right;
 
@@ -42,33 +43,28 @@ namespace TheFrozenBanana
         //******************** Methods *********************\\
         //**************************************************\\
 
-        void Awake()
-        {
+        void Awake() {
 
             if (_showDebugLog) {
                 Debug.Log("Combatant Debug Log is on");
             }
             _dependencyManager = GetComponent<DependencyManager>();
-            if(_dependencyManager == null)
-            {
+            if (_dependencyManager == null) {
                 Debug.Log("No DependencyManager found on " + name);
             }
 
             _inputManager = (IInputManager)_dependencyManager.Registry[typeof(IInputManager)];
-            if (_inputManager == null)
-            {
+            if (_inputManager == null) {
                 Debug.Log("No Input Manager found on " + name);
             }
 
             _health = (IHealth)_dependencyManager.Registry[typeof(IHealth)];
-            if (_health == null)
-            {
+            if (_health == null) {
                 Debug.LogError("IHealth not found on " + gameObject.name);
             }
 
             _locomotion = (ILocomotion2dSideScroller)_dependencyManager.Registry[typeof(ILocomotion2dSideScroller)];
-            if (_health == null)
-            {
+            if (_health == null) {
                 Debug.LogError("IHealth not found on " + gameObject.name);
             }
 
@@ -77,25 +73,25 @@ namespace TheFrozenBanana
 
             IList<IWeapon> allWeapons = transform.GetComponentsInChildren<IWeapon>().ToList();
 
-            foreach (IWeapon weapon in allWeapons)
-            {
-                if (weapon.WeaponTypeDefinition == _mainWeaponType) 
-                {
+            foreach (IWeapon weapon in allWeapons) {
+                if (weapon.WeaponTypeDefinition == _mainWeaponType) {
                     _mainWeapons.Add(weapon);
-                } else 
-                {
+                } else {
                     _secondaryWeapons.Add(weapon);
-				}
+                }
             }
 
-            if(_mainWeapons.Count > 0)
-            {
+            if (_mainWeapons.Count > 0) {
                 _currentMainWeapon = _mainWeapons[0];
             }
 
-            if (_secondaryWeapons.Count > 0) 
-            {
+            if (_secondaryWeapons.Count > 0) {
                 _currentSecondaryWeapon = _secondaryWeapons[0];
+                includeSeconary = true;
+            }
+            if (_showDebugLog) {
+                Debug.Log("Main      Weapons Count: " + _mainWeapons.Count);
+                Debug.Log("Secondary Weapons Count: " + _secondaryWeapons.Count);
             }
         }
 
@@ -105,6 +101,15 @@ namespace TheFrozenBanana
             IsAttacking = _inputManager.IsAttacking;
             IsSecondaryAttack = _inputManager.IsSecondaryAttack;
             IsCycleWeapons = _inputManager.IsToggleWeapons;
+            if (CurrentMainWeapon.IsAttacking) {
+                IsSecondaryAttack = false;
+			}
+            if (includeSeconary) {
+                if (CurrentSecondaryWeapon.IsAttacking) {
+                    IsAttack = false;
+                    IsAttacking = false;
+                }
+            }
 
             bool isUp = _inputManager.Vertical > Mathf.Epsilon;
 
@@ -221,6 +226,15 @@ namespace TheFrozenBanana
                 if (_currentMainWeapon != value)
                 {
                     _currentMainWeapon = value;
+                }
+            }
+        }
+
+        public IWeapon CurrentSecondaryWeapon {
+            get { return _currentSecondaryWeapon; }
+            set {
+                if (_currentSecondaryWeapon != value) {
+                    _currentSecondaryWeapon = value;
                 }
             }
         }

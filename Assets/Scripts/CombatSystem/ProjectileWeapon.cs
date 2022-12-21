@@ -1,9 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheFrozenBanana
 {
     public class ProjectileWeapon : MonoBehaviour, IWeapon
     {
+        [SerializeField] protected bool _showDebugLog = false;
         //**************************************************\\
         //********************* Fields *********************\\
         //**************************************************\\
@@ -13,6 +16,8 @@ namespace TheFrozenBanana
 
         [SerializeField] GameObject DefaultProjectile;
         [SerializeField] GameObject ChargingParticleSystem;
+
+        [SerializeField] private float _attackSpeed = 0.1f;
 
         [SerializeField] private float[] _chargedShotTime;
         [SerializeField] private GameObject[] _chargeProjectile;
@@ -26,6 +31,10 @@ namespace TheFrozenBanana
 		[SerializeField] private int _animationLayer;
         [SerializeField] private string _owner;
 
+        // Minimum interval variables
+        private bool _isAttacking;
+        private bool _isQueuedAttack;
+
         //**************************************************\\
         //******************** Methods *********************\\
         //**************************************************\\
@@ -38,8 +47,19 @@ namespace TheFrozenBanana
 			}
 		}
 
-        public void Attack(float chargeTime)
-        {
+        public void Attack(float chargeTime) {
+            if (_showDebugLog) {
+                Debug.Log("Attacking with " + name);
+            }
+            if (!_isAttacking) {
+                StartCoroutine(HandleAttack(chargeTime));
+            } else if (!_isQueuedAttack) {
+                _isQueuedAttack = true;
+            }
+        }
+
+        private IEnumerator HandleAttack(float chargeTime) {
+            _isAttacking = true;
             if (ChargingParticleSystem != null) {
                 ParticleSystem ps = ChargingParticleSystem.GetComponent<ParticleSystem>();
                     ps.Stop();
@@ -51,7 +71,7 @@ namespace TheFrozenBanana
                     insProjectile = Instantiate(DefaultProjectile, _pointOfOrigin.position, Quaternion.identity, null);
                 } else {
                     Debug.LogWarning("Not enough ammo");
-                    return;
+                    yield break;
                 }
             } else {
                 // Loop backwards to 0, not from 0 and up
@@ -62,14 +82,20 @@ namespace TheFrozenBanana
                             break;
                         } else {
                             Debug.LogWarning("Not enough ammo");
-                            return;
-						}
+                            yield break;
+                        }
                     }
                 }
             }
             
             IProjectile projectile = insProjectile.GetComponent<IProjectile>();
             projectile.Setup(_pointOfOrigin.position, _pointOfTargetting.position, _owner);
+            yield return new WaitForSeconds(_attackSpeed);
+            _isAttacking = false;
+            if (_isQueuedAttack) {
+                _isQueuedAttack = false;
+                StartCoroutine(HandleAttack(0.01f));
+            }
         }
 
         private bool CheckAmmo(int i) {
@@ -139,6 +165,8 @@ namespace TheFrozenBanana
 			set { _animationLayer = value; }
 		}
 
-        public float AttackCharge { get; set; }
+        public float AttackSpeed { get { return _attackSpeed; } }
+        public bool IsAttacking { get { return _isAttacking; } }
+
     }
 }

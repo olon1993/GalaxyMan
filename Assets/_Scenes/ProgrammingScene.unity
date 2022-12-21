@@ -8003,6 +8003,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: _attackSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _chargedShotTime.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -58137,6 +58141,7 @@ MonoBehaviour:
   _showDebugLog: 0
   _ammoTypeDefinition: 0
   _weaponTypeDefinition: 0
+  _attackSpeed: 0.5
   _isLimitedAmmo: 0
   _maxAmmo: 0
   _currentAmmo: 0
@@ -58652,6 +58657,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2380511092315831880, guid: 1b2d030195293214f8d8b65a9e17a8d6, type: 3}
+      propertyPath: _attackSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380511092315831880, guid: 1b2d030195293214f8d8b65a9e17a8d6, type: 3}
       propertyPath: _isLimitedAmmo
       value: 1
       objectReference: {fileID: 0}
@@ -58898,6 +58907,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3213696353108361102, guid: 542ec81f40c57804880fc3e215f0c71f, type: 3}
+      propertyPath: _attackSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213696353108361102, guid: 542ec81f40c57804880fc3e215f0c71f, type: 3}
       propertyPath: _currentAmmo
       value: 15
       objectReference: {fileID: 0}
@@ -59042,6 +59055,10 @@ PrefabInstance:
     - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
       propertyPath: _maxAmmo
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: _attackSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
       propertyPath: _currentAmmo
