@@ -45,23 +45,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e51b5b29cafcf44d9c2a89d2bc577a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _showDebugLog: 0
   _pointOfOrigin: {fileID: 2820402607794095308}
   _pointOfTargetting: {fileID: 0}
   DefaultProjectile: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
-  ChargingParticleSystem: {fileID: 0}
+  ChargingParticleSystem: {fileID: 4003310249244158883, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+  _attackSpeed: 0
   _chargedShotTime:
   - 0
   - 0.6
   - 1.5
   _chargeProjectile:
   - {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
-  - {fileID: 5128333805578873701, guid: 75d017bcf09c5a5479c0b30ae68ba502, type: 3}
-  - {fileID: 5128333805578873701, guid: 82b399a9613498a45b0dde76b31a6a09, type: 3}
+  - {fileID: 5902931012708338258, guid: f60d1ebe8b478e34a9c20a214bd0d3cc, type: 3}
+  - {fileID: 5902931012708338258, guid: c53c1787cca3e2f44910e1ef723028d7, type: 3}
   _chargeAmmoCost: 
   _isLimitedAmmo: 0
   _maxAmmo: 10
   _currentAmmo: 10
-  _ammoType: 0
+  _ammoTypeDefinition: 0
+  _weaponTypeDefinition: 1
   _animationLayer: 0
   _owner: Player
 --- !u!1 &2820402607794095307

@@ -103,8 +103,7 @@ namespace TheFrozenBanana
             IsCycleWeapons = _inputManager.IsToggleWeapons;
             if (CurrentMainWeapon.IsAttacking) {
                 IsSecondaryAttack = false;
-			}
-            if (includeSeconary) {
+			} else if (includeSeconary) {
                 if (CurrentSecondaryWeapon.IsAttacking) {
                     IsAttack = false;
                     IsAttacking = false;
@@ -168,7 +167,11 @@ namespace TheFrozenBanana
                     { 
                         _currentMainWeaponIndex = 0; 
                     }
-
+                    if (_isCharging) {
+                        CurrentMainWeapon.Attack(_attackChargeTime);
+                        _attackChargeTime = 0f;
+                        _isCharging = false;
+                    }
                     CurrentMainWeapon = _mainWeapons[_currentMainWeaponIndex];
                 }
 

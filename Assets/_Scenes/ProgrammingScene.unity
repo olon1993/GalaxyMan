@@ -8007,6 +8007,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: ChargingParticleSystem
+      value: 
+      objectReference: {fileID: 1646127150}
+    - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _chargedShotTime.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -8029,11 +8033,11 @@ PrefabInstance:
     - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _chargeProjectile.Array.data[1]
       value: 
-      objectReference: {fileID: 5128333805578873701, guid: 75d017bcf09c5a5479c0b30ae68ba502, type: 3}
+      objectReference: {fileID: 5902931012708338258, guid: f60d1ebe8b478e34a9c20a214bd0d3cc, type: 3}
     - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _chargeProjectile.Array.data[2]
       value: 
-      objectReference: {fileID: 5128333805578873701, guid: 82b399a9613498a45b0dde76b31a6a09, type: 3}
+      objectReference: {fileID: 5902931012708338258, guid: c53c1787cca3e2f44910e1ef723028d7, type: 3}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -11024,6 +11028,11 @@ MonoBehaviour:
   _stunTime: 0
   _damageAmount: 1
   _knockbackForce: 0
+--- !u!4 &1241041854 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 453778756, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+  m_PrefabInstance: {fileID: 278025024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1253024532
 GameObject:
   m_ObjectHideFlags: 0
@@ -11355,6 +11364,67 @@ Transform:
   m_Father: {fileID: 1656509386}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1587346204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1241041854}
+    m_Modifications:
+    - target: {fileID: 1865318163177778576, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003310249244158883, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_Name
+      value: PlasmaChargeEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
 --- !u!1 &1598590615
 GameObject:
   m_ObjectHideFlags: 0
@@ -58063,6 +58133,11 @@ MonoBehaviour:
   pauseAtWaypoint: 0.5
   distanceToWaypoint: 0
   moveDistance: 0
+--- !u!1 &1646127150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4003310249244158883, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
+  m_PrefabInstance: {fileID: 1587346204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1653884000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2830779920672102534, guid: fe26c5255efa4404da8226fcbb40227a, type: 3}
@@ -58141,7 +58216,7 @@ MonoBehaviour:
   _showDebugLog: 0
   _ammoTypeDefinition: 0
   _weaponTypeDefinition: 0
-  _attackSpeed: 0.5
+  _attackSpeed: 0.3
   _isLimitedAmmo: 0
   _maxAmmo: 0
   _currentAmmo: 0
@@ -59083,6 +59158,26 @@ PrefabInstance:
     - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
       propertyPath: _chargeAmmoCost.Array.data[1]
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878097332520456345, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878097332520456345, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: VelocityModule.radial.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878097332520456345, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: VelocityModule.orbitalX.scalar
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878097332520456345, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: VelocityModule.orbitalY.scalar
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878097332520456345, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: VelocityModule.orbitalZ.scalar
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}

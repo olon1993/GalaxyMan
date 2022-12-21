@@ -48,6 +48,7 @@ namespace TheFrozenBanana
 		}
 
         public void Attack(float chargeTime) {
+
             if (_showDebugLog) {
                 Debug.Log("Attacking with " + name);
             }
@@ -62,7 +63,8 @@ namespace TheFrozenBanana
             _isAttacking = true;
             if (ChargingParticleSystem != null) {
                 ParticleSystem ps = ChargingParticleSystem.GetComponent<ParticleSystem>();
-                    ps.Stop();
+                ps.Clear();
+                ps.Stop();
 			}
             
             GameObject insProjectile = null;
