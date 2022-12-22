@@ -13,5 +13,6 @@ namespace TheFrozenBanana
 		int CurrentHealth { get; set; }
 		void TakeDamage(IDamage damage);
 		void AddHealth(int hp);
+		void ToggleHealthActive(bool option);
 	}
 }

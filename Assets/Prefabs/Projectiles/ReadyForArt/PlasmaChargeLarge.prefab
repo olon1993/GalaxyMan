@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damageTypeDefinition: 1
   _stunTime: 0
-  _damageAmount: 1
+  _damageAmount: 5
   _knockbackForce: 5
 --- !u!58 &1006562212219234016
 CircleCollider2D:

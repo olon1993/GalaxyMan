@@ -30,6 +30,9 @@ namespace TheFrozenBanana
 		}
 
 		public override void TakeDamage(IDamage dmgDefinition) {
+			if (!healthActive) {
+				return;
+			}
 			if (IsHurt) {
 				return;
 			}
@@ -97,6 +100,7 @@ namespace TheFrozenBanana
 				idl.DropRandomLoot();
 			}
 		}
+
 
 		//**************************************************\\
 		//******************* Properties *******************\\

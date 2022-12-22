@@ -14,7 +14,7 @@ GameObject:
   m_Layer: 0
   m_Name: LocationA (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394647451267484262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.269997, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,7 +72,7 @@ GameObject:
   m_Layer: 0
   m_Name: LocationD (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394647451446799848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.769997, y: 5.5, z: 0}
+  m_LocalPosition: {x: -29.5, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -130,7 +130,7 @@ GameObject:
   m_Layer: 0
   m_Name: LocationE (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394647451747821784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.269997, y: 0, z: 0}
+  m_LocalPosition: {x: -39, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,7 +188,7 @@ GameObject:
   m_Layer: 0
   m_Name: LocationC (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394647452222689596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.269997, y: 0, z: 0}
+  m_LocalPosition: {x: -22, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -246,7 +246,7 @@ GameObject:
   m_Layer: 0
   m_Name: LocationB (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -258,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394647453020735983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.769997, y: 5.5, z: 0}
+  m_LocalPosition: {x: -14.5, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 4504868203981869191}
   - component: {fileID: 4504868203981869198}
   - component: {fileID: 4504868203981869199}
+  - component: {fileID: -4438755948255461522}
   - component: {fileID: 4504868203981869196}
   - component: {fileID: 4504868203981869202}
   - component: {fileID: 4504868203981869197}
@@ -399,10 +400,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beee7788d9cafe845b9209e1c3945124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 0
+  _showDebugLog: 1
   rndrr: {fileID: 4504868204987013670}
   _weapon: {fileID: 4504868205554437586}
-  pauseBetweenActions: 1
+  hpPercentageAtPhase:
+  - 0.6
+  - 0.3
+  - 0
+  pauseBetweenActions:
+  - 1
+  - 0.7
+  - 0.4
 --- !u!114 &4504868203981869189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,11 +439,21 @@ MonoBehaviour:
   - {fileID: 3394647451747821784}
   _canEndOnSameLocation: 0
   _mustEndOnSameLocation: 0
-  _totalActionTime: 1.4
-  _anticipationTime: 1
-  _actionDelayTime: 1
+  _anticipationTime:
+  - 1
+  - 0.8
+  - 0.6
+  _actionTime:
+  - 2
+  - 1.8
+  - 1.6
+  _recoveryTime:
+  - 0.5
+  - 0.35
+  - 0.2
   _anticipationEffect: {fileID: 4746322822887836611, guid: bd09aa343919e4b43a5b5f0702cce4d7, type: 3}
   _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
+  _phaseChangeAction: 0
   JumpHeight: 12
 --- !u!114 &4504868203981869188
 MonoBehaviour:
@@ -458,17 +476,25 @@ MonoBehaviour:
   - {fileID: 3394647452222689596}
   _canEndOnSameLocation: 0
   _mustEndOnSameLocation: 0
-  _totalActionTime: 1.7
-  _anticipationTime: 1
-  _actionDelayTime: 1
+  _anticipationTime:
+  - 1
+  - 0.75
+  - 0.5
+  _actionTime:
+  - 1.4
+  - 1.2
+  - 1
+  _recoveryTime:
+  - 1
+  - 0.8
+  - 0.6
   _anticipationEffect: {fileID: 1511868571819278864, guid: 39ad37238d585e74b8fae52ab3521e78, type: 3}
   _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
+  _phaseChangeAction: 0
   JumpHeight: 25
   WaveSpeed: {x: 10, y: 8}
   WavePrefab: {fileID: 7025187141464383285, guid: cfdef05f1d8d1e34a88326a1958c5091, type: 3}
   CameraVibration: {x: 1, y: 1}
-  sdcam: {fileID: 0}
-  vcam: {fileID: 0}
 --- !u!114 &4504868203981869191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,11 +516,21 @@ MonoBehaviour:
   - {fileID: 3394647451747821784}
   _canEndOnSameLocation: 0
   _mustEndOnSameLocation: 0
-  _totalActionTime: 0.4
-  _anticipationTime: 1
-  _actionDelayTime: 1
+  _anticipationTime:
+  - 0.8
+  - 0.6
+  - 0.4
+  _actionTime:
+  - 0.9
+  - 0.7
+  - 0.5
+  _recoveryTime:
+  - 0.8
+  - 0.6
+  - 0.4
   _anticipationEffect: {fileID: 1830695089661522282, guid: e23835e900c88474282620d304a32b8b, type: 3}
   _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
+  _phaseChangeAction: 0
 --- !u!114 &4504868203981869198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,11 +557,21 @@ MonoBehaviour:
   - {fileID: 3394647451747821784}
   _canEndOnSameLocation: 0
   _mustEndOnSameLocation: 1
-  _totalActionTime: 0.8
-  _anticipationTime: 1
-  _actionDelayTime: 1
+  _anticipationTime:
+  - 1.2
+  - 0.9
+  - 0.6
+  _actionTime:
+  - 1.4
+  - 1.1
+  - 0.8
+  _recoveryTime:
+  - 1
+  - 0.75
+  - 0.5
   _anticipationEffect: {fileID: 1784551715040631312, guid: 063e01bd65569e84789ff8372dcfd856, type: 3}
   _juiceEffect: {fileID: 0}
+  _phaseChangeAction: 0
   ProjectilePrefab: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
   ShotsPerAction: 9
   AngleChangePerShot: 12
@@ -551,16 +597,70 @@ MonoBehaviour:
   - {fileID: 3394647451747821784}
   _canEndOnSameLocation: 0
   _mustEndOnSameLocation: 0
-  _totalActionTime: 1
-  _anticipationTime: 1
-  _actionDelayTime: 1
+  _anticipationTime:
+  - 1
+  - 0.7
+  - 0.4
+  _actionTime:
+  - 1
+  - 0.9
+  - 0.8
+  _recoveryTime:
+  - 1
+  - 1
+  - 1
   _anticipationEffect: {fileID: 404383183757372714, guid: 5a0d97f6d25989c4c9a8680a9f3c1b53, type: 3}
   _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
+  _phaseChangeAction: 0
   bounceHeight: 12
   bounceHeightTimer: 0.6
   bounceEndLocationsGO:
   - {fileID: 3394647453020735983}
   - {fileID: 3394647451446799848}
+--- !u!114 &-4438755948255461522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504868203981869190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f7936116f289949a37d47a54d9d61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionName: Roar
+  _showDebugLog: 0
+  _startLocationsGO:
+  - {fileID: 3394647451267484262}
+  - {fileID: 3394647453020735983}
+  - {fileID: 3394647452222689596}
+  - {fileID: 3394647451446799848}
+  - {fileID: 3394647451747821784}
+  _endLocationsGO:
+  - {fileID: 3394647451267484262}
+  - {fileID: 3394647453020735983}
+  - {fileID: 3394647452222689596}
+  - {fileID: 3394647451446799848}
+  - {fileID: 3394647451747821784}
+  _canEndOnSameLocation: 0
+  _mustEndOnSameLocation: 1
+  _anticipationTime:
+  - 2
+  - 2
+  - 2
+  _actionTime:
+  - 2
+  - 2
+  - 2
+  _recoveryTime:
+  - 2
+  - 2
+  - 2
+  _anticipationEffect: {fileID: 0}
+  _juiceEffect: {fileID: 5600778434431341510, guid: ff0f5d3679a25654dbdd28da4de356d7, type: 3}
+  _phaseChangeAction: 1
+  CameraVibration: {x: 1, y: 1}
 --- !u!114 &4504868203981869196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +699,8 @@ MonoBehaviour:
   _showDebugLog: 0
   _ignoreTag: Untagged
   _CalculateRecoilFromCenter: 0
+  _respawnOnTouch: 0
+  _respawnLocation: {fileID: 0}
 --- !u!114 &4504868203981869197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +842,7 @@ GameObject:
   - component: {fileID: 4243461390784520879}
   - component: {fileID: 1185493818472496515}
   - component: {fileID: 6593761071680260624}
+  - component: {fileID: 9072276742183831798}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -954,6 +1057,24 @@ MonoBehaviour:
   _canBeInterrupted: 1
   _isAnimationOverride: 0
   _actionName: Jump
+--- !u!114 &9072276742183831798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504868204987013670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2080fdb734caf9b45ac3c39da376539c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 7400000, guid: 0abddfcd1c43c45489e665a2dbc969fa, type: 2}
+  _priority: 7
+  _animationLayer: 0
+  _canBeInterrupted: 1
+  _isAnimationOverride: 0
+  _actionName: Roar
 --- !u!1 &4504868205554437586
 GameObject:
   m_ObjectHideFlags: 0
