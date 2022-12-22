@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 559941962226131818}
   - component: {fileID: 559941962226131819}
   - component: {fileID: 559941962226131820}
-  - component: {fileID: 559941962226131821}
+  - component: {fileID: 7327664963274655317}
   m_Layer: 7
   m_Name: BoomerangProjectile
   m_TagString: Untagged
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1239905090, guid: b850fcdd886b10940a33e847750672b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
---- !u!114 &559941962226131821
+--- !u!114 &7327664963274655317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,11 +159,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5460237704629442253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc2af17df3645341a29a87ede8e7e2b, type: 3}
+  m_Script: {fileID: 11500000, guid: c904e210e77dcc94da028ea397256e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugLog: 0
+  _showDebugLog: 1
   _velocity: 12
+  _child: {fileID: 0}
   _hitEffect: {fileID: 0}
-  _useGravity: 0
-  _gravity: 8
+  _timeBeforeReturn: 1.2
