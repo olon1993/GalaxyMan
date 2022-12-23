@@ -162,10 +162,15 @@ namespace TheFrozenBanana
             {
                 if (IsCycleWeapons)
                 {
-                    _currentMainWeaponIndex++;
-                    if (_currentMainWeaponIndex >= _mainWeapons.Count) 
-                    { 
-                        _currentMainWeaponIndex = 0; 
+                    bool weaponSelected = false;
+                    while (!weaponSelected) {
+                        _currentMainWeaponIndex++;
+                        if (_currentMainWeaponIndex >= _mainWeapons.Count) {
+                            _currentMainWeaponIndex = 0;
+                        }
+                        if (_mainWeapons[_currentMainWeaponIndex].IsUnlocked) {
+                            weaponSelected = true;
+						}
                     }
                     if (_isCharging) {
                         CurrentMainWeapon.Attack(_attackChargeTime);

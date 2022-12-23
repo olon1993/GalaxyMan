@@ -93,12 +93,14 @@ namespace TheFrozenBanana
 			IsHurt = false;
 		}
 
-		protected override void Die() {
-			base.Die();
+
+		protected override IEnumerator DelayDeath() {
+			yield return new WaitForSeconds(_timeToDie);
 			IDropLoot idl = gameObject.GetComponent<IDropLoot>();
 			if (idl != null) {
 				idl.DropRandomLoot();
 			}
+			gameObject.SetActive(false);
 		}
 
 

@@ -7,6 +7,7 @@ namespace TheFrozenBanana
     public class ProjectileWeapon : MonoBehaviour, IWeapon
     {
         [SerializeField] protected bool _showDebugLog = false;
+		[SerializeField] protected string _weaponName;
         //**************************************************\\
         //********************* Fields *********************\\
         //**************************************************\\
@@ -31,6 +32,7 @@ namespace TheFrozenBanana
 		[SerializeField] private int _animationLayer;
         [SerializeField] private string _owner;
 
+        [SerializeField] protected bool _isUnlocked = false;
         // Minimum interval variables
         private bool _isAttacking;
         private bool _isQueuedAttack;
@@ -43,7 +45,6 @@ namespace TheFrozenBanana
             if (ChargingParticleSystem != null) {
                 ParticleSystem ps = ChargingParticleSystem.GetComponent<ParticleSystem>();
                     ps.Play();
-				
 			}
 		}
 
@@ -111,6 +112,10 @@ namespace TheFrozenBanana
             return true;
 		}
 
+        public void UnlockWeapon() {
+            _isUnlocked = true;
+		}
+
         public void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
@@ -121,6 +126,10 @@ namespace TheFrozenBanana
         //**************************************************\\
         //******************* Properties *******************\\
         //**************************************************\\
+
+        public string WeaponName {
+            get { return _weaponName; }
+		}
 
         public bool IsLimitedAmmo
         {
@@ -170,5 +179,6 @@ namespace TheFrozenBanana
         public float AttackSpeed { get { return _attackSpeed; } }
         public bool IsAttacking { get { return _isAttacking; } }
 
+        public bool IsUnlocked { get { return _isUnlocked; } }
     }
 }

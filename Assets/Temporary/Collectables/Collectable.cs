@@ -50,8 +50,8 @@ namespace TheFrozenBanana
 			if (pickupEffect != null) {
 				GameObject tmp = Instantiate(pickupEffect, transform.position, Quaternion.identity, null) as GameObject;
 				Destroy(tmp, 5f);
-				Destroy(this.gameObject, 0.1f);
 			}
+			Destroy(this.gameObject, 0.1f);
 
 		}
 

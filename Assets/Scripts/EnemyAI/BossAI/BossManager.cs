@@ -32,6 +32,7 @@ namespace TheFrozenBanana
 		// Boss Phase Variables
 		[SerializeField] protected float[] hpPercentageAtPhase;
 		[SerializeField] protected float[] pauseBetweenActions;
+		[SerializeField] protected GameObject deathEffect;
 		private int phase = 0;
 		private bool startNextPhase;
 
@@ -91,8 +92,11 @@ namespace TheFrozenBanana
 				if (percentage < hpPercentageAtPhase[phase]) {
 					startNextPhase = true;
 				}
+			} 
+			if (_hp.CurrentHealth <= 0) {
+				StartCoroutine(DelaySpawnDeathEffect());
+				active = false;
 			}
-
 		}
 
 		private void SetupNextPhase() {
@@ -111,6 +115,10 @@ namespace TheFrozenBanana
 			StartCoroutine(DelayedStartAction());
 		}
 
+		private IEnumerator DelaySpawnDeathEffect() {
+			yield return new WaitForSeconds(4f);
+			Instantiate(deathEffect,transform.position + Vector3.up, Quaternion.identity,this.gameObject.transform);
+		}
 
 		//**************************************************\\
 		//******************** Actions *********************\\

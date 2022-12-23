@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.22222, y: 18.5, z: -10}
+  m_LocalPosition: {x: -87.18517, y: 18.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8003,6 +8003,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: _isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: _weaponName
+      value: Plasma Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 453778758, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: _attackSpeed
       value: 0.2
       objectReference: {fileID: 0}
@@ -9101,7 +9109,7 @@ Transform:
   - {fileID: 60090701}
   - {fileID: 1198146947}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073342147
 GameObject:
@@ -58224,6 +58232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
+  _weaponName: Sword
   _ammoTypeDefinition: 0
   _weaponTypeDefinition: 0
   _attackSpeed: 0.3
@@ -58240,6 +58249,7 @@ MonoBehaviour:
   _attackGraphics: {fileID: 3440503212528832044, guid: 15ff4f2206a89a249973eb31d70993c1, type: 3}
   _audioSource: {fileID: 0}
   _audioClips: []
+  _isUnlocked: 1
 --- !u!114 &1699718805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58480,7 +58490,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987193575
 GameObject:
@@ -58742,6 +58752,14 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2380511092315831880, guid: 1b2d030195293214f8d8b65a9e17a8d6, type: 3}
+      propertyPath: _isUnlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380511092315831880, guid: 1b2d030195293214f8d8b65a9e17a8d6, type: 3}
+      propertyPath: _weaponName
+      value: Rocket Launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380511092315831880, guid: 1b2d030195293214f8d8b65a9e17a8d6, type: 3}
       propertyPath: _attackSpeed
       value: 0.5
       objectReference: {fileID: 0}
@@ -58844,7 +58862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 645546754641337758, guid: addd0b53c83048045901b5008290815d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 645546754641337758, guid: addd0b53c83048045901b5008290815d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -58990,6 +59008,10 @@ PrefabInstance:
     - target: {fileID: 3213696353108361102, guid: 542ec81f40c57804880fc3e215f0c71f, type: 3}
       propertyPath: _maxAmmo
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213696353108361102, guid: 542ec81f40c57804880fc3e215f0c71f, type: 3}
+      propertyPath: _weaponName
+      value: Boomerang
       objectReference: {fileID: 0}
     - target: {fileID: 3213696353108361102, guid: 542ec81f40c57804880fc3e215f0c71f, type: 3}
       propertyPath: _attackSpeed
@@ -59144,6 +59166,14 @@ PrefabInstance:
     - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
       propertyPath: _maxAmmo
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: _isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
+      propertyPath: _weaponName
+      value: Lightning Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 4322857799430956494, guid: 1a934cdfcc539b743b7ecd6aaa1b78aa, type: 3}
       propertyPath: _attackSpeed
@@ -59613,7 +59643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978079836987, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978079836987, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.x

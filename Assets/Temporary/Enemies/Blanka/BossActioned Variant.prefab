@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 4504868203981869202}
   - component: {fileID: 4504868203981869197}
   - component: {fileID: 821591384277215444}
+  - component: {fileID: -31189122549904845}
   m_Layer: 0
   m_Name: BossActioned Variant
   m_TagString: Enemy
@@ -411,6 +412,7 @@ MonoBehaviour:
   - 1
   - 0.7
   - 0.4
+  deathEffect: {fileID: 3078990244121918643, guid: 80938c93ad465fe44b05056889f67715, type: 3}
 --- !u!114 &4504868203981869189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,9 +678,9 @@ MonoBehaviour:
   _showDebugLog: 0
   _maxHealth: 100
   _currentHealth: 100
-  _timeToDie: 0
+  _timeToDie: 10
   hpSlider: {fileID: 0}
-  _destroyBounds: 0
+  _destroyBounds: 1
   _resistanceTypeDefinition: 
   _vulnerableTypeDefinition: 
   _timeInvulnerable: 0
@@ -739,7 +741,25 @@ MonoBehaviour:
   _registerLocomotion: 0
   _registerLocomotion2dSideScroller: 0
   _registerCombatant: 0
-  _registerHealth: 0
+  _registerHealth: 1
+--- !u!114 &-31189122549904845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504868203981869190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0fef508883f374393d3f68aacf837d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugLog: 0
+  _dropChance: 1
+  _lootList:
+  - {fileID: 4784827816714396370, guid: 09bde867a5944b647a37dec1128b7809, type: 3}
+  _lootWeightedChance:
+  - 1
 --- !u!1 &4504868204614956934
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +863,7 @@ GameObject:
   - component: {fileID: 1185493818472496515}
   - component: {fileID: 6593761071680260624}
   - component: {fileID: 9072276742183831798}
+  - component: {fileID: 8251810752354110958}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1075,6 +1096,23 @@ MonoBehaviour:
   _canBeInterrupted: 1
   _isAnimationOverride: 0
   _actionName: Roar
+--- !u!114 &8251810752354110958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504868204987013670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c414542e08bcc647a5811c439d93dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 7400000, guid: c7f1ba25638a49d4fb452eb6dcd23001, type: 2}
+  _priority: 1
+  _animationLayer: 0
+  _canBeInterrupted: 1
+  _isAnimationOverride: 0
 --- !u!1 &4504868205554437586
 GameObject:
   m_ObjectHideFlags: 0

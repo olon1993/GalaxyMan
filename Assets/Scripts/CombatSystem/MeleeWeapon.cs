@@ -7,7 +7,7 @@ namespace TheFrozenBanana
 	[RequireComponent(typeof(Damage))]
 	public class MeleeWeapon : MonoBehaviour, IMeleeWeapon {
 		[SerializeField] protected bool _showDebugLog = false;
-
+		[SerializeField] protected string _weaponName;
 		//**************************************************\\
 		//********************* Fields *********************\\
 		//**************************************************\\
@@ -41,6 +41,7 @@ namespace TheFrozenBanana
 
 		private bool _is2D = true;
 
+		[SerializeField] protected bool _isUnlocked = false;
 		// Minimum interval variables
 		private bool _isAttacking;
 		private bool _isQueuedAttack;
@@ -168,6 +169,10 @@ namespace TheFrozenBanana
 			_audioSource.Play();
 		}
 
+		public void UnlockWeapon() {
+			_isUnlocked = true;
+		}
+
 		void OnDrawGizmos()
 		{
 			Gizmos.color = Color.red;
@@ -178,6 +183,9 @@ namespace TheFrozenBanana
 		//******************* Properties *******************\\
 		//**************************************************\\
 
+		public string WeaponName {
+			get { return _weaponName; }
+		}
 		public IDamage Damage {
 			get { return _damage; }
 			set { _damage = value; }
@@ -235,5 +243,6 @@ namespace TheFrozenBanana
 
 		public bool IsAttacking { get { return _isAttacking; } }
 
+		public bool IsUnlocked { get { return _isUnlocked; } }
 	}
 }

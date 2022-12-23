@@ -75,7 +75,7 @@ namespace TheFrozenBanana
         }
 
         protected virtual void SpawnLoot(GameObject loot) {
-            Instantiate(loot, gameObject.transform.position, Quaternion.identity, null);
+            Instantiate(loot, gameObject.transform.position + Vector3.up * 2, Quaternion.identity, null);
 		}
 
         //**************************************************\\

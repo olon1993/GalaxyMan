@@ -14,7 +14,7 @@ namespace TheFrozenBanana
 
 		[SerializeField] private int _maxHealth;
 		[SerializeField] protected int _currentHealth;
-		[SerializeField] private float _timeToDie;
+		[SerializeField] protected float _timeToDie;
 		[SerializeField] private Slider hpSlider;
 		[SerializeField] private bool _destroyBounds = false;
 		protected bool healthActive = true;
@@ -92,7 +92,7 @@ namespace TheFrozenBanana
 			StartCoroutine(DelayDeath());
 		}
 
-		private IEnumerator DelayDeath() {
+		protected virtual IEnumerator DelayDeath() {
 			yield return new WaitForSeconds(_timeToDie);
 			gameObject.SetActive(false);
 		}

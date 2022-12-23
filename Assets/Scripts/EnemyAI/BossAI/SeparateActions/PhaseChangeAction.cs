@@ -40,7 +40,7 @@ namespace TheFrozenBanana
 			_endLocationId = _startLocationId;
 			StartCoroutine(ShakeCamera());
 			BossManagerScript.HP.ToggleHealthActive(false);
-			GameObject tmp = Instantiate(_juiceEffect, gameObject.transform.position, Quaternion.identity, null) as GameObject;
+			GameObject tmp = Instantiate(_juiceEffect, gameObject.transform.position + Vector3.up, Quaternion.identity, null) as GameObject;
 			yield return new WaitForSeconds(ActionTime[phase]);
 			tmp.GetComponent<ParticleSystem>().Stop();
 			BossManagerScript.HP.ToggleHealthActive(true);
