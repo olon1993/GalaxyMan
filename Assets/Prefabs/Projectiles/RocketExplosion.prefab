@@ -4932,7 +4932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageTypeDefinition: 3
-  _stunTime: 2
+  _stunTime: 0.5
   _damageAmount: 3
   _knockbackForce: 10
 --- !u!58 &5092710910842261173

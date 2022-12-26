@@ -410,8 +410,8 @@ MonoBehaviour:
   - 0
   pauseBetweenActions:
   - 1
-  - 0.7
-  - 0.4
+  - 0.5
+  - 0.2
   deathEffect: {fileID: 3078990244121918643, guid: 80938c93ad465fe44b05056889f67715, type: 3}
 --- !u!114 &4504868203981869189
 MonoBehaviour:
@@ -487,8 +487,8 @@ MonoBehaviour:
   - 1.2
   - 1
   _recoveryTime:
-  - 1
-  - 0.8
+  - 0.6
+  - 0.6
   - 0.6
   _anticipationEffect: {fileID: 1511868571819278864, guid: 39ad37238d585e74b8fae52ab3521e78, type: 3}
   _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
@@ -527,8 +527,8 @@ MonoBehaviour:
   - 0.7
   - 0.5
   _recoveryTime:
-  - 0.8
   - 0.6
+  - 0.5
   - 0.4
   _anticipationEffect: {fileID: 1830695089661522282, guid: e23835e900c88474282620d304a32b8b, type: 3}
   _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
@@ -568,8 +568,8 @@ MonoBehaviour:
   - 1.1
   - 0.8
   _recoveryTime:
-  - 1
-  - 0.75
+  - 0.5
+  - 0.5
   - 0.5
   _anticipationEffect: {fileID: 1784551715040631312, guid: 063e01bd65569e84789ff8372dcfd856, type: 3}
   _juiceEffect: {fileID: 0}
@@ -608,9 +608,9 @@ MonoBehaviour:
   - 0.9
   - 0.8
   _recoveryTime:
-  - 1
-  - 1
-  - 1
+  - 0.5
+  - 0.5
+  - 0.5
   _anticipationEffect: {fileID: 404383183757372714, guid: 5a0d97f6d25989c4c9a8680a9f3c1b53, type: 3}
   _juiceEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
   _phaseChangeAction: 0
@@ -648,17 +648,17 @@ MonoBehaviour:
   _canEndOnSameLocation: 0
   _mustEndOnSameLocation: 1
   _anticipationTime:
-  - 2
-  - 2
-  - 2
+  - 0
+  - 0
+  - 0
   _actionTime:
   - 2
   - 2
   - 2
   _recoveryTime:
-  - 2
-  - 2
-  - 2
+  - 0
+  - 0
+  - 0
   _anticipationEffect: {fileID: 0}
   _juiceEffect: {fileID: 5600778434431341510, guid: ff0f5d3679a25654dbdd28da4de356d7, type: 3}
   _phaseChangeAction: 1

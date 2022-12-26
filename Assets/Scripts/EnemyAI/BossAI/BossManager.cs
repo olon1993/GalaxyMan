@@ -118,7 +118,8 @@ namespace TheFrozenBanana
 				}
 			}
 			_currentAction = _phaseAction;
-			StartCoroutine(DelayedStartAction());
+			_currentAction.RunAction(phase);
+			pausing = false;
 		}
 
 		private IEnumerator DelaySpawnDeathEffect() {
@@ -126,6 +127,7 @@ namespace TheFrozenBanana
 			lc.BossIsDefeated();
 			yield return new WaitForSeconds(4f);
 			Instantiate(deathEffect,transform.position + Vector3.up, Quaternion.identity,this.gameObject.transform);
+			yield return new WaitForSeconds(5f);
 			cmSwitch.SwitchCamera(0);
 		}
 

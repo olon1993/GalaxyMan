@@ -241,10 +241,12 @@ namespace TheFrozenBanana
 				if (_wallDirectionX < 0) 
 				{
 					_velocity.x = _dashSpeed;
+					_velocity.y = 0f;
 				}
 				else if (_wallDirectionX > 0) 
 				{
 					_velocity.x = -_dashSpeed;
+					_velocity.y = 0f;
 				} 
 				else
 				{

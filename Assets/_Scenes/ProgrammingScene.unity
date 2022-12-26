@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.203705, y: 18.5, z: -10}
+  m_LocalPosition: {x: -87.16667, y: 18.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8660,6 +8660,10 @@ PrefabInstance:
       propertyPath: _dashSlider
       value: 
       objectReference: {fileID: 738697358}
+    - target: {fileID: 5792141944326332762, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
+      propertyPath: _wallSlideSpeedMax
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332762, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: CollisionMask.m_Bits
       value: 72
@@ -71778,7 +71782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923845935
 GameObject:
@@ -72720,7 +72724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 645546754641337758, guid: addd0b53c83048045901b5008290815d, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 645546754641337758, guid: addd0b53c83048045901b5008290815d, type: 3}
       propertyPath: m_AnchorMax.x
