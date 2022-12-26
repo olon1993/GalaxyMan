@@ -10,18 +10,25 @@ namespace TheFrozenBanana
 		public Collider2D doorCollider;
 		public string tagTrigger;
 		private AudioSource ad;
+		private bool allowChange = true;
 
 		private void Awake() {
 			ad = GetComponent<AudioSource>();
 		}
 
 		public void OnTriggerEnter2D(Collider2D col) {
+			if (!allowChange) {
+				return;
+			}
 			if (col.CompareTag(tagTrigger)) {
 				StartCoroutine(OpenDoor(true));
 			}
 		}
 
 		public void OnTriggerExit2D(Collider2D col) {
+			if (!allowChange) {
+				return;
+			}
 			if (col.CompareTag(tagTrigger)) {
 				StartCoroutine(OpenDoor(false));
 			}
@@ -36,5 +43,10 @@ namespace TheFrozenBanana
 			yield return new WaitForSeconds(0.4f);
 			doorCollider.enabled = !open;
 		} 
+
+		public void AlwaysOpen() {
+			StartCoroutine(OpenDoor(true));
+			allowChange = false;
+		}
 	}
 }

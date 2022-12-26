@@ -18,6 +18,10 @@ namespace TheFrozenBanana
 		private Vector3 baseScale;
 		private Vector3 weaponScale;
 		private Transform _target;
+		private int currentLocationId = 0;
+		protected float _direction = -1f;
+
+		// Boss Phase Variables
 		private IBossAction[] allActions;
 		private IBossAction[] possibleActions;
 		private IBossAction _currentAction;
@@ -26,15 +30,15 @@ namespace TheFrozenBanana
 
 		private bool acting;
 		private bool active;
-		private int currentLocationId = 0;
-		protected float _direction = -1f;
-
-		// Boss Phase Variables
 		[SerializeField] protected float[] hpPercentageAtPhase;
 		[SerializeField] protected float[] pauseBetweenActions;
 		[SerializeField] protected GameObject deathEffect;
 		private int phase = 0;
 		private bool startNextPhase;
+
+		// ending
+		private GameObject CMCamSwitch;
+		private CamSwitch cmSwitch;
 
 		//**************************************************\\
 		//******************** Methods *********************\\
@@ -42,6 +46,8 @@ namespace TheFrozenBanana
 
 		private void Awake() {
 			phase = 0;
+			CMCamSwitch = GameObject.FindGameObjectWithTag("CMCamera");
+			cmSwitch = CMCamSwitch.GetComponent<CamSwitch>();
 			_hp = GetComponent<IHealth>();
 			baseScale = rndrr.transform.localScale;
 			weaponScale = _weapon.transform.localScale;
@@ -116,8 +122,11 @@ namespace TheFrozenBanana
 		}
 
 		private IEnumerator DelaySpawnDeathEffect() {
+			LevelController lc = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelController>();
+			lc.BossIsDefeated();
 			yield return new WaitForSeconds(4f);
 			Instantiate(deathEffect,transform.position + Vector3.up, Quaternion.identity,this.gameObject.transform);
+			cmSwitch.SwitchCamera(0);
 		}
 
 		//**************************************************\\

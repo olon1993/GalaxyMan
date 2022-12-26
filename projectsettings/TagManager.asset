@@ -9,6 +9,7 @@ TagManager:
   - PassableObstacle
   - Hazard
   - Destructible
+  - CMCamera
   layers:
   - Default
   - TransparentFX

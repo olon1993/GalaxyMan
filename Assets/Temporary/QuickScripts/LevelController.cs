@@ -64,5 +64,20 @@ namespace TheFrozenBanana
 			musicAudio.Play();
 			input.IsEnabled = true;
 		}
+
+		public void BossIsDefeated() {
+			StartCoroutine(BossDefeatChanges());
+		}
+
+		private IEnumerator BossDefeatChanges() {
+			IInputManager input = player.GetComponent<IInputManager>();
+			input.IsEnabled = false;
+			DoorScript[] doors = gameObject.GetComponentsInChildren<DoorScript>();
+			yield return new WaitForSeconds(10f);
+			input.IsEnabled = true;
+			foreach (DoorScript door in doors) {
+				door.AlwaysOpen();
+			}
+		}
 	}
 }
