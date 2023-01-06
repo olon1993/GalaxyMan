@@ -11,7 +11,7 @@ namespace TheFrozenBanana
         //********************* Fields *********************\\
         //**************************************************\\
 
-        [TagSelector] public string[] SelectedTags;
+        [TagSelector] public string[] SelectedTags = new string[] { };
         private Collider2D _collider;
 
         //**************************************************\\

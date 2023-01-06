@@ -8,7 +8,8 @@ namespace TheFrozenBanana
     {
         [SerializeField] protected bool _showDebugLog = false;
         [SerializeField] protected IDamage _damage;
-        [SerializeField] protected string _ignoreTag= "Untagged";
+        [TagSelector]
+        [SerializeField] protected string[] _ignoreTags = new string[] { };
         [SerializeField] protected bool _CalculateRecoilFromCenter = false;
         [SerializeField] protected bool _respawnOnTouch = false;
         [SerializeField] protected Transform _respawnLocation;
@@ -22,37 +23,55 @@ namespace TheFrozenBanana
             }
         }
 
-        protected virtual void OnTriggerEnter2D(Collider2D col) {
-            if (_showDebugLog) {
+        protected virtual void OnTriggerEnter2D(Collider2D col) 
+        {
+            if (_showDebugLog)
+            {
                 Debug.Log("Hazard hit :" + col.gameObject.name);
             }
-            if (col.tag == null) {
-                return;
-            }
-            if (col.CompareTag(_ignoreTag)) {
+
+            if (col.tag == null) 
+            {
                 return;
             }
 
+            if (_ignoreTags != null || _ignoreTags.Length > 0)
+            {
+
+                foreach (string tag in _ignoreTags)
+                {
+                    if (col.CompareTag(tag))
+                    {
+                        return;
+                    }
+                }
+            }
+
             IHealth otherHealth = col.GetComponent<IHealth>();
-            if (otherHealth != null) {
+            if (otherHealth != null)
+            {
                 otherHealth.TakeDamage(_damage);
             }
 
             IRecoil recoil = col.GetComponent<IRecoil>();
-            if (recoil != null) {
-                if (_showDebugLog) {
+            if (recoil != null) 
+            {
+                if (_showDebugLog)
+                {
                     Debug.Log("Recoil");
                 }
                 Vector2 closest = col.ClosestPoint(gameObject.transform.position);
                 Vector3 src = new Vector3(closest.x, closest.y, 0);
-                if (_CalculateRecoilFromCenter) {
+                if (_CalculateRecoilFromCenter) 
+                {
                     src = gameObject.transform.position;
 				}
                 recoil.ApplyRecoil(_damage.KnockbackForce, src, _damage.StunTime);
             }
         }
 
-        public void ChangeRespawnLocation(Transform newLocation) {
+        public void ChangeRespawnLocation(Transform newLocation)
+        {
             _respawnLocation = newLocation;
 		}
 
