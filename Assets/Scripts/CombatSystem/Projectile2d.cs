@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TheFrozenBanana
 {
-    public class Projectile2D : MonoBehaviour, IProjectile
+    public class Projectile2d : MonoBehaviour, IProjectile
 	{
 
 		//**************************************************\\
