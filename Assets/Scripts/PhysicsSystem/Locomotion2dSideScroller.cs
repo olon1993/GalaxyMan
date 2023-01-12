@@ -53,9 +53,13 @@ namespace TheFrozenBanana
 		// Graphics
 		private float _horizontalLook = 1;
 
+		// Gizmos
+		private float _distanceCoefficient = 2.0625f;
+
 		//**************************************************\\
 		//******************** Methods *********************\\
 		//**************************************************\\
+
 
 		protected override void Awake() {
 			base.Awake();
@@ -69,6 +73,28 @@ namespace TheFrozenBanana
 				Debug.Log("No Input Manager found on " + name);
 			}
 
+		}
+
+		private void OnDrawGizmos() {
+			// calculations prior to draw
+			float guestimateDistance = _timeToJumpApex * _walkSpeed * _distanceCoefficient;
+			Vector3[] points = new Vector3[7];
+			points[0] = transform.position + Vector3.down;
+			points[1] = transform.position + Vector3.down + Vector3.right * guestimateDistance;
+			points[2] = transform.position + Vector3.down + (Vector3.right * guestimateDistance) * 3 / 4 + Vector3.up * _maxJumpHeight * 3 / 4;
+			points[3] = transform.position + Vector3.down + (Vector3.right * guestimateDistance) * 2 / 4 + Vector3.up * (_maxJumpHeight - 0.5f);
+			points[4] = transform.position + Vector3.down + (Vector3.left * guestimateDistance) * 2 / 4 + Vector3.up * (_maxJumpHeight - 0.5f);
+			points[5] = transform.position + Vector3.down + (Vector3.left * guestimateDistance) * 3 / 4 + Vector3.up * _maxJumpHeight * 3 / 4;
+			points[6] = transform.position + Vector3.down + Vector3.left * guestimateDistance;
+
+			Gizmos.color = Color.cyan;
+			Gizmos.DrawLine(points[0], points[1]);
+			Gizmos.DrawLine(points[1], points[2]);
+			Gizmos.DrawLine(points[2], points[3]);
+			Gizmos.DrawLine(points[3], points[4]);
+			Gizmos.DrawLine(points[4], points[5]);
+			Gizmos.DrawLine(points[5], points[6]);
+			Gizmos.DrawLine(points[6], points[0]);
 		}
 
 		protected override void Start() {
