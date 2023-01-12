@@ -139,7 +139,7 @@ namespace TheFrozenBanana
 
 		private IEnumerator TempJumpInput() {
 			_isJump = true;
-			yield return new WaitForSeconds(0.3f);
+			yield return new WaitForEndOfFrame();
 			_isJump = false;
 		}
 
