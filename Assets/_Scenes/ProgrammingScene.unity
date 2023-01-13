@@ -73473,17 +73473,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6826479877702706507, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _maxJumpHeight
-      value: 12
+    - target: {fileID: 6826479877702706506, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
+      propertyPath: _maxHealth
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 6826479877702706507, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _timeToJumpApex
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826479877702706507, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _terminalFallingVelocity
-      value: -45
+    - target: {fileID: 6826479877702706506, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
+      propertyPath: _timeToDie
+      value: 0.667
       objectReference: {fileID: 0}
     - target: {fileID: 6826479877702706511, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
       propertyPath: m_RootOrder

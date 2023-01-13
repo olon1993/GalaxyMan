@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4517850892603164133}
   - component: {fileID: 5152829574730132796}
   - component: {fileID: 6492253809151785667}
+  - component: {fileID: 1534763459}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6826479876554882755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6826479877702706511}
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7100812, guid: 70eb453eaa7e0f94298e22dc3cc8954b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1ba3f260a42d51408b9f9335da843a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 6826479876554882755}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 234064561f80e384e9960720b750dbe0, type: 2}
+  m_Controller: {fileID: 9100000, guid: d4f552e73e6ec2c47a529aa68e9b7184, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6272c336148c3ec47bede36df37d50da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: 98af25835ba50474081ac68c1d435394, type: 2}
+  _animation: {fileID: 7400000, guid: d0863bd10462d084582564ad42567716, type: 2}
   _priority: 0
   _animationLayer: 0
   _canBeInterrupted: 1
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0494e726833ec64b8b53b70ba547de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: 2ce15f6db49b1d843a74a6930335ef2f, type: 2}
+  _animation: {fileID: 7400000, guid: 08dabaea02ad4ca498aa8d3d28d6d1ba, type: 2}
   _priority: 2
   _animationLayer: 0
   _canBeInterrupted: 1
@@ -167,8 +168,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8767fa57cde361243b6e0db3a74d8914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: 88b06294d1600814ebc97400e442cf6d, type: 2}
+  _animation: {fileID: 7400000, guid: c19009288d95fd647a5f3c2987db915e, type: 2}
   _priority: 3
+  _animationLayer: 0
+  _canBeInterrupted: 1
+  _isAnimationOverride: 0
+--- !u!114 &1534763459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826479876554882755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c414542e08bcc647a5811c439d93dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 7400000, guid: d0eeac4c706dc484b980d1e02598d1b2, type: 2}
+  _priority: 4
   _animationLayer: 0
   _canBeInterrupted: 1
   _isAnimationOverride: 0
@@ -303,13 +321,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _useGravity: 1
-  _maxJumpHeight: 7
-  _timeToJumpApex: 0.45
+  _maxJumpHeight: 12
+  _timeToJumpApex: 0.5
   _maxSlopeAngle: 80
   _walkSpeed: 6
   _dashSpeed: 11
   _wallSlideSpeedMax: 3
-  _terminalFallingVelocity: -30
+  _terminalFallingVelocity: -45
   _minJumpHeight: 1
   _coyoteTimeMargin: 0.25
   _wallStickTime: 0.25
@@ -354,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
-  _ignoreTag: Enemy
+  _ignoreTags: []
   _CalculateRecoilFromCenter: 0
   _respawnOnTouch: 0
   _respawnLocation: {fileID: 0}
