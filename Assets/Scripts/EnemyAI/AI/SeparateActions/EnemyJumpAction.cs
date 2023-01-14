@@ -6,6 +6,9 @@ namespace TheFrozenBanana
 {
  	public class EnemyJumpAction : EnemyAction
 	{
+		[SerializeField] private GameObject _trailEffect;
+		[SerializeField] private GameObject _landingEffect;
+		[SerializeField] private Transform _landingEffectLocation;
 		private float dir;
 		private Animator ac;
 
@@ -39,6 +42,10 @@ namespace TheFrozenBanana
 					_inputManager.EndOverride();
 				}
 				yield return new WaitForEndOfFrame();
+			}
+			if (_landingEffect != null && _landingEffectLocation != null) {
+				GameObject tmp = Instantiate(_landingEffect, _landingEffectLocation.position, Quaternion.identity, null) as GameObject;
+				Destroy(tmp, 1f);
 			}
 			StopAction();
 		}

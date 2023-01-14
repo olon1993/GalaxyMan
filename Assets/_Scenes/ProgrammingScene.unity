@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.666667
+  orthographic size: 11.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -12460,6 +12460,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1103301383 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6826479877702706511, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
+  m_PrefabInstance: {fileID: 6826479878019107611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1103829858
 GameObject:
   m_ObjectHideFlags: 0
@@ -14953,6 +14958,137 @@ MonoBehaviour:
   _stunTime: 0
   _damageAmount: 1
   _knockbackForce: 0
+--- !u!1 &1206354047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206354048}
+  - component: {fileID: 1206354049}
+  m_Layer: 0
+  m_Name: Trail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1206354048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206354047}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1103301383}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!96 &1206354049
+TrailRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206354047}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8d046e2a4ebb36442b9bdfb101f26a49, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 0.1
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 2.5130885, g: 11.999997, b: 9.676129, a: 1}
+      key1: {r: 1.2146596, g: 3.9999995, b: 3.8941953, a: 0}
+      key2: {r: 0.51308894, g: 3.4999998, b: 3.1928365, a: 0}
+      key3: {r: 0.12434556, g: 0.7909241, b: 1.25, a: 0}
+      key4: {r: 0, g: 0.29255292, b: 0.7490196, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 6554
+      ctime2: 19661
+      ctime3: 32768
+      ctime4: 45875
+      ctime5: 65535
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 6
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 1
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
 --- !u!4 &1241041854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 453778756, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
@@ -73473,26 +73609,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5152829574730132796, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _animation
-      value: 
-      objectReference: {fileID: 7400000, guid: 08dabaea02ad4ca498aa8d3d28d6d1ba, type: 2}
-    - target: {fileID: 6826479877702706505, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: m_Size.y
-      value: 2.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826479877702706505, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826479877702706506, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _maxHealth
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826479877702706506, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _timeToDie
-      value: 0.667
-      objectReference: {fileID: 0}
     - target: {fileID: 6826479877702706511, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -73535,14 +73651,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6826479877702706511, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826479877702706513, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _actionTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826479877702706514, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
-      propertyPath: _actionInterruptable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6826479877702706515, guid: 6cb190224ba7afd42941cef102ae8742, type: 3}
