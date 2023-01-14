@@ -23,7 +23,7 @@ namespace TheFrozenBanana
 
 			_actionInEffect = true;
 			float t = 0;
-			while (t < _actionTime) {
+			while (t < 1.5f) {
 				yield return new WaitForEndOfFrame();
 				t += Time.deltaTime;
 				// Turn around
@@ -44,7 +44,7 @@ namespace TheFrozenBanana
 		}
 
 		private IEnumerator DelayJumpAnimation() {
-			yield return new WaitForSeconds(0.2f);
+			yield return new WaitForSeconds(0.5f);
 			if (ac != null) {
 				ac.SetTrigger("ToggleJump");
 			}
