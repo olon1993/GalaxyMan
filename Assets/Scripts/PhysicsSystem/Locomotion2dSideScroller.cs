@@ -55,6 +55,8 @@ namespace TheFrozenBanana
 
 		// Gizmos
 		private float _distanceCoefficient = 2.0625f;
+		[SerializeField] private bool _showJumpGizmo;
+		[SerializeField] private bool _showDashGizmo;
 
 		//**************************************************\\
 		//******************** Methods *********************\\
@@ -76,25 +78,43 @@ namespace TheFrozenBanana
 		}
 
 		private void OnDrawGizmos() {
-			// calculations prior to draw
-			float guestimateDistance = _timeToJumpApex * _walkSpeed * _distanceCoefficient;
-			Vector3[] points = new Vector3[7];
-			points[0] = transform.position + Vector3.down;
-			points[1] = transform.position + Vector3.down + Vector3.right * guestimateDistance;
-			points[2] = transform.position + Vector3.down + (Vector3.right * guestimateDistance) * 3 / 4 + Vector3.up * _maxJumpHeight * 3 / 4;
-			points[3] = transform.position + Vector3.down + (Vector3.right * guestimateDistance) * 2 / 4 + Vector3.up * (_maxJumpHeight - 0.5f);
-			points[4] = transform.position + Vector3.down + (Vector3.left * guestimateDistance) * 2 / 4 + Vector3.up * (_maxJumpHeight - 0.5f);
-			points[5] = transform.position + Vector3.down + (Vector3.left * guestimateDistance) * 3 / 4 + Vector3.up * _maxJumpHeight * 3 / 4;
-			points[6] = transform.position + Vector3.down + Vector3.left * guestimateDistance;
+			// Jump Arc Gizmo
+			if (_showJumpGizmo) {
+				float guestimateDistance = _timeToJumpApex * _walkSpeed * _distanceCoefficient;
+				Vector3[] jumpPoints = new Vector3[7];
+				jumpPoints[0] = transform.position + Vector3.down;
+				jumpPoints[1] = transform.position + Vector3.down + Vector3.right * guestimateDistance;
+				jumpPoints[2] = transform.position + Vector3.down + (Vector3.right * guestimateDistance) * 3 / 4 + Vector3.up * _maxJumpHeight * 3 / 4;
+				jumpPoints[3] = transform.position + Vector3.down + (Vector3.right * guestimateDistance) * 2 / 4 + Vector3.up * (_maxJumpHeight - 0.5f);
+				jumpPoints[4] = transform.position + Vector3.down + (Vector3.left * guestimateDistance) * 2 / 4 + Vector3.up * (_maxJumpHeight - 0.5f);
+				jumpPoints[5] = transform.position + Vector3.down + (Vector3.left * guestimateDistance) * 3 / 4 + Vector3.up * _maxJumpHeight * 3 / 4;
+				jumpPoints[6] = transform.position + Vector3.down + Vector3.left * guestimateDistance;
 
-			Gizmos.color = Color.cyan;
-			Gizmos.DrawLine(points[0], points[1]);
-			Gizmos.DrawLine(points[1], points[2]);
-			Gizmos.DrawLine(points[2], points[3]);
-			Gizmos.DrawLine(points[3], points[4]);
-			Gizmos.DrawLine(points[4], points[5]);
-			Gizmos.DrawLine(points[5], points[6]);
-			Gizmos.DrawLine(points[6], points[0]);
+				Gizmos.color = Color.cyan;
+				Gizmos.DrawLine(jumpPoints[0], jumpPoints[1]);
+				Gizmos.DrawLine(jumpPoints[1], jumpPoints[2]);
+				Gizmos.DrawLine(jumpPoints[2], jumpPoints[3]);
+				Gizmos.DrawLine(jumpPoints[3], jumpPoints[4]);
+				Gizmos.DrawLine(jumpPoints[4], jumpPoints[5]);
+				Gizmos.DrawLine(jumpPoints[5], jumpPoints[6]);
+				Gizmos.DrawLine(jumpPoints[6], jumpPoints[0]);
+			}
+
+			if (_showDashGizmo) {
+				// Dash Rect Gizmo
+				float dashDistance = _dashSpeed * _dashDuration + 1;
+				Vector3[] dashPoints = new Vector3[4];
+				dashPoints[0] = transform.position + Vector3.right * dashDistance;
+				dashPoints[1] = transform.position + Vector3.right * dashDistance + Vector3.up;
+				dashPoints[2] = transform.position + Vector3.left * dashDistance + Vector3.up;
+				dashPoints[3] = transform.position + Vector3.left * dashDistance;
+
+				Gizmos.color = Color.green;
+				Gizmos.DrawLine(dashPoints[0], dashPoints[1]);
+				Gizmos.DrawLine(dashPoints[1], dashPoints[2]);
+				Gizmos.DrawLine(dashPoints[2], dashPoints[3]);
+				Gizmos.DrawLine(dashPoints[3], dashPoints[0]);
+			}
 		}
 
 		protected override void Start() {

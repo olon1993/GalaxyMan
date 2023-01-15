@@ -230,7 +230,7 @@ GameObject:
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -325,6 +325,8 @@ MonoBehaviour:
   _wallLeap: {x: 12, y: 30}
   _dashSlider: {fileID: 0}
   _dashDuration: 0.5
+  _showJumpGizmo: 1
+  _showDashGizmo: 1
 --- !u!114 &5792141944326332763
 MonoBehaviour:
   m_ObjectHideFlags: 0
