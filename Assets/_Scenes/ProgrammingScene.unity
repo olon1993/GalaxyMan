@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.25
+  orthographic size: 10.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.689993, y: -2, z: -10}
+  m_LocalPosition: {x: 22.479979, y: -2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8544,11 +8544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.69
+      value: 22.48
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.42
+      value: -7.41
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -73876,11 +73876,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5081439703878405475, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.69
+      value: 22.48
       objectReference: {fileID: 0}
     - target: {fileID: 5081439703878405475, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.42
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978079836987, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_RootOrder
@@ -73980,11 +73980,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978750165739, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.69
+      value: 22.48
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978750165739, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.42
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: 7704108978750165740, guid: 8a45ed08546da9c4c89c3fae7e6cb422, type: 3}
       propertyPath: m_Follow
