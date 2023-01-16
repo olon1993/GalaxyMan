@@ -312,6 +312,8 @@ MonoBehaviour:
   _wallLeap: {x: 10, y: 10}
   _dashSlider: {fileID: 0}
   _dashDuration: 0
+  _showJumpGizmo: 0
+  _showDashGizmo: 0
 --- !u!114 &678291744404683983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +409,7 @@ MonoBehaviour:
   locations:
   - {fileID: 0}
   - {fileID: 0}
-  allowJump: 1
+  allowJump: 0
   currentLocation: 0
 --- !u!114 &2715142223668374889
 MonoBehaviour:
