@@ -46,8 +46,9 @@ namespace TheFrozenBanana
 		[SerializeField] protected float _dashDuration;
 		private bool _isDashing;
 
-		// Damage Force
+		// KnockBack
 
+		[SerializeField] private bool _cancelKnockback = false;
 		private bool _handlingKnockback;
 
 		// Graphics
@@ -536,6 +537,9 @@ namespace TheFrozenBanana
 		private IEnumerator RunRecoil(float forceValue, Vector3 forceSource, float stunTime) {
 			if (_showDebugLog) {
 				Debug.Log("Applying Damage Force: " + gameObject.name + " Source: " + forceSource);
+			}
+			if (_cancelKnockback || forceValue < Mathf.Epsilon) {
+				yield break;
 			}
 			if (stunTime < Mathf.Epsilon) {
 				stunTime = 0.1f;

@@ -242,7 +242,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d1ba3f260a42d51408b9f9335da843a9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.67511016, g: 1, b: 0.3176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 6826479877702706514}
   - component: {fileID: 8249291111603549427}
   m_Layer: 6
-  m_Name: Enemy-Jump
+  m_Name: Enemy-Jump - Stops above Player
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -500,6 +500,8 @@ MonoBehaviour:
   _wallLeap: {x: 10, y: 10}
   _dashSlider: {fileID: 0}
   _dashDuration: 0
+  _showJumpGizmo: 1
+  _showDashGizmo: 0
 --- !u!114 &6826479877702706517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,6 +617,7 @@ MonoBehaviour:
   _trailEffect: {fileID: 0}
   _landingEffect: {fileID: 4646907595154101472, guid: b620fdb3a682bb846b08c5635c6df12b, type: 3}
   _landingEffectLocation: {fileID: 6939966712840262858}
+  _stopAbovePlayer: 1
 --- !u!114 &8249291111603549427
 MonoBehaviour:
   m_ObjectHideFlags: 0
