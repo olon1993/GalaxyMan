@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7823515610180161946}
   - component: {fileID: 3816934425812497115}
   - component: {fileID: 7823515610180161947}
+  - component: {fileID: 1671890526}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -133,6 +134,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animation: {fileID: 7400000, guid: 528d9d6b41cf74c4d8afce67e56f118f, type: 2}
   _priority: 0
+  _animationLayer: 0
+  _canBeInterrupted: 1
+  _isAnimationOverride: 0
+--- !u!114 &1671890526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678291743407843161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c414542e08bcc647a5811c439d93dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 7400000, guid: b231286303c63aa4ab184f0e5deb800f, type: 2}
+  _priority: 1
   _animationLayer: 0
   _canBeInterrupted: 1
   _isAnimationOverride: 0
@@ -270,9 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
-  _maxHealth: 20
+  _maxHealth: 4
   _currentHealth: 0
-  _timeToDie: 0
+  _timeToDie: 1
   hpSlider: {fileID: 0}
   _destroyBounds: 0
   _resistanceTypeDefinition: 
