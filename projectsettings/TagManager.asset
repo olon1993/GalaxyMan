@@ -10,6 +10,7 @@ TagManager:
   - Hazard
   - Destructible
   - CMCamera
+  - GarbageCollector
   layers:
   - Default
   - TransparentFX
