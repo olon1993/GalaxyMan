@@ -12,6 +12,8 @@ namespace TheFrozenBanana
 		//**************************************************\\
 		//********************* Fields *********************\\
 		//**************************************************\\
+
+		protected DependencyManager _dependencyManager;
 		private IInputManager _inputManager;
 
 		// Speed and smoothing
@@ -71,11 +73,14 @@ namespace TheFrozenBanana
 		}
 
 		private void GetDependencies() {
-			_inputManager = GetComponent<IInputManager>();
+			_dependencyManager = GetComponent<DependencyManager>();
+			if (_dependencyManager == null) {
+				Debug.LogError("DependencyManager not found on " + name);
+			}
+			_inputManager = (IInputManager)_dependencyManager.Registry[typeof(IInputManager)];
 			if (_inputManager == null) {
 				Debug.Log("No Input Manager found on " + name);
 			}
-
 		}
 
 		private void OnDrawGizmos() {

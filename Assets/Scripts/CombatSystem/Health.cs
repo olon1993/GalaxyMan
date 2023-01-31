@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,9 @@ namespace TheFrozenBanana
 		//**************************************************\\
 		//********************* Fields *********************\\
 		//**************************************************\\
+
+		protected DependencyManager _dependencyManager;
+		private IInputManager _inputManager;
 
 		[SerializeField] private int _maxHealth;
 		[SerializeField] protected int _currentHealth;
@@ -26,6 +30,7 @@ namespace TheFrozenBanana
 		//**************************************************\\
 
 		protected virtual void Awake() {
+			GetDependencies();
 			if (CurrentHealth == 0) {
 				CurrentHealth = MaxHealth;
 			}
@@ -33,6 +38,18 @@ namespace TheFrozenBanana
 				hpSlider.maxValue = _maxHealth;
 				hpSlider.minValue = 0;
 				hpSlider.value = _currentHealth;
+			}
+		}
+
+		private void GetDependencies() {
+			_dependencyManager = GetComponent<DependencyManager>();
+			if (_dependencyManager == null) {
+				Debug.LogError("DependencyManager not found on " + name);
+			}
+			try {
+				_inputManager = (IInputManager)_dependencyManager.Registry[typeof(IInputManager)];
+			} catch (KeyNotFoundException knfe) {
+				Debug.Log("Object " + this.gameObject.name + " has HP, but no input manager found. Make sure this is by design. ");
 			}
 		}
 
@@ -82,7 +99,10 @@ namespace TheFrozenBanana
 
 		protected virtual void Die() {
 			_isDead = true;
-
+			if (_inputManager != null) {
+				_inputManager.EndOverride();
+				_inputManager.IsEnabled = false;
+			}
 			if (_showDebugLog) {
 				Debug.Log(gameObject.name + " has died!");
 			}
