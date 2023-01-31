@@ -39,8 +39,9 @@ namespace TheFrozenBanana
 					}
 				}
 
-
-				_inputManager.OverrideHorizontalInput(dir);
+				if (_inputManager.IsEnabled) {
+					_inputManager.OverrideHorizontalInput(dir);
+				}
 				yield return new WaitForEndOfFrame();
 				t += Time.deltaTime;
 			}

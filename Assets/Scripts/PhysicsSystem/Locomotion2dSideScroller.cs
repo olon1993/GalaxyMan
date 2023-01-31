@@ -12,6 +12,8 @@ namespace TheFrozenBanana
 		//**************************************************\\
 		//********************* Fields *********************\\
 		//**************************************************\\
+
+		protected DependencyManager _dependencyManager;
 		private IInputManager _inputManager;
 
 		// Speed and smoothing
@@ -46,8 +48,9 @@ namespace TheFrozenBanana
 		[SerializeField] protected float _dashDuration;
 		private bool _isDashing;
 
-		// Damage Force
+		// KnockBack
 
+		[SerializeField] private bool _cancelKnockback = false;
 		private bool _handlingKnockback;
 
 		// Graphics
@@ -70,11 +73,14 @@ namespace TheFrozenBanana
 		}
 
 		private void GetDependencies() {
-			_inputManager = GetComponent<IInputManager>();
+			_dependencyManager = GetComponent<DependencyManager>();
+			if (_dependencyManager == null) {
+				Debug.LogError("DependencyManager not found on " + name);
+			}
+			_inputManager = (IInputManager)_dependencyManager.Registry[typeof(IInputManager)];
 			if (_inputManager == null) {
 				Debug.Log("No Input Manager found on " + name);
 			}
-
 		}
 
 		private void OnDrawGizmos() {
@@ -536,6 +542,9 @@ namespace TheFrozenBanana
 		private IEnumerator RunRecoil(float forceValue, Vector3 forceSource, float stunTime) {
 			if (_showDebugLog) {
 				Debug.Log("Applying Damage Force: " + gameObject.name + " Source: " + forceSource);
+			}
+			if (_cancelKnockback || forceValue < Mathf.Epsilon) {
+				yield break;
 			}
 			if (stunTime < Mathf.Epsilon) {
 				stunTime = 0.1f;

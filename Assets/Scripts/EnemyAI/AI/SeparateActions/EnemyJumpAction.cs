@@ -9,6 +9,7 @@ namespace TheFrozenBanana
 		[SerializeField] private GameObject _trailEffect;
 		[SerializeField] private GameObject _landingEffect;
 		[SerializeField] private Transform _landingEffectLocation;
+		[SerializeField] private bool _stopAbovePlayer;
 		private float dir;
 		private Animator ac;
 
@@ -21,7 +22,6 @@ namespace TheFrozenBanana
 			if (_showDebugLog) {
 				Debug.Log("EnemyJumpAction.CarryOutAction");
 			}
-
 			StartCoroutine(DelayJumpAnimation());
 
 			_actionInEffect = true;
@@ -33,13 +33,12 @@ namespace TheFrozenBanana
 				_locomotion.HorizontalLook = Mathf.Sign(ec.Target.transform.position.x - gameObject.transform.position.x);
 				dir = _locomotion.HorizontalLook;
 			}
-
 			_inputManager.OverrideHorizontalInput(dir);
 			ec.Jump();
 			yield return new WaitForSeconds(0.1f);
 			while (!_locomotion.IsGrounded) {
-				if (dir != Mathf.Sign(ec.Target.transform.position.x - gameObject.transform.position.x)) {
-					_inputManager.EndOverride();
+				if (_stopAbovePlayer && dir != Mathf.Sign(ec.Target.transform.position.x - gameObject.transform.position.x)) {
+					ec.EndOverride();
 				}
 				yield return new WaitForEndOfFrame();
 			}

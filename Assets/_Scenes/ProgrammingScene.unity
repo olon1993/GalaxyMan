@@ -179,7 +179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.666667
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -15402,11 +15402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2058993458824567647, guid: b5692b7ff56b1914a954f2d7cd40159f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.16
+      value: 35.651
       objectReference: {fileID: 0}
     - target: {fileID: 2058993458824567647, guid: b5692b7ff56b1914a954f2d7cd40159f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.96
+      value: -5.01
       objectReference: {fileID: 0}
     - target: {fileID: 2058993458824567647, guid: b5692b7ff56b1914a954f2d7cd40159f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -72605,6 +72605,10 @@ PrefabInstance:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5321313259976105107, guid: 23e25bcb2b1cfa04987703c4a2079a91, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321313259976105107, guid: 23e25bcb2b1cfa04987703c4a2079a91, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.12
       objectReference: {fileID: 0}
@@ -72642,6 +72646,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5321313259976105107, guid: 23e25bcb2b1cfa04987703c4a2079a91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321313259976105109, guid: 23e25bcb2b1cfa04987703c4a2079a91, type: 3}
+      propertyPath: m_Size.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321313259976105109, guid: 23e25bcb2b1cfa04987703c4a2079a91, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321313259976105109, guid: 23e25bcb2b1cfa04987703c4a2079a91, type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7286476749335645480, guid: 23e25bcb2b1cfa04987703c4a2079a91, type: 3}

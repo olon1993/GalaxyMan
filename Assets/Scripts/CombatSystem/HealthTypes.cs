@@ -14,6 +14,7 @@ namespace TheFrozenBanana
 		[SerializeField] private float _timeInvulnerable;
 		[SerializeField] private float _resistFactor = 0.5f;
 		[SerializeField] private float _vulnerableFactor = 1.5f;
+		[SerializeField] private GameObject _spawnThisOnDeath;
 
 		//**************************************************\\
 		//******************** Methods *********************\\
@@ -95,11 +96,15 @@ namespace TheFrozenBanana
 
 
 		protected override IEnumerator DelayDeath() {
+			if (_spawnThisOnDeath != null) {
+				Instantiate(_spawnThisOnDeath, transform.position, Quaternion.identity, null);
+			}
 			yield return new WaitForSeconds(_timeToDie);
 			IDropLoot idl = gameObject.GetComponent<IDropLoot>();
 			if (idl != null) {
 				idl.DropRandomLoot();
 			}
+
 			gameObject.SetActive(false);
 		}
 
