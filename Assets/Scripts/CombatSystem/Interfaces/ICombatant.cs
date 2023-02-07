@@ -11,6 +11,7 @@ namespace TheFrozenBanana
         IWeapon CurrentMainWeapon { get; set; }
         bool IsAttack { get; set; }
         bool IsAttacking { get; set; }
+        bool FeignAttack { get; set; }
         int HorizontalFacingDirection { get; set; }
     }
 }

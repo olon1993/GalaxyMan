@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8f3095647b1c940946adcfd79052b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: a000fe998f7d0f94eb78caeaee418686, type: 2}
+  _animation: {fileID: 7400000, guid: 8cb5c8ee7f7ffc5478916ef42ebae5cb, type: 2}
   _priority: 3
   _animationLayer: 0
   _canBeInterrupted: 1
@@ -821,7 +821,6 @@ MonoBehaviour:
   IsMovementEnabled: 1
   _isEnabled: 1
   _aggroRange: 15
-  _distance: 0
 --- !u!114 &5321313259976105101
 MonoBehaviour:
   m_ObjectHideFlags: 0

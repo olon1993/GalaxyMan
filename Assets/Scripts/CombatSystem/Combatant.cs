@@ -141,6 +141,9 @@ namespace TheFrozenBanana
 
             if (IsAttack)
             {
+                if (FeignAttack) {
+                    return;
+				}
                 CurrentMainWeapon.Attack(_attackChargeTime);
                 _attackChargeTime = 0f;
                 _isCharging = false;
@@ -250,6 +253,8 @@ namespace TheFrozenBanana
         public bool IsAttack { get; set; }
 
         public bool IsAttacking { get; set; }
+
+        public bool FeignAttack { get; set; }
 
         public bool IsSecondaryAttack { get; set; }
 

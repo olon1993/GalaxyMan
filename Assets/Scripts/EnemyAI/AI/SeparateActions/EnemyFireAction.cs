@@ -17,6 +17,7 @@ namespace TheFrozenBanana
 			if (_showDebugLog) {
 				Debug.Log("EnemyFireAction.CarryOutAction");
 			}
+			ec.FeignEnemyAttack(true);
 			_actionInEffect = true;
 			float t = 0;
 			float angle = 0;
@@ -49,15 +50,6 @@ namespace TheFrozenBanana
 				t += Time.deltaTime;
 				yield return new WaitForEndOfFrame();
 			}
-			/*
-			 *			if (_actionInEffect) {
-
-							ec.EnemyAttack(true);
-							yield return new WaitForEndOfFrame();
-							ec.EnemyAttack(false);
-							_inputManager.EndOverride();
-
-							}*/
 			int shotsFired = 0;
 			while (shotsFired < shotsPerVolley) {
 				float shotTime = volleyTime / (float)shotsPerVolley;
@@ -70,6 +62,7 @@ namespace TheFrozenBanana
 					}
 				}
 			}
+			ec.FeignEnemyAttack(false);
 			StopAction();
 		}
 

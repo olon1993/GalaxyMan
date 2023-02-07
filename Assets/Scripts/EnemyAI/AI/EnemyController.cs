@@ -147,8 +147,9 @@ namespace TheFrozenBanana
 			_horizontal = 0;
 		}
 
-		public void EnemyAttack(bool setto) {
-			_isAttack = setto;
+		public void FeignEnemyAttack(bool setto) {
+			GetComponent<ICombatant>().FeignAttack = setto;
+			_isAttacking = setto;
 		}
 
 		//**************************************************\\
