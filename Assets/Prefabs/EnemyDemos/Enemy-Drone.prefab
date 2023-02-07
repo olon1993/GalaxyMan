@@ -489,9 +489,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5321313259243308831}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 74bff5c000dc97446a77b4edace22a70, type: 2}
+  m_Controller: {fileID: 9100000, guid: a8a1f89b5cb3a4a4ea5361e625c600b0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6272c336148c3ec47bede36df37d50da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: 98af25835ba50474081ac68c1d435394, type: 2}
+  _animation: {fileID: 7400000, guid: a000fe998f7d0f94eb78caeaee418686, type: 2}
   _priority: 0
   _animationLayer: 0
   _canBeInterrupted: 1
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8f3095647b1c940946adcfd79052b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: 3821f3c190bad31459ac1faf0b3672c3, type: 2}
+  _animation: {fileID: 7400000, guid: a000fe998f7d0f94eb78caeaee418686, type: 2}
   _priority: 3
   _animationLayer: 0
   _canBeInterrupted: 1
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944831d594113dc43977329755709eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: 7e28e1577b4e333499e3e5a09960bfa3, type: 2}
+  _animation: {fileID: 7400000, guid: a000fe998f7d0f94eb78caeaee418686, type: 2}
   _priority: 0
   _animationLayer: 0
   _canBeInterrupted: 1
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c414542e08bcc647a5811c439d93dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animation: {fileID: 7400000, guid: bbd07379dae24ed4e94f23aae634adec, type: 2}
+  _animation: {fileID: 7400000, guid: feeb87656670aba4dabd3131c55307d7, type: 2}
   _priority: 4
   _animationLayer: 0
   _canBeInterrupted: 0
@@ -689,9 +689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
-  _maxHealth: 20
+  _maxHealth: 6
   _currentHealth: 0
-  _timeToDie: 0
+  _timeToDie: 0.6
   hpSlider: {fileID: 0}
   _destroyBounds: 0
   _resistanceTypeDefinition: 
@@ -699,6 +699,7 @@ MonoBehaviour:
   _timeInvulnerable: 0
   _resistFactor: 0.5
   _vulnerableFactor: 1.5
+  _spawnThisOnDeath: {fileID: 0}
 --- !u!114 &5321313259976105111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +732,7 @@ MonoBehaviour:
   _wallLeap: {x: 10, y: 10}
   _dashSlider: {fileID: 0}
   _dashDuration: 0
+  _cancelKnockback: 1
   _showJumpGizmo: 0
   _showDashGizmo: 0
 --- !u!114 &7286476749335645483
@@ -819,6 +821,7 @@ MonoBehaviour:
   IsMovementEnabled: 1
   _isEnabled: 1
   _aggroRange: 15
+  _distance: 0
 --- !u!114 &5321313259976105101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,7 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showDebugLog: 0
   _priority: 5
-  _actionRange: 10
+  _actionRange: 14
   _actionTime: 2
   _requiresTarget: 1
   _requiresLineOfSight: 1

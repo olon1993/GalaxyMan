@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
-  _maxHealth: 36
+  _maxHealth: 24
   _currentHealth: 12
   _timeToDie: 5
   hpSlider: {fileID: 0}
@@ -824,72 +824,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3213696353108361100, guid: 542ec81f40c57804880fc3e215f0c71f, type: 3}
   m_PrefabInstance: {fileID: 968141626}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1309583452
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 453778756}
-    m_Modifications:
-    - target: {fileID: 1865318163177778576, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003310249244158883, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_Name
-      value: PlasmaChargeEffect
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
---- !u!1 &4003310250486547455 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4003310249244158883, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
-  m_PrefabInstance: {fileID: 1309583452}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1543467353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1135,7 +1069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8382405602743460863, guid: 43e364ceed541ca46953769eb36112bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1253,7 +1187,7 @@ PrefabInstance:
     - target: {fileID: 2820402607768805446, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
       propertyPath: ChargingParticleSystem
       value: 
-      objectReference: {fileID: 4003310250486547455}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd95356a82938b429babdebb3d60627, type: 3}
 --- !u!4 &453778756 stripped

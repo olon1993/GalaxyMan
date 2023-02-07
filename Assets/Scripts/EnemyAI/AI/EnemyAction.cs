@@ -24,6 +24,7 @@ namespace TheFrozenBanana
 		protected IInputManager _inputManager;
 		protected ILocomotion2dSideScroller _locomotion;
 
+
 		//**************************************************\\
 		//******************** Methods *********************\\
 		//**************************************************\\
@@ -91,7 +92,7 @@ namespace TheFrozenBanana
 			hitUp = Physics2D.Raycast(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.up);
 			hitDown = Physics2D.Raycast(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.down);
 			if (_showDebugLog) { 
-				Debug.DrawRay(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position, Color.magenta, 4f);
+				Debug.DrawRay(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position, Color.magenta, 1f);
 				Debug.DrawRay(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.up, Color.cyan, 1f);
 				Debug.DrawRay(gameObject.transform.position, ec.Target.transform.position - gameObject.transform.position + Vector3.down, Color.blue, 1f);
 			}

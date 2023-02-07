@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugLog: 0
+  _weaponName: 
   _pointOfOrigin: {fileID: 2820402607794095308}
   _pointOfTargetting: {fileID: 0}
   DefaultProjectile: {fileID: 5902931012708338258, guid: d7ef8e2a128fb2340b98280f7f7fc314, type: 3}
@@ -67,6 +68,7 @@ MonoBehaviour:
   _weaponTypeDefinition: 1
   _animationLayer: 0
   _owner: Player
+  _isUnlocked: 0
 --- !u!1 &2820402607794095307
 GameObject:
   m_ObjectHideFlags: 0
