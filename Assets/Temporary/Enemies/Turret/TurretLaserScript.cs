@@ -41,6 +41,9 @@ namespace TheFrozenBanana
 				if (distance < maxDistance) {
 					Vector3 vectorToTarget = target.transform.position - barrel.transform.position;
 					angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+					if (!openFire) {
+						ac.SetTrigger("Charge");
+					}
 					openFire = true;
 				} else {
 					Vector3 vectorToTarget = (barrel.transform.position + (Vector3.down)) - barrel.transform.position;
@@ -59,7 +62,6 @@ namespace TheFrozenBanana
 				yield return new WaitForEndOfFrame();
 				if (openFire) {
 					t += Time.deltaTime;
-					ac.SetTrigger("Charge");
 				}
 
 				if (t >= laserChargeTime) {

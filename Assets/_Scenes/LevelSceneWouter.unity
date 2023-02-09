@@ -938,7 +938,7 @@ MonoBehaviour:
   projectileSpawnpoint: {fileID: 1090338299}
   maxDistance: 20
   speed: 1
-  laserActiveTime: 4
+  laserActiveTime: 2
   laserChargeTime: 2
   layer:
     serializedVersion: 2
@@ -95445,8 +95445,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 857406296431918005, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 857406296431918005, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 71db4f6b5f4821d49be9c806d00dd6d3, type: 2}
     - target: {fileID: 857406296926760171, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
       propertyPath: m_Name
       value: LaserTurret
