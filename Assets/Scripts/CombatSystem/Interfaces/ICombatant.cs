@@ -12,6 +12,7 @@ namespace TheFrozenBanana
         bool IsAttack { get; set; }
         bool IsAttacking { get; set; }
         bool FeignAttack { get; set; }
+        bool IsUp { get; set; }
         int HorizontalFacingDirection { get; set; }
     }
 }

@@ -110,14 +110,14 @@ namespace TheFrozenBanana
                 }
             }
 
-            bool isUp = _inputManager.Vertical > Mathf.Epsilon;
+            IsUp = _inputManager.Vertical > Mathf.Epsilon;
 
             if (IsAttacking && !_isCharging) {
                 CurrentMainWeapon.ChargeEffect();
                 _isCharging = true;
 			}
 
-            if (isUp)
+            if (IsUp)
             {
                 CurrentMainWeapon.PointOfOrigin.localPosition = new Vector3(0, 1.5f, 0);
                 CurrentMainWeapon.PointOfTargetting.localPosition = new Vector3(0, 5f, 0);
@@ -257,6 +257,8 @@ namespace TheFrozenBanana
         public bool FeignAttack { get; set; }
 
         public bool IsSecondaryAttack { get; set; }
+
+        public bool IsUp { get; set; }
 
         public int HorizontalFacingDirection
         {
