@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1018624796, guid: 9908f0cefb975e5428c59ed9056ef049, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7cf72d24e284e4448a59a939efd1ae57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,12 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cabf361fd72cf7438fd98361eb113e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextWaypoint: 1
   _localWaypoints: []
-  speed: 12
-  pauseAtWaypoint: 0.5
-  distanceToWaypoint: 0
-  moveDistance: 0
+  _speed: 0
+  _pauseAtWaypoint: 0
 --- !u!114 &1079571517596739133
 MonoBehaviour:
   m_ObjectHideFlags: 0
