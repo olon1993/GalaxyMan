@@ -813,11 +813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.3
+      value: 41.95
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2
+      value: -44.33
       objectReference: {fileID: 0}
     - target: {fileID: 5792141944326332711, guid: 3289aa9e07794fe4d87ce0fbeaf9db81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -999,7 +999,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18.854166
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1023,7 +1023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441341217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.3, y: -1.1999998, z: -10}
+  m_LocalPosition: {x: 41.95, y: -41.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441341217}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
@@ -95443,6 +95443,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 857406295498061542, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857406295498061542, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.05
+      objectReference: {fileID: 0}
     - target: {fileID: 857406296431918005, guid: 50b7af34672288549a104cadf0f36e18, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -95741,7 +95749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPrefab: {fileID: 6921360266835298808, guid: 65778b2e7610a384bb2b90853287c45f, type: 3}
   hitsPerSecond: 5
-  shadertest: {fileID: -6465566751694194690, guid: 8c9dd237c1f2dd84e99c569ec6cb5d24, type: 3}
 --- !u!1 &978356239
 GameObject:
   m_ObjectHideFlags: 0
@@ -101617,7 +101624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715651344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.3, y: -1.1999998, z: -10}
+  m_LocalPosition: {x: 41.95, y: -41.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

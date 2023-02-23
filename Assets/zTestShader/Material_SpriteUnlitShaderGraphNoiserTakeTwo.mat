@@ -34,10 +34,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _High_Edge: 0.8
+    - _Low_Edge: 0.2
     - _SpeedX: -1
     - _SpeedX2: -2
-    - _SpeedY: 0.2
-    - _Strength: 4
+    - _SpeedX_Fast: 1
+    - _SpeedX_Slow: -1
+    - _SpeedY: 1
+    - _Strength: 5
+    - _X_Stretch: 0.1
+    - _Y_Stretch: 1
     m_Colors:
     - _ColorA: {r: 0, g: 0.191, b: 1, a: 1}
     - _ColorB: {r: 0, g: 1, b: 1, a: 1}
