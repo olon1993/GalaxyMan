@@ -51,6 +51,9 @@ namespace TheFrozenBanana
 		}
 
 		private void Update() {
+			if (Time.timeScale < Mathf.Epsilon) {
+				return;
+			}
 			float distance = Vector3.Distance(transform.position, _target.transform.position);
 			_distance = distance;
 			if (currentAction == null) {

@@ -55,6 +55,9 @@ namespace TheFrozenBanana
 		}
 
 		void Update() {
+			if (Time.timeScale < Mathf.Epsilon) {
+				return;
+			}
 			if (IsEnabled) {
 				_horizontal = Input.GetAxisRaw("Horizontal");
 				_vertical = Input.GetAxisRaw("Vertical");

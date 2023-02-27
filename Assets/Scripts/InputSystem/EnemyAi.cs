@@ -68,6 +68,9 @@ namespace TheFrozenBanana
         // Update is called once per frame
         private void Update()
         {
+            if (Time.timeScale < Mathf.Epsilon) {
+                return;
+			}
 			if (gameObject.GetComponent<IHealth>().IsDead) {
 				_horizontal = 0;
 				return;
